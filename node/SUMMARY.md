@@ -1,0 +1,16 @@
+# Table of contents
+
+* [Overview](README.md)
+* [Node Operator FAQ](node-operator-faq.md)
+* [Node Setup Guide](node-setup-guide.md)
+* [Node Upgrade Guide](node-upgrade-guide/README.md)
+  * [Upgrade Checklist (Pre-Upgrade Verification)](node-upgrade-guide/upgrade-checklist-pre-upgrade-verification.md)
+  * [Download the Node Management Scripts](node-upgrade-guide/download-the-node-management-scripts.md)
+  * [Update the Supra Node Docker Image](node-upgrade-guide/update-the-supra-node-docker-image.md)
+  * [Validator Migration to 9.0.12](node-upgrade-guide/validator-migration-to-9.0.12.md)
+  * [RPC Migration to 9.0.12](node-upgrade-guide/rpc-migration-to-9.0.12.md)
+  * [Starting the Supra Node](node-upgrade-guide/starting-the-supra-node.md)
+  * [Monitor Node Synchronization](node-upgrade-guide/monitor-node-synchronization.md)
+  * [CLI Improvements](node-upgrade-guide/cli-improvements.md)
+  * [Recovery Guide](node-upgrade-guide/recovery-guide.md)
+* [Creating SupraDesk Tickets via Email](creating-supradesk-tickets-via-email.md)
