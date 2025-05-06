@@ -1,0 +1,9 @@
+# Overview
+
+Welcome to the Supra Move Layer 1 network documentation. Supra's MoveVM is a high-performance blockchain designed to support secure and scalable decentralized applications. As part of Supra's vertically integrated L1 ecosystem, MoveVM offers developers a robust platform to build and deploy applications using the Move programming language, renowned for its safety and efficiency.
+
+Incorporating native services such as oracles, verifiable randomness, automation, and cross-chain communication, Supra's MoveVM enables the creation of "Super dApps" that are both composable and performant. This documentation provides comprehensive resources to help you get started, from setting up the Supra CLI to deploying your first Move smart contract and dApp. Whether you're new to Move or an experienced developer, this guide will support you in harnessing the full potential of Supra's MoveVM.
+
+***
+
+<table data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td></td><td>Getting Started</td><td></td><td><a href="getting-started/">getting-started</a></td></tr><tr><td></td><td>Network Information</td><td></td><td><a href="network-information.md">network-information.md</a></td></tr><tr><td></td><td>Learn Move 101</td><td></td><td><a href="learn-move/">learn-move</a></td></tr><tr><td></td><td>CLI Commands</td><td></td><td><a href="cli-commands/">cli-commands</a></td></tr><tr><td></td><td>TypeScript SDK</td><td></td><td><a href="typescript-sdk/">typescript-sdk</a></td></tr><tr><td></td><td>Rest API</td><td></td><td><a href="rest-api/">rest-api</a></td></tr><tr><td></td><td>Supra Dapp Templates</td><td></td><td><a href="dev/supra-dapp-templates.md">supra-dapp-templates.md</a></td></tr><tr><td></td><td>Supra Move VS Code Extension</td><td></td><td><a href="dev/supra-move-vs-code-extension.md">supra-move-vs-code-extension.md</a></td></tr></tbody></table>
