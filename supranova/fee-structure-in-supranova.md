@@ -2,7 +2,7 @@
 
 SupraNova’s fee model is designed to sustain a permissionless, decentralized bridging ecosystem while incentivizing critical actors like relayers and committee updaters.
 
-<figure><img src=".gitbook/assets/Fee structure.png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/3 (1).jpg" alt=""><figcaption></figcaption></figure>
 
 SupraNova applies two levels of fees internally but simplifies the user experience by exposing only the Service Layer Fee during transaction confirmation.
 
