@@ -14,7 +14,7 @@ SupraNova organizes its bridging infrastructure into clearly separated functiona
 
 This separation enables innovation at the Service Layer while maintaining strong cryptographic guarantees at the Message Layer. Below you can find the architecture of Two- Layer Approach:
 
-<figure><img src=".gitbook/assets/1.jpg" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/two layer.drawio.png" alt=""><figcaption></figcaption></figure>
 
 \
 \
