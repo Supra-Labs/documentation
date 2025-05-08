@@ -25,6 +25,10 @@ At compilation, `exampleAddress` will be replaced with the value you set in the 
 
 The sources directory holds the move modules that you will be working on within your project. Within the `sources` directory,  create the `example.move` file with the following code.&#x20;
 
+{% hint style="info" %}
+You can create the file through your code editor, or by executing one of the following commands: `touch example.move`  or `echo > example.move`
+{% endhint %}
+
 {% code title="example.move" lineNumbers="true" %}
 ```
 module exampleAddress::transfer {
