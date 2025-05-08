@@ -81,12 +81,12 @@ supra move tool view --function-id '<exampleAddress>::transfer::view_balance' --
 ### Call the deployed `two_by_two` entry function
 
 {% hint style="info" %}
-Replace the place holder values denoted with `<>` below to execute the command. Following the execution of this command, repeat step 8 to observe the new balance(s).
+Replace the place holder values denoted with `<>` below to execute the command. Following the execution of this command, repeat step 1 to observe the new balance(s).
 {% endhint %}
 
 {% code overflow="wrap" %}
 ```
-supra move tool run --function-id '<exampleAddress>::transfer::two_by_two' --args u64:<AMOUNT> address:<FIRST_ADR> address:<SECOND_ADR> --rpc-url https://rpc-testnet.supra.com
+supra move tool run --function-id '<exampleAddress>::transfer::two_by_two' --args u64:10000000 address:<FIRST_ADR> address:<SECOND_ADR> --rpc-url https://rpc-testnet.supra.com
 ```
 {% endcode %}
 {% endstep %}
