@@ -1,0 +1,4 @@
+# Standard Library
+
+Supra provides multiple useful libraries for developers. The complete up-to-date\
+docs can be found here.
