@@ -38,6 +38,32 @@ supra profile new accountA <PRIVATE_KEY> --network testnet
 {% endstep %}
 
 {% step %}
+### Modify the profile
+
+The new version of profiles contain the rpc\_url, faucet\_url, and chain\_id associated with the profile. CLI commands will use the stored values of the calling profile for the respective command parameters unless manually overwritten.\
+\
+To modify a profile, use the following command:
+
+```
+supra profile modify accountA --network <localnet/testnet/mainnet/custom>
+```
+{% endstep %}
+
+{% step %}
+### Change the active profile
+
+{% hint style="info" %}
+CLI commands will be executed from the active profile.
+{% endhint %}
+
+To activate another profile, use the following command:
+
+```
+supra profile activate accountA
+```
+{% endstep %}
+
+{% step %}
 ### View local public keys
 
 {% hint style="info" %}
@@ -62,32 +88,6 @@ If you wish to view the private key of your profile(s), use the following comman
 
 ```
 supra profile -l -r
-```
-{% endstep %}
-
-{% step %}
-### Change the active profile
-
-{% hint style="info" %}
-CLI commands will be executed from the active profile.
-{% endhint %}
-
-To activate another profile, use the following command:
-
-```
-supra profile activate accountA
-```
-{% endstep %}
-
-{% step %}
-### Modify the profile
-
-The new version of profiles contain the rpc\_url, faucet\_url, and chain\_id associated with the profile. CLI commands will use the stored values of the calling profile for the respective command parameters unless manually overwritten.\
-\
-To modify a profile, use the following command:
-
-```
-supra profile modify accountA --network <localnet/testnet/mainnet/custom>
 ```
 {% endstep %}
 {% endstepper %}
