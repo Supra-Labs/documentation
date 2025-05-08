@@ -64,7 +64,7 @@ docker exec -it supra_cli /bin/bash
 
 Once inside, execute the `ls` command to gain a simple understanding of the file system. The displayed `configs` directory is bind mounted to the `supra_configs` directory on your host machine. These directories are shared/linked between your host machine and the container.
 
-<figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption><p>Note: "supra" is the CLI binary within the container. <br>The compose file automatically setup the alias to interact with the binary using the "supra" command.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/cli_new.png" alt=""><figcaption><p>Note: "supra" is the CLI binary within the container. <br>The compose file automatically setup the alias to interact with the binary using the "supra" command.</p></figcaption></figure>
 {% endstep %}
 
 {% step %}
