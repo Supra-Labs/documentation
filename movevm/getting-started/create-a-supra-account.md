@@ -9,7 +9,7 @@ description: >-
 {% hint style="danger" %}
 On May 2nd, 2025 a new version of the CLI was released. The new image (v9.0.12) introduced an improved profile feature which deprecated the key command of the previous version (v6.3.0) along with an update to the key file structure.\
 \
-If you have just upgraded, you must execute the following command to migrate your key files to the new version: `supra profile migrate` After migration, you must modify the profiles as shown in step 6.
+If you have just upgraded, you must execute the following command to migrate your key files to the new version: `supra profile migrate` After migration, you must modify the profiles as shown in step 3.
 {% endhint %}
 
 {% stepper %}
