@@ -11,7 +11,7 @@ description: Create and deploy your first move module.
 ### Create a new Move package
 
 {% hint style="info" %}
-Executing the command without the --package-dir command will initiatlize the package within your current working directory.
+Executing the command without the --package-dir argument will initiatlize the package within your current working directory.
 {% endhint %}
 
 {% code title="execute me!" overflow="wrap" %}
