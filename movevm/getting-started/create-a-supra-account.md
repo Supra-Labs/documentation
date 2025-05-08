@@ -40,7 +40,7 @@ supra profile new accountA <PRIVATE_KEY> --network testnet
 {% step %}
 ### Modify the profile
 
-The new version of profiles contain the rpc\_url, faucet\_url, and chain\_id associated with the profile. CLI commands will use the stored values of the calling profile for the respective command parameters unless manually overwritten.\
+The new version of profiles contain the `rpc_url`, `faucet_url`, and `chain_id` associated with the profile. CLI commands will use the stored values of the calling profile for the respective command parameters unless manually overwritten.\
 \
 To modify a profile, use the following command:
 
