@@ -42,7 +42,7 @@ Function parameters are passed with the argument `--args`. If multiple parameter
 
 {% code title="Example command" overflow="wrap" %}
 ```
-supra move tool view --function-id '0xCAF3::transfer::view_balance' --args address:0xCAF3 --url https://rpc-testnet.supra.com
+supra move tool view --function-id '0xCAF3::transfer::view_balance' --args address:0xCAF3 --rpc-url https://rpc-testnet.supra.com
 ```
 {% endcode %}
 
@@ -72,7 +72,7 @@ As we have deployed the module to the same account that you will be calling the 
 
 {% code overflow="wrap" %}
 ```
-supra move tool view --function-id '<exampleAddress>::transfer::view_balance' --args address:<ADDRESS_TO_CHECK> --url https://rpc-testnet.supra.com
+supra move tool view --function-id '<exampleAddress>::transfer::view_balance' --args address:<ADDRESS_TO_CHECK> --rpc-url https://rpc-testnet.supra.com
 ```
 {% endcode %}
 {% endstep %}
@@ -86,7 +86,7 @@ Replace the place holder values denoted with `<>` below to execute the command. 
 
 {% code overflow="wrap" %}
 ```
-supra move tool run --function-id '<exampleAddress>::transfer::two_by_two' --args u64:<AMOUNT> address:<FIRST_ADR> address:<SECOND_ADR> --url https://rpc-testnet.supra.com
+supra move tool run --function-id '<exampleAddress>::transfer::two_by_two' --args u64:<AMOUNT> address:<FIRST_ADR> address:<SECOND_ADR> --rpc-url https://rpc-testnet.supra.com
 ```
 {% endcode %}
 {% endstep %}
