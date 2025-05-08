@@ -31,7 +31,7 @@ The `run` command is used to call `entry` functions, which result in some transa
 Execute the following command to better understand the arguments of the command.
 
 ```bash
-supra move tool view --help
+supra move tool run --help
 ```
 {% endstep %}
 {% endstepper %}
