@@ -2,6 +2,7 @@
 description: >-
   Get started with Supra's CLI to manage profiles, connect to the blockchain,
   and simplify your development journey.
+hidden: true
 ---
 
 # CLI Commands

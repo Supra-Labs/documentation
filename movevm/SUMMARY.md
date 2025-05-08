@@ -22,40 +22,6 @@
   * [Passing Data in Move: Value vs. Reference](learn-move/passing-data-in-move-value-vs.-reference.md)
   * [Adding Elements with vector::push\_back](learn-move/adding-elements-with-vector-push_back.md)
   * [Emitting Events with event::emit](learn-move/emitting-events-with-event-emit.md)
-* [CLI Commands](cli-commands/README.md)
-  * [Cheat Sheet](cli-commands/cheat-sheet.md)
-  * [Profiles](cli-commands/profiles.md)
-  * [Accounts](cli-commands/accounts.md)
-  * [Tools](cli-commands/tools.md)
-* [TypeScript SDK](typescript-sdk/README.md)
-  * [Guides](typescript-sdk/guides/README.md)
-    * [Create Supra Accounts](typescript-sdk/guides/create-supra-accounts.md)
-    * [Publish a Package](typescript-sdk/guides/publish-a-package.md)
-  * [Documentation](https://sdk-docs.supra.com/index.html)
-  * [Repository](https://github.com/Entropy-Foundation/supra-l1-sdk/tree/master)
-* [Rest API](rest-api/README.md)
-  * [Mainnet](rest-api/mainnet/README.md)
-    * ```yaml
-      type: builtin:openapi
-      props:
-        models: false
-      dependencies:
-        spec:
-          ref:
-            kind: openapi
-            spec: supra-mainnet-api
-      ```
-  * [Testnet](rest-api/testnet/README.md)
-    * ```yaml
-      type: builtin:openapi
-      props:
-        models: false
-      dependencies:
-        spec:
-          ref:
-            kind: openapi
-            spec: supra-testnet-api
-      ```
 * [Move Book](move-book/README.md)
   * [Getting Started](move-book/getting-started/README.md)
     * [Modules and Scripts](move-book/getting-started/modules-and-scripts.md)
@@ -90,6 +56,40 @@
   * [Reference](move-book/reference/README.md)
     * [Standard Library](move-book/reference/standard-library.md)
     * [Coding Conventions](move-book/reference/coding-conventions.md)
+* [CLI Commands](cli-commands/README.md)
+  * [Cheat Sheet](cli-commands/cheat-sheet.md)
+  * [Profiles](cli-commands/profiles.md)
+  * [Accounts](cli-commands/accounts.md)
+  * [Tools](cli-commands/tools.md)
+* [TypeScript SDK](typescript-sdk/README.md)
+  * [Guides](typescript-sdk/guides/README.md)
+    * [Create Supra Accounts](typescript-sdk/guides/create-supra-accounts.md)
+    * [Publish a Package](typescript-sdk/guides/publish-a-package.md)
+  * [Documentation](https://sdk-docs.supra.com/index.html)
+  * [Repository](https://github.com/Entropy-Foundation/supra-l1-sdk/tree/master)
+* [Rest API](rest-api/README.md)
+  * [Mainnet](rest-api/mainnet/README.md)
+    * ```yaml
+      type: builtin:openapi
+      props:
+        models: false
+      dependencies:
+        spec:
+          ref:
+            kind: openapi
+            spec: supra-mainnet-api
+      ```
+  * [Testnet](rest-api/testnet/README.md)
+    * ```yaml
+      type: builtin:openapi
+      props:
+        models: false
+      dependencies:
+        spec:
+          ref:
+            kind: openapi
+            spec: supra-testnet-api
+      ```
 
 ## Developer Resources <a href="#dev" id="dev"></a>
 
