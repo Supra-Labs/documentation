@@ -32,7 +32,7 @@ Open your terminal and `cd` to the directory on your machine where you wish to s
 
 The following command will use the latest compose file (which you can [view here](https://github.com/Entropy-Foundation/supra-dev-hub/blob/main/Scripts/cli/compose.yaml)) and pipe it into the Docker Compose command. This will pull the latest image, create, and start the container.
 
-{% code overflow="wrap" %}
+{% code title="execute me!" overflow="wrap" %}
 ```bash
 curl -s https://raw.githubusercontent.com/Entropy-Foundation/supra-dev-hub/refs/heads/main/Scripts/cli/compose.yaml | docker compose -f - up -d
 ```
@@ -56,11 +56,11 @@ Docker containers are a form of virtualization that contain everything needed to
 
 To interact with the Supra CLI, we must enter the shell of the container. This will allow us to execute commands within the container from our host machine.&#x20;
 
-Execute the following command:
-
+{% code title="execute me!" %}
 ```bash
 docker exec -it supra_cli /bin/bash 
 ```
+{% endcode %}
 
 Once inside, execute the `ls` command to gain a simple understanding of the file system. The displayed `configs` directory is bind mounted to the `supra_configs` directory on your host machine. These directories are shared/linked between your host machine and the container.
 

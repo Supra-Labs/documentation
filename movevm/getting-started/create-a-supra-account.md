@@ -18,9 +18,11 @@ If you have just upgraded, you must execute the following command to migrate you
 
 Execute the following command to generate a new profile/set of keys.&#x20;
 
+{% code title="execute me!" %}
 ```
 supra profile new accountA --network testnet
 ```
+{% endcode %}
 {% endstep %}
 
 {% step %}

@@ -70,7 +70,7 @@ Our example module included a view function `view_balance`. For our first intera
 As we have deployed the module to the same account that you will be calling the function from, both the module address and the address argument will be the same.
 {% endhint %}
 
-{% code overflow="wrap" %}
+{% code title="replace & execute me!" overflow="wrap" %}
 ```
 supra move tool view --function-id '<exampleAddress>::transfer::view_balance' --args address:<ADDRESS_TO_CHECK> --rpc-url https://rpc-testnet.supra.com
 ```
@@ -84,7 +84,7 @@ supra move tool view --function-id '<exampleAddress>::transfer::view_balance' --
 Replace the place holder values denoted with `<>` below to execute the command. Following the execution of this command, repeat step 1 to observe the new balance(s).
 {% endhint %}
 
-{% code overflow="wrap" %}
+{% code title="replace & execute me!" overflow="wrap" %}
 ```
 supra move tool run --function-id '<exampleAddress>::transfer::two_by_two' --args u64:10000000 address:<FIRST_ADR> address:<SECOND_ADR> --rpc-url https://rpc-testnet.supra.com
 ```

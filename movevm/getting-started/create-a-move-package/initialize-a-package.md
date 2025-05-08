@@ -14,7 +14,7 @@ description: Create and deploy your first move module.
 Executing the command without the --package-dir command will initiatlize the package within your current working directory.
 {% endhint %}
 
-{% code overflow="wrap" %}
+{% code title="execute me!" overflow="wrap" %}
 ```
 supra move tool init --package-dir /supra/configs/move_workspace/exampleContract --name exampleContract
 ```
