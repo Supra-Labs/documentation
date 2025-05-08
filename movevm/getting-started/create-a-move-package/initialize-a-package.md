@@ -54,7 +54,7 @@ Named addresses allow identifiers such as `@exampleAddress` to be used throughou
 For now, add the below named address to your `Move.toml` file and set the value to your address. We'll explain why in the next step.&#x20;
 
 {% hint style="info" %}
-You can view the address of your profiles by executing: `supra key -l`
+You can view the address of your profiles by executing: `supra profile -l`
 {% endhint %}
 
 ```toml
