@@ -56,7 +56,7 @@ This validation logic powers the message-passing core of SupraNova, handled by H
 
 &#x20;It uses Ethereum’s native finality mechanisms:
 
-* Gasper Consensus: Combines Casper the Friendly Finality Gadget with LMD-GHOST fork choice rule.\<hyperlink proof validation structure>
+* Gasper Consensus: Combines Casper the Friendly Finality Gadget with LMD-GHOST fork choice rule.
 * Sync Committee Attestations: A lightweight subset of validators (512 randomly selected nodes) sign block headers every \~27 hours (8192 slots).
 
 The bridge process checks that:
