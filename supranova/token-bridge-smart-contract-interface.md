@@ -8,7 +8,4 @@ SupraNova’s Token Bridge contract is a service layer contract integrated withi
 * `isRegistered(address tokenAddress)`: Checks if a token is approved for bridging.
 * `isChainIdRegistered(uint256 chainId)`: Checks if a destination chain is supported.
 
-These methods provide a flexible, decentralized interface for both end-users and cross-chain applications interacting with SupraNova.
-
-\
-\
+These methods provide a flexible, decentralized interface for both end-users and cross-chain applications interacting with SupraNova.\
