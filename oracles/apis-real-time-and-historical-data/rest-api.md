@@ -29,12 +29,12 @@ GET/history
 
 ### Query Parameters
 
-| Parameter     | Type    | Description                                                                                                            | Example       |
-| ------------- | ------- | ---------------------------------------------------------------------------------------------------------------------- | ------------- |
-| trading\_pair | String  | The trading pair for which to retrieve historical data. Example: btc\_usd, eth\_usd, etc.                              | btc\_usd      |
-| startDate     | Integer | The starting timestamp for the data range in Unix milliseconds (UTC). This determines the beginning of the data range. | 1732014893723 |
-| endDate       | Integer | The ending timestamp for the data range in Unix milliseconds (UTC). This determines the end of the data range.         | 1732014910000 |
-| Resolution    | Integer | The time interval between data points in minutes. Typical intervals could be 1, 5, 15, 30, 60, etc.                    | 5             |
+| Parameter     | Type    | Description                                                                                                            | Example                     |
+| ------------- | ------- | ---------------------------------------------------------------------------------------------------------------------- | --------------------------- |
+| trading\_pair | String  | The trading pair for which to retrieve historical data. Example: btc\_usd, eth\_usd, etc.                              | btc\_usd                    |
+| startDate     | Integer | The starting timestamp for the data range in Unix milliseconds (UTC). This determines the beginning of the data range. | 1732014893723               |
+| endDate       | Integer | The ending timestamp for the data range in Unix milliseconds (UTC). This determines the end of the data range.         | 1732014910000               |
+| Resolution    | Integer | The time interval between data points in seconds. Typical intervals could be 15, 30, 60, 3600(1 hour)                  | 86400 ( for 24H resolution) |
 
 #### Example Request
 
