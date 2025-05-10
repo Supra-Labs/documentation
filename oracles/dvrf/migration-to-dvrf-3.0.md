@@ -1,32 +1,186 @@
+---
+description: >-
+  This page introduces the new features of Supra dVRF 3.0 and provides migration
+  steps. Clients are encouraged to migrate at their convenience before the VRF
+  2.0 contracts are phased out soon.
+---
+
 # Migration to dVRF 3.0
 
-This page introduces the new features of Supra dVRF 3.0 and provides migration steps. Clients are encouraged to migrate at their convenience before the VRF 2.0 contracts are phased out in few weeks. \\
+## Why Move to dVRF 3?
 
-### **Changes Introduced in VRF 3.0**
+Moving to VRF 3.0 offers several key advantages over the previous version, especially for users focused on reliability, customization, and future-proofing their integration.
 
-1. Self-whitelisting will be available through the [Subscription Manager UI](https://supra.com/data/dvrf) (selected networks only) and via [deposit contract function](https://docs.supra.com/oracles/dvrf/v2-guide#step-1-create-the-supra-router-contract-interface-1).
-2. Subscribing to new requester contracts, removing existing contracts from the subscription, and depositing funds will be available via the front end.
-3. Real time transaction updates and Event history updates will be available via the front end.
-4. Introduction of requester contract level user-defined parameters to manage Gas Limit and Gas Price for the call back transaction.\
-   \
-   **Max Gas Limit:** Maximum units of gas you are willing to spend on call back transaction. This is applicable to all requester contracts under your subscription\
-   \
-   **Callback Gas Limit**: Maximum units of gas you are willing to spend on call back transaction for a particular requester contract. This will be capped at Max Gas Limit above.\
-   \
-   **Max Gas Price:** The maximum gas price you are willing to spend for a callback transaction in Gwei. This is applicable to all requester contracts under your subscription. Higher values will ensure faster response times, but if speed is not a concern it can be set at a lower value.\
-   \
-   **Callback Gas Price**: Maximum gas price you are willing to spend on call back transaction for a particular requester contract. This will be capped at Max Gas price above.
-5. Dynamic calculation method for Minimum Fund Balance will be based on the Max Gas Limit and Max Gas Price. Read [subscription FAQ](https://docs.supra.com/oracles/dvrf/vrf-subscription-model) for more info.&#x20;
+dVRF 3.0 introduces major upgrades focused on reliability, configurability, and developer experience.&#x20;
 
-### **How can existing clients migrate?**
+{% hint style="info" %}
+#### **Check all the New Features & Benefits introduced in dVRF 3.0 Below:**
+{% endhint %}
 
-Clients need to call **`migrateClient(uint128 _maxGasPrice, uint128 _maxGasLimit) payable`**, specifying the maximum gas price and maximum gas limit for their contracts, and send the required gas tokens to fund the deposit contract.\
-This will migrate your existing subscription to the VRF 3.0 deposit contract. During migration, the callback gas price and callback gas limit will be set to the Max Gas price and Max Gas Limit for all registered contracts. These limits can be modified at any time.
+<details>
 
-### **How existing clients are impacted?**
+<summary><strong>What’s New in dVRF 3.0?</strong> </summary>
 
-There will be a 15-20 minute downtime during the deployment which will be communicated well in advance. We will operate both VRF 2.1 and VRF 3.0 in parallel for a period of time in which you can chose to complete the migration.&#x20;
+#### Request Retry Mechanism
 
-### **How to fund VRF 3.0?**
+Failed callback transactions (due to insufficient gas) are automatically retried every 6 hours, for up to 48 hours. Greatly improves reliability without manual resubmission.
 
-Clients must withdraw their remaining funds from the VRF 2.1 deposit contract after migration and manually fund the new deposit contract..
+#### Custom Callback Gas Settings
+
+Clients can now set: `callbackGasPrice` and `callbackGasLimit`. This gives full control over callback execution costs and helps adapt to varying network conditions.
+
+#### Request & Response Tracking
+
+Every client now has counters to track: Total RNG requests made, and total responses fulfilled.
+
+#### Self-whitelisting
+
+Clients can whitelist themselves, specifying “maxGasPrice” and “maxGasLimit” which acts as default values for their contracts.
+
+#### On-chain Request Validation
+
+A hash of request parameters is stored and validated during callbacks for data integrity: Includes nonce, caller, clientSeed, gas details, etc. It prevents tampering and enhances security.
+
+#### Upgradeable & Migration-Friendly Deposit Contract
+
+The Deposit contract is now upgradeable and backward-compatible with older versions. It supports seamless client migration, dynamic gas balance requirements, auto-whitelisting during migration
+
+#### Fund Safety and Locking
+
+Funds are held while a request is pending. Clients cannot withdraw until all requests are resolved, improving safety.
+
+#### Dynamic Minimum Balance Enforcement
+
+“`minBalanceLimit`” for a client is calculated dynamically as follows:
+
+```solidity
+uint128 minBalanceLimit = minRequests * _maxGasPrice * (_maxGasLimit +  verificationGasValue);
+```
+
+#### Introduction of “supraMinimumPerTx”
+
+It is the gas used by '`generateRngCallback()`' for transaction initialization and calldata. If a transaction fails due to insufficient funds, “`supraMinimumPerTx`” is deducted from the client.
+
+#### Client removal
+
+`removeClientFromWhitelist(address _clientAddress, bool _forceRemove)` removes the client and their contracts. It transfers back the client fund if no pending requests exist or transfers the client fund to “`supraFund`” if pending requests exist and “`_forceRemove`” is true.
+
+</details>
+
+<details>
+
+<summary>Benefits of dVRF 3.0</summary>
+
+### Improved Reliability with Retry Mechanism
+
+If a random number callback fails due to insufficient gas funds, the RequestRetry mechanism caches it and retries every 6 hours (for up to 48 hours). This significantly reduces the chance of missed callbacks.
+
+### Custom Gas Controls for Callback Transactions&#x20;
+
+Users can now specify both callbackGasPrice and callbackGasLimit, giving more control over costs and ensuring successful delivery during network volatility.
+
+### Enhanced Security & Integrity
+
+On-chain calldata hash verification prevents tampering and validates the request origin, seed, and other key parameters before fulfilling a callback.
+
+### Dynamic Minimum Balance Enforcement
+
+Prevents underfunded requests by enforcing a minimum balance, calculated dynamically.
+
+### Self-whitelisting
+
+Clients can whitelist themselves, specifying “maxGasPrice” and “maxGasLimit” which acts as default values for their contracts
+
+</details>
+
+### Who Needs to Migrate?
+
+You need to migrate to VRF 3.0 if you are currently using VRF 2 and want access to VRF 3.0 features and improvements.
+
+***
+
+## Migration Code Changes & Guide
+
+### Code for existing clients to Migrate
+
+Before migrating, the client must withdraw their existing funds from the old Deposit contract.&#x20;
+
+The client must decide the following values:
+
+1. `maxGasPrice` — the maximum callback gas price they are willing to pay
+2. `maxGasLimit` — the maximum callback gas limit with which the callback transaction can get executed.
+
+{% hint style="success" %}
+The client can call getMinBalanceLimit(maxGasPrice, maxGasLimit) to compute their minimum balance required:
+
+**`function getMinBalanceLimit(uint128 _maxGasPrice, uint128 _maxGasLimit)`**&#x20;
+
+external view returns (`uint128`);
+{% endhint %}
+
+#### Interface to interact with the Deposit contract
+
+```solidity
+interface IDeposit {
+   function getMinBalanceLimit(uint128 maxGasPrice, uint128 maxGasLimit) external view returns (uint128);
+}
+contract MigrateToVRF3 {
+   IDeposit public deposit;  // The address of the Deposit contract (VRF 3.0)
+   constructor(address _deposit) {
+       deposit = IDeposit(_deposit);
+   }
+   /// @notice Get the minimum balance required.
+   function checkMinRequiredBalance(uint128 maxGasPrice, uint128 maxGasLimit) external view returns (uint128) {
+       return deposit.getMinBalanceLimit(maxGasPrice, maxGasLimit);
+   } }
+```
+
+{% hint style="info" %}
+Clients need to call `“migrateClient(uint128 _maxGasPrice, uint128 _maxGasLimit) payable`”, specifying the max gas price, max gas limit for their contracts and sending along the ether to deposit. They can only migrate before the end of migration time.
+
+`function migrateClient(uint128 _maxGasPrice, uint128 _maxGasLimit) external payable;`
+{% endhint %}
+
+{% hint style="success" %}
+Please refer to [**THIS REPO**](https://github.com/Entropy-Foundation/supra-vrf/tree/vrf_3.0/smart-contracts/eth/src) for Sample Contract with VRF3 Implementation.
+{% endhint %}
+
+***
+
+## Self-whitelisting Guide
+
+{% tabs %}
+{% tab title="Via Deposit ContractFunction" %}
+#### **Requirements:**
+
+* You must not already be whitelisted.
+* `_maxGasPrice` and `_maxGasLimit` must be greater than 0.
+
+#### Clients can call the “`addClientToWhitelist`” function to whitelist themselves:
+
+```solidity
+function addClientToWhitelist(uint128 _maxGasPrice, uint128 _maxGasLimit) 
+external;
+```
+{% endtab %}
+
+{% tab title="Via Subscription Manager" %}
+1. Visit [https://qa-spa.supra.com/data/dvrf/subscription-manager](https://qa-spa.supra.com/data/dvrf/subscription-manager)
+2. Select the network from the network list.
+3. Click on “Create new subscription” button.
+4. Enter the project name, email address, telegram handle, max gas price(in Gwei) and max gas limit.&#x20;
+5. Click “Create subscription”
+{% endtab %}
+{% endtabs %}
+
+***
+
+## Comparing dVRF 2 vs dVRF 3.0
+
+<table><thead><tr><th width="249">Feature </th><th>dVRF 2</th><th>dVRF 3</th></tr></thead><tbody><tr><td>Client Whitelisting</td><td>Manual only (admin-controlled)</td><td>Self-whitelisting enabled with maxGasPrice and maxGasLimit inputs</td></tr><tr><td>Min Balance Calculation</td><td>Static or fixed value</td><td>Dynamically computed</td></tr><tr><td>Upgradeable Contracts</td><td>Only Generator</td><td>Generator and Deposit</td></tr><tr><td>Custom Gas Config for Callbacks</td><td>Not available</td><td>Fully configurable per client and per contract (callbackGasPrice, callbackGasLimit)</td></tr><tr><td>Fund Locking for Pending Requests</td><td>Funds always withdrawable</td><td>Funds locked if there are pending RNG requests</td></tr><tr><td>Request Retry Mechanism</td><td>Not available</td><td>Failed RNG callbacks due to low balance retried for 48 hours</td></tr><tr><td>Backward Compatibility</td><td>Not applicable</td><td>Generator and Deposit allow compatibility with older structure</td></tr><tr><td>On chain storing calldata hash of request</td><td>Only validated on chain</td><td>Stored on chain and validated also on chain</td></tr></tbody></table>
+
+***
+
+## Functions Introduced in dVRF 3
+
+<table><thead><tr><th width="303.3831787109375">Function Name</th><th width="142.006591796875">Contract</th><th>Utility</th></tr></thead><tbody><tr><td>addClientToWhitelist(uint128, uint128)</td><td>Deposit</td><td>Allows new clients to self-whitelist, specifying their max gas price and gas limit.</td></tr><tr><td>getMinBalanceLimit(uint128, uint128)</td><td>Deposit</td><td>Returns the minimum balance required to maintain based on client’s gas settings. </td></tr><tr><td>migrateClient(uint128, uint128)</td><td>Deposit</td><td>Enables existing clients to migrate their subscription and settings from VRF 2 to VRF 3.0.</td></tr><tr><td>updateMinRequests(uint128)</td><td>Deposit</td><td>Admin sets the minimum number of expected RNG requests per client, used to compute minBalanceLimit.</td></tr><tr><td>updateVerificationGasValue(uint128)</td><td>Deposit</td><td>Admin sets the gas cost of BLS verification, a component in calculating minBalanceLimit.</td></tr><tr><td>removeClientFromWhitelist(address, bool)</td><td>Deposit</td><td>Removes a client and refunds their balance (or transfers to supraFund if forced).</td></tr><tr><td>updateCount(address)</td><td>Deposit</td><td>Tracks the number of RNG requests and responses per client (called by Generator).</td></tr><tr><td>setOldDepositContract(address)</td><td>Deposit</td><td>Sets the address of the previous deposit contract for migration support.</td></tr><tr><td>updateMigrationEndTime(uint256)</td><td>Deposit</td><td>Admin sets the deadline for migration from the old contract.</td></tr><tr><td>setSupraMinimumPerTx(uint256)</td><td>Generator</td><td>Admin function to set the minimum gas charged per RNG transaction attempt (even if the callback fails).</td></tr><tr><td>updateMaxGasPrice(uint128)</td><td>Deposit</td><td>Allows a whitelisted client to update their maxGasPrice, which impacts the minBalanceLimit.</td></tr><tr><td>updateMaxGasLimit(uint128)</td><td>Deposit</td><td>Allows a whitelisted client to update their maxGasLimit, which affects the minBalanceLimit.</td></tr><tr><td>updateCallbackGasPrice(address, uint128)</td><td>Deposit</td><td>Allows clients to set callbackGasPrice for specific contracts.</td></tr><tr><td>updateCallbackGasLimit(address, uint128)</td><td>Deposit</td><td>Allows clients to set callbackGasLimit for specific contracts. </td></tr></tbody></table>

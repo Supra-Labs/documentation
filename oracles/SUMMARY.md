@@ -16,6 +16,7 @@
   * [A Deeper Dive into Supra dVRF](dvrf/a-deeper-dive-into-supra-dvrf.md)
   * [VRF Developer Guide](dvrf/v2-guide.md)
   * [Migration to dVRF 3.0](dvrf/migration-to-dvrf-3.0.md)
+  * [What’s New in dVRF 3.0?](dvrf/whats-new-in-dvrf-3.0.md)
   * [VRF Subscription FAQ](dvrf/vrf-subscription-model.md)
   * [Available Networks](dvrf/networks.md)
 * [Indices](indices/README.md)
