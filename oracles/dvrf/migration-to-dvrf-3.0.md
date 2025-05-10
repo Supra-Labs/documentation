@@ -99,7 +99,7 @@ You need to migrate to VRF 3.0 if you are currently using VRF 2 and want access 
 
 ***
 
-## Migration Code Changes & Guide
+## Migration Guide
 
 ### Code for existing clients to Migrate
 
