@@ -113,7 +113,7 @@ The client must decide the following values:
 {% hint style="success" %}
 The client can call getMinBalanceLimit(maxGasPrice, maxGasLimit) to compute their minimum balance required:
 
-**`function getMinBalanceLimit(uint128 _maxGasPrice, uint128 _maxGasLimit)`**&#x20;
+**`function getMinBalanceLimit(uint128 _maxGasPrice, uint128 _maxGasLimit)`** &#x20;
 
 external view returns (`uint128`);
 {% endhint %}
@@ -136,7 +136,9 @@ contract MigrateToVRF3 {
 ```
 
 {% hint style="info" %}
-Clients need to call `“migrateClient(uint128 _maxGasPrice, uint128 _maxGasLimit) payable`”, specifying the max gas price, max gas limit for their contracts and sending along the ether to deposit. They can only migrate before the end of migration time.
+Clients need to call `“migrateClient(uint128 _maxGasPrice, uint128 _maxGasLimit) payable`”, specifying the max gas price, max gas limit for their contracts and sending along the ether to deposit. \
+\
+They can only migrate before the end of migration time.
 
 `function migrateClient(uint128 _maxGasPrice, uint128 _maxGasLimit) external payable;`
 {% endhint %}
