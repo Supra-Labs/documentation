@@ -69,7 +69,7 @@ It is the gas used by '`generateRngCallback()`' for transaction initialization a
 
 <details>
 
-<summary>Benefits of dVRF 3.0</summary>
+<summary><strong>Benefits of dVRF 3.0</strong></summary>
 
 ### Improved Reliability with Retry Mechanism
 
