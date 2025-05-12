@@ -183,9 +183,12 @@ external;
 
 The parameter this function takes is the User’s contract address along with `callbackGasPrice` and `callbackGasLimit` for the contract which should be smaller than the `maxGasPrice`and `maxGasLimit` respectively.
 
-```solidity
-addContractToWhitelist(address _contractAddress, uint128 _callbackGasPrice, uint128 _callbackGasLimit)
-```
+<pre class="language-solidity"><code class="lang-solidity"><strong>addContractToWhitelist(address _contractAddress, uint128 _callbackGasPrice, uint128 _callbackGasLimit)
+</strong></code></pre>
+
+{% hint style="info" %}
+**You can learn more about the** `callbackGasPrice` and `callbackGasLimit`  **functions from** [**Here.**](https://docs.supra.com/oracles/dvrf/vrf-subscription-model#what-is-the-callback-gas-price)
+{% endhint %}
 
 ***
 
@@ -193,8 +196,11 @@ addContractToWhitelist(address _contractAddress, uint128 _callbackGasPrice, uint
 
 <table><thead><tr><th width="249">Feature </th><th>dVRF 2</th><th>dVRF 3</th></tr></thead><tbody><tr><td>Client Whitelisting</td><td>Manual only (admin-controlled)</td><td>Self-whitelisting enabled with maxGasPrice and maxGasLimit inputs</td></tr><tr><td>Min Balance Calculation</td><td>Static or fixed value</td><td>Dynamically computed</td></tr><tr><td>Upgradeable Contracts</td><td>Only Generator</td><td>Generator and Deposit</td></tr><tr><td>Custom Gas Config for Callbacks</td><td>Not available</td><td>Fully configurable per client and per contract (callbackGasPrice, callbackGasLimit)</td></tr><tr><td>Fund Locking for Pending Requests</td><td>Funds always withdrawable</td><td>Funds locked if there are pending RNG requests</td></tr><tr><td>Request Retry Mechanism</td><td>Not available</td><td>Failed RNG callbacks due to low balance retried for 48 hours</td></tr><tr><td>Backward Compatibility</td><td>Not applicable</td><td>Generator and Deposit allow compatibility with older structure</td></tr><tr><td>On chain storing calldata hash of request</td><td>Only validated on chain</td><td>Stored on chain and validated also on chain</td></tr></tbody></table>
 
+
+
 ***
 
 ## Functions Introduced in dVRF 3
 
 <table><thead><tr><th width="303.3831787109375">Function Name</th><th width="142.006591796875">Contract</th><th>Utility</th></tr></thead><tbody><tr><td>addClientToWhitelist(uint128, uint128)</td><td>Deposit</td><td>Allows new clients to self-whitelist, specifying their max gas price and gas limit.</td></tr><tr><td>getMinBalanceLimit(uint128, uint128)</td><td>Deposit</td><td>Returns the minimum balance required to maintain based on client’s gas settings. </td></tr><tr><td>migrateClient(uint128, uint128)</td><td>Deposit</td><td>Enables existing clients to migrate their subscription and settings from VRF 2 to VRF 3.0.</td></tr><tr><td>updateMinRequests(uint128)</td><td>Deposit</td><td>Admin sets the minimum number of expected RNG requests per client, used to compute minBalanceLimit.</td></tr><tr><td>updateVerificationGasValue(uint128)</td><td>Deposit</td><td>Admin sets the gas cost of BLS verification, a component in calculating minBalanceLimit.</td></tr><tr><td>removeClientFromWhitelist(address, bool)</td><td>Deposit</td><td>Removes a client and refunds their balance (or transfers to supraFund if forced).</td></tr><tr><td>updateCount(address)</td><td>Deposit</td><td>Tracks the number of RNG requests and responses per client (called by Generator).</td></tr><tr><td>setOldDepositContract(address)</td><td>Deposit</td><td>Sets the address of the previous deposit contract for migration support.</td></tr><tr><td>updateMigrationEndTime(uint256)</td><td>Deposit</td><td>Admin sets the deadline for migration from the old contract.</td></tr><tr><td>setSupraMinimumPerTx(uint256)</td><td>Generator</td><td>Admin function to set the minimum gas charged per RNG transaction attempt (even if the callback fails).</td></tr><tr><td>updateMaxGasPrice(uint128)</td><td>Deposit</td><td>Allows a whitelisted client to update their maxGasPrice, which impacts the minBalanceLimit.</td></tr><tr><td>updateMaxGasLimit(uint128)</td><td>Deposit</td><td>Allows a whitelisted client to update their maxGasLimit, which affects the minBalanceLimit.</td></tr><tr><td>updateCallbackGasPrice(address, uint128)</td><td>Deposit</td><td>Allows clients to set callbackGasPrice for specific contracts.</td></tr><tr><td>updateCallbackGasLimit(address, uint128)</td><td>Deposit</td><td>Allows clients to set callbackGasLimit for specific contracts. </td></tr></tbody></table>
+
