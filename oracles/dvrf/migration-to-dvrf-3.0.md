@@ -7,7 +7,7 @@ description: >-
 
 # Migration to dVRF 3.0
 
-## Why Move to dVRF 3?
+## Why Migrate to dVRF 3.0?
 
 Moving to VRF 3.0 offers several key advantages over the previous version, especially for users focused on reliability, customization, and future-proofing their integration.
 
@@ -107,8 +107,8 @@ Before migrating, the client must withdraw their existing funds from the old Dep
 
 The client must decide the following values:
 
-1. `maxGasPrice` — the maximum callback gas price they are willing to pay
-2. `maxGasLimit` — the maximum callback gas limit with which the callback transaction can get executed.
+1. `maxGasPrice`— the maximum callback gas price they are willing to pay
+2. `maxGasLimit`— the maximum callback gas limit with which the callback transaction can get executed.
 
 {% hint style="success" %}
 The client can call getMinBalanceLimit(maxGasPrice, maxGasLimit) to compute their minimum balance required:
@@ -116,6 +116,10 @@ The client can call getMinBalanceLimit(maxGasPrice, maxGasLimit) to compute thei
 **`function getMinBalanceLimit(uint128 _maxGasPrice, uint128 _maxGasLimit)`** &#x20;
 
 external view returns (`uint128`);
+{% endhint %}
+
+{% hint style="info" %}
+**You can learn more about the** `maxGasPrice` **&** `maxGasLimit`  **functions from** [**Here.**](https://docs.supra.com/oracles/dvrf/vrf-subscription-model#how-to-determine-max-gas-limit-and-max-gas-price-in-vrf-3.0)
 {% endhint %}
 
 #### Interface to interact with the Deposit contract
@@ -144,7 +148,7 @@ They can only migrate before the end of migration time.
 {% endhint %}
 
 {% hint style="success" %}
-Please refer to [**THIS REPO**](https://github.com/Entropy-Foundation/supra-vrf/tree/vrf_3.0/smart-contracts/eth/src) for Sample Contract with VRF3 Implementation.
+Please refer to [**THIS REPO**](https://github.com/Entropy-Foundation/supra-vrf-examples/tree/master/supra_examples) for Sample Contract with VRF3 Implementation.
 {% endhint %}
 
 ***
@@ -167,13 +171,21 @@ external;
 {% endtab %}
 
 {% tab title="Via Subscription Manager" %}
-1. Visit [https://qa-spa.supra.com/data/dvrf/subscription-manager](https://qa-spa.supra.com/data/dvrf/subscription-manager)
+1. Visit [https://supra.com/data/dvrf](https://supra.com/data/dvrf)
 2. Select the network from the network list.
 3. Click on “Create new subscription” button.
-4. Enter the project name, email address, telegram handle, max gas price(in Gwei) and max gas limit.&#x20;
+4. Enter the project name, email address, telegram handle, max gas price (in Gwei) and max gas limit.&#x20;
 5. Click “Create subscription”
 {% endtab %}
 {% endtabs %}
+
+### **Whitelist Your Consumer Contracts**
+
+The parameter this function takes is the User’s contract address along with `callbackGasPrice` and `callbackGasLimit` for the contract which should be smaller than the `maxGasPrice`and `maxGasLimit` respectively.
+
+```solidity
+addContractToWhitelist(address _contractAddress, uint128 _callbackGasPrice, uint128 _callbackGasLimit)
+```
 
 ***
 
