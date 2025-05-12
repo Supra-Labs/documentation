@@ -21,6 +21,14 @@ These two parameters will also impact the minimum balance that you have to maint
 
 Maximum gas price is the gas price you are willing to spend for call back transactions of all your requester contracts. If you need a different call back gas price for each requester contract you can set "**callbackGasPrice"** parameter at requester contract level, which should be less than or equal to the **"maxGasPrice".**
 
+## What is the callback gas price?
+
+The callback gas price is set per contract basis which determines the maximum gas price with which the callback transaction gets executed for that particular contract. The callback gas price of a contract is `<= maxGasPrice` of the client.
+
+## What is the callback gas limit?
+
+The callback gas limit is set per contract basis which determines the maximum gas limit with which the callback transaction gets executed for that particular contract. The callback gas limit of a contract is `<= maxGasLimit` of the client.
+
 {% hint style="info" %}
 callbackGasLimit of a contract < = maxGasLimit of the subscription\
 callbackGasPrice of a contract <=  maxGasprice of the subscription\
