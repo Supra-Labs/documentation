@@ -2,6 +2,10 @@
 
 ## Fungible Token Standards
 
+{% hint style="warning" %}
+The migration feature of Coin to Fungible Asset is currently disabled.
+{% endhint %}
+
 | Standard Name  | Module Address                                                                   | Links                                                                                                                                                                                                                                                               |
 | -------------- | -------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Fungible Asset | [0x1](https://suprascan.io/address/0x1/f?tab=modules\&moduleName=fungible_asset) | [Module](https://github.com/Entropy-Foundation/aptos-core/blob/dev/aptos-move/framework/supra-framework/sources/fungible_asset.move) / [Docs](https://github.com/Entropy-Foundation/aptos-core/blob/dev/aptos-move/framework/supra-framework/doc/fungible_asset.md) |
