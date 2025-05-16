@@ -40,7 +40,7 @@ Both commands expect the argument `--function-id` which designates the function 
 
 Function parameters are passed with the argument `--args`. If multiple parameters must be passed, they are separated by spaces. The format is as follows: `TYPE:VALUE`
 
-{% code title="Example command" overflow="wrap" %}
+{% code title="Example command" %}
 ```
 supra move tool view --function-id '0xCAF3::transfer::view_balance' --args address:0xCAF3 --rpc-url https://rpc-testnet.supra.com
 ```
@@ -70,7 +70,7 @@ Our example module included a view function `view_balance`. For our first intera
 As we have deployed the module to the same account that you will be calling the function from, both the module address and the address argument will be the same.
 {% endhint %}
 
-{% code title="replace & execute me!" overflow="wrap" %}
+{% code title="replace & execute me!" %}
 ```
 supra move tool view --function-id '<exampleAddress>::transfer::view_balance' --args address:<ADDRESS_TO_CHECK> --rpc-url https://rpc-testnet.supra.com
 ```
@@ -84,7 +84,7 @@ supra move tool view --function-id '<exampleAddress>::transfer::view_balance' --
 Replace the place holder values denoted with `<>` below to execute the command. Following the execution of this command, repeat step 1 to observe the new balance(s).
 {% endhint %}
 
-{% code title="replace & execute me!" overflow="wrap" %}
+{% code title="replace & execute me!" %}
 ```
 supra move tool run --function-id '<exampleAddress>::transfer::two_by_two' --args u64:10000000 address:<FIRST_ADR> address:<SECOND_ADR> --rpc-url https://rpc-testnet.supra.com
 ```

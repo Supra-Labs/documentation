@@ -14,7 +14,7 @@ description: Create and deploy your first move module.
 Executing the command without the --package-dir argument will initiatlize the package within your current working directory.
 {% endhint %}
 
-{% code title="execute me!" overflow="wrap" %}
+{% code title="execute me!" %}
 ```
 supra move tool init --package-dir /supra/configs/move_workspace/exampleContract --name exampleContract
 ```
@@ -51,7 +51,7 @@ subdir = "aptos-move/framework/supra-framework"
 
 Named addresses allow identifiers such as `@exampleAddress` to be used throughout your package, rather than hard coding an address value. When compiled into bytecode, any occurrence of the identifier such as `@exampleAddress` will be replaced with the set value below.\
 \
-For now, add the below named address to your `Move.toml` file and set the value to your address. We'll explain why in the next step.&#x20;
+For now, add the below named address to your `Move.toml` file and set the value to your address. We'll explain why in the next step.
 
 {% hint style="info" %}
 You can view the address of your profiles by executing: `supra profile -l`

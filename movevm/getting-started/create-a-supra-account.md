@@ -69,7 +69,7 @@ supra profile activate accountA
 ### View local public keys
 
 {% hint style="info" %}
-The currently activated profile will be displayed with a `(*)` by the profile name.
+The active profile will be displayed with a `(*)` by the profile name.
 {% endhint %}
 
 If you wish to view existing keys within your current directory, use the following command:
