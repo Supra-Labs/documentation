@@ -2,7 +2,8 @@
 
 * [Overview](README.md)
 * [Getting Started](getting-started/README.md)
-  * [Install Supra CLI with Docker](getting-started/supra-cli-with-docker.md)
+  * [Introduction to Docker](getting-started/docker.md)
+  * [Setup Supra CLI](getting-started/supra-cli-with-docker.md)
   * [Create a Supra Account](getting-started/create-a-supra-account.md)
   * [Testnet Faucet](getting-started/testnet-faucet.md)
   * [Create a Move Package](getting-started/create-a-move-package/README.md)
