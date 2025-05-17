@@ -211,11 +211,34 @@ In EVM ( Ethereum Virtual Machine) based networks, you will interact with two Su
 
 #### Step 1: Whitelist your admin wallet and Consumer Contracts <a href="#step-1-create-the-supra-router-contract-interface" id="step-1-create-the-supra-router-contract-interface"></a>
 
-This works differently in dVRF 2.0 and dVRF 3.0. Please chose accordingly.
+This works differently in dVRF 2.0 and dVRF 3.0. Please chose accordingly.\
 
-| <p><strong>VRF 3.0</strong><br><strong>Whitelist your wallet</strong><br>User should first whitelist themselves by calling <strong><code>function addClientToWhitelist(uint128 _maxGasPrice, uint128 _maxGasLimit)</code></strong> of the Deposit contract, specifying “maxGasPrice” and “maxGasLimit”.<br>Read more on how to determine the Max Gas Price and Max Gas Limit <a href="https://docs.supra.com/oracles/dvrf/vrf-subscription-model#how-to-set-determine-max-gas-limit-and-max-gas-price">here</a>.<br><br><strong>Whitelist your consumer contracts</strong><br><strong><code>addContractToWhitelist(address _contractAddress, uint128 _callbackGasPrice, uint128 _callbackGasLimit)</code></strong> The parameter this function takes is the User’s contract address along with callbackGasPrice and callbackGasLimit for the contract which should be smaller than the maxGasPrice and maxGasLimit respectively.</p> |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| <p><strong>VRF 2.0</strong><br><strong>Whitelist your wallet</strong><br>Feel free to send us a request via this <a href="https://forms.gle/WFvpBXg67GmDrokv5">form</a> to get your wallet registered with Supra.<br><br><strong>Whitelist your Consumer Contracts</strong><br><strong><code>addContracttoWhitelist(address _contractAddress)</code></strong> - Once Supra team confirms your whitelist request you can call this function with your consumer contract address.</p>                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+
+<details>
+
+<summary><strong>Whitelisting for networks with VRF 2.0</strong> </summary>
+
+Send us a request via this [form](https://forms.gle/WFvpBXg67GmDrokv5) to get your wallet registered with Supra.\
+\
+**Whitelist your Consumer Contracts**\
+&#xNAN;**`addContracttoWhitelist(address _contractAddress)`** - Once Supra team confirms your whitelist request you can call this function with your consumer contract address.
+
+</details>
+
+&#x20;
+
+<details>
+
+<summary><strong>Whitelisting for networks with VRF 3.0</strong> </summary>
+
+**Whitelist your wallet**\
+User should first whitelist themselves by calling **`function addClientToWhitelist(uint128 _maxGasPrice, uint128 _maxGasLimit)`** of the Deposit contract, specifying “maxGasPrice” and “maxGasLimit”.\
+Read more on how to determine the Max Gas Price and Max Gas Limit [here](https://docs.supra.com/oracles/dvrf/vrf-subscription-model#how-to-set-determine-max-gas-limit-and-max-gas-price).\
+\
+**Whitelist your consumer contracts**\
+&#xNAN;**`addContractToWhitelist(address _contractAddress, uint128 _callbackGasPrice, uint128 _callbackGasLimit)`** The parameter this function takes is the User’s contract address along with callbackGasPrice and callbackGasLimit for the contract which should be smaller than the maxGasPrice and maxGasLimit respectively.
+
+</details>
 
 #### Step 2: Create the Supra VRF Interface[​](https://qa-docs.supraoracles.com/docs/vrf-dev-guide#step-1-create-the-supra-router-contract-interface) <a href="#step-1-create-the-supra-router-contract-interface" id="step-1-create-the-supra-router-contract-interface"></a>
 
