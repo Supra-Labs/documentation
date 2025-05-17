@@ -237,7 +237,7 @@ Read more on how to determine the Max Gas Price and Max Gas Limit [here](https:/
 
 </details>
 
-#### Step 2: Create the Supra VRF Interface[​](https://qa-docs.supraoracles.com/docs/vrf-dev-guide#step-1-create-the-supra-router-contract-interface) <a href="#step-1-create-the-supra-router-contract-interface" id="step-1-create-the-supra-router-contract-interface"></a>
+#### Step 2: Create Supra dVRF interface <a href="#step-1-create-the-supra-router-contract-interface" id="step-1-create-the-supra-router-contract-interface"></a>
 
 Once you are whitelisted (by requesting Supra team or by self whitelisting), add the following code to your consumer contract.
 
