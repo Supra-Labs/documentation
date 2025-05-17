@@ -211,8 +211,7 @@ In EVM ( Ethereum Virtual Machine) based networks, you will interact with two Su
 
 #### Step 1: Whitelist your admin wallet and Consumer Contracts <a href="#step-1-create-the-supra-router-contract-interface" id="step-1-create-the-supra-router-contract-interface"></a>
 
-This works differently in dVRF 2.0 and dVRF 3.0. Please chose accordingly.\
-
+This works differently in dVRF 2.0 and dVRF 3.0. Please [chose](networks.md) accordingly.
 
 <details>
 
@@ -224,8 +223,6 @@ Send us a request via this [form](https://forms.gle/WFvpBXg67GmDrokv5) to get yo
 &#xNAN;**`addContracttoWhitelist(address _contractAddress)`** - Once Supra team confirms your whitelist request you can call this function with your consumer contract address.
 
 </details>
-
-&#x20;
 
 <details>
 
