@@ -1,10 +1,10 @@
-# VRF Developer Guide
+# Developer Guide
 
 {% hint style="info" %}
 Supra dVRF is in transition period from upgrading to dVRF 3.0. Please identify the correct version of Supra dVRF deployed in your preferred [network](networks.md) and pick the relevant dev guide sections accordingly.
 {% endhint %}
 
-Supra dVRF requires a whitelisted subscription to the service with a customer-controlled wallet address to act as the main reference. Once your wallet is whitelisted, you can use it to whitelist any number of VRF requester smart contracts and top up the deposit balance maintained with Supra in order to pay for the gas fees of callback (response) transactions.
+Supra dVRF requires a whitelisted subscription to the service with a customer-controlled wallet address to act as the main reference. Once your wallet is whitelisted, you can use it to whitelist any number of  consumer contracts and top up the deposit balance maintained with Supra in order to pay for the gas fees of callback (response) transactions.
 
 * Please refer to the [VRF subscription FAQ](vrf-subscription-model.md) page for a better understanding of how it works.
 * Please refer to the [Network Addresses](networks.md) page for Supra dVRF version and contract addresses.&#x20;
@@ -270,8 +270,8 @@ contract ExampleContract {
 
 In this step, we will use the **“generateRequest”** function of the Supra Router Contract to create a request for random numbers. There are two modes for the **"generateRequest"** function. The only difference between them is that you can optionally provide a client-side input, which will also be part of the payload being threshold-signed to provide randomness.
 
-* **\_functionSig**- a string parameter; here, the requester contract will have to pass the function signature, which will receive the callback i.e., a random number from the Supra Router Contract. The function signature should be in the form of the function name following the parameters it accepts. We will see an example later in the document.
-* **\_rngCount** - an integer parameter; this is for the number of random numbers a particular requester wants to generate. Currently, we can generate a maximum of 255 random numbers per request.
+* **\_functionSig**- a string parameter; here, the consumer contract will have to pass the function signature, which will receive the callback i.e., a random number from the Supra Router Contract. The function signature should be in the form of the function name following the parameters it accepts. We will see an example later in the document.
+* **\_rngCount** - an integer parameter; this is for the number of random numbers a particular consumer wants to generate. Currently, we can generate a maximum of 255 random numbers per request.
 * **\_numConfirmations** - an integer parameter (Minimum: 1 - Maximum :20) that specifies the number of block confirmations needed before Supra VRF can generate the random number.
 * **\_clientSeed** (optional) - an optional integer parameter that could be provided by the client (defaults to 0). This is for additional unpredictability. The source of the seed can be a UUID of 256 bits. This can also be from a centralized source.
 * **\_clientWalletAddress** - an “address” type parameter that takes the client wallet address that is already registered with the Supra Team as input.
@@ -299,11 +299,11 @@ function exampleRNG() external {
 }
 ```
 
-#### Step 5 - Add the Validation in the Callback Function of the Requester Contract[​](https://qa-docs.supraoracles.com/docs/vrf-dev-guide#step-4---add-the-validation-in-the-callback-function-of-requester-contract) <a href="#step-4---add-the-validation-in-the-callback-function-of-requester-contract" id="step-4---add-the-validation-in-the-callback-function-of-requester-contract"></a>
+#### Step 5 - Add the Validation in the Callback Function of the Consumer Contract[​](https://qa-docs.supraoracles.com/docs/vrf-dev-guide#step-4---add-the-validation-in-the-callback-function-of-requester-contract) <a href="#step-4---add-the-validation-in-the-callback-function-of-requester-contract" id="step-4---add-the-validation-in-the-callback-function-of-requester-contract"></a>
 
-Inside the callback function where the requester contract wants the random number (in this example, the callback function is exampleCallback), the requester contract will have to add the validation such that only the Supra router contract can call the function. The validation is necessary to protect against malicious contracts/users executing the callback with fake data.
+Inside the callback function where the consumer contract wants the random number (in this example, the callback function is exampleCallback), the consumer contract will have to add the validation such that only the Supra router contract can call the function. The validation is necessary to protect against malicious contracts/users executing the callback with fake data.
 
-For example, if the callback function is pickWinner in the requester contract, the snippet can be as follows:
+For example, if the callback function is pickWinner in the consumer contract, the snippet can be as follows:
 
 ```solidity
 function exampleCallback(uint256 _nonce ,uint256[] _rngList) external {
@@ -312,9 +312,9 @@ function exampleCallback(uint256 _nonce ,uint256[] _rngList) external {
  }
 ```
 
-#### Step 6 : Whitelist Your Requester Contract with Supra Deposit Contract and Deposit Funds[​](https://qa-docs.supraoracles.com/docs/vrf-dev-guide#step-1-create-the-supra-router-contract-interface) <a href="#step-1-create-the-supra-router-contract-interface" id="step-1-create-the-supra-router-contract-interface"></a>
+#### Step 6 : Whitelist Your Consumer Contract with Supra Deposit Contract and Deposit Funds[​](https://qa-docs.supraoracles.com/docs/vrf-dev-guide#step-1-create-the-supra-router-contract-interface) <a href="#step-1-create-the-supra-router-contract-interface" id="step-1-create-the-supra-router-contract-interface"></a>
 
-It is important to note that your wallet address must be registered with Supra before this step. If that is completed, then you need to whitelist your requester smart contract under your wallet address and deposit funds to be paid for your callback transactions gas fees.
+It is important to note that your wallet address must be registered with Supra before this step. If that is completed, then you need to whitelist your consumer smart contract under your wallet address and deposit funds to be paid for your callback transactions gas fees.
 
 * The simplest way to interact with the deposit contract will be through Remix IDE.
 * Go to [Remix IDE](http://remix.ethereum.org/) & create a file with the name _IDepositContract.sol_
@@ -339,16 +339,16 @@ It is important to note that your wallet address must be registered with Supra b
     }
     </code></pre>
 * Navigate to the “Navigate & run Transactions” tab in remix and paste the Deposit Contract address into the text box next to the “At Address” button. Then, press the At Address button. You will find the instance for the Deposit Contract created using which a user can interact and use the features provided by the Deposit Contract.
-* The following functions will facilitate whitelisting your requester smart contracts and fund deposits:
+* The following functions will facilitate whitelisting your consumer smart contracts and fund deposits:
   1.  **\[VRF 2.0]** -\
-      “**addContracttoWhitelist(address)”** - The whitelisted users will have to whitelist the contract that they will be using to request the random numbers. The parameter this function takes is the user’s contract address. This function will be called after the user deploys the requester contract post development and makes it ready for interacting with the Supra Contracts.\
+      “**addContracttoWhitelist(address)”** - The whitelisted users will have to whitelist the contract that they will be using to request the random numbers. The parameter this function takes is the user’s contract address. This function will be called after the user deploys the consumer contract post development and makes it ready for interacting with the Supra Contracts.\
       \
       &#xNAN;**\[VRF 3.0]** -
 
       “**addContractToWhitelist(address \_contractAddress, uint128 \_callbackGasPrice, uint128 \_callbackGasLimit)**”. Once your wallet is whitelisted you have to whitelist your contract to request for random numbers. The parameter this function takes is the User’s contract address along with callbackGasPrice and callbackGasLimit for the contract which should be <= maxGasPrice and maxGasLimit respectively.
 
 
-  2. **“depositFundClient()” -** This is another mandatory function for a user to use once before the user starts requesting from that contract. This is a function that will deposit funds in the Deposit Contract from the users for the response/callback transaction. The funds for a specific user should remain higher than the minimum amount set by the Supra (ex. 0.1 ETH for Arbitrum testnet) for the new request transactions to be accepted.
+  2. **“depositFundClient()” -** This is another mandatory function for a user to use once before the user starts requesting from that contract. This is a function that will deposit funds in the Deposit Contract from the users for the response/callback transaction. The funds for a specific user should remain higher than the minimum amount set by the Supra  for the new request transactions to be accepted.
 * In essence, the user will have to interact with the Deposit Contract and add funds for their accounts, which will be utilized for the response transaction gas fee. There will be a script from Supra that will monitor the funds and will alert the user if a refill is required.
 
 **Additional Functions of the Deposit Contract and its Usage**
