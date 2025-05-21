@@ -21,7 +21,7 @@ Ready to build? We’ve made it easy to get started regardless of your backgroun
 Supra’s native oracle network brings unmatched speed and precision to on-chain data delivery.
 
 * **Data Feeds** – Pull and push-based price feeds with fast refresh rates and multi-source aggregation.
-* **dVRF (Distributed Verifiable Random Function)** – A next-gen VRF system that delivers secure, provably fair randomness optimized for performance-critical applications like gaming, NFTs, and lotteries.
+* **dVRF (Distributed Verifiable Random Function)** – A next-gen dVRF system that delivers secure, provably fair randomness optimized for performance-critical applications like gaming, NFTs, lotteries, and more.
 
 <table data-card-size="large" data-view="cards"><thead><tr><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td>Explore Data Feeds →</td><td><a href="https://app.gitbook.com/s/pGVprscCeQzW0QYcaJS9/data-feeds">Data Feeds</a></td></tr><tr><td>Explore dVRF (Randomness) →</td><td><a href="https://app.gitbook.com/s/pGVprscCeQzW0QYcaJS9/dvrf">Decentralized VRF (dVRF)</a></td></tr></tbody></table>
 
@@ -29,7 +29,7 @@ Supra’s native oracle network brings unmatched speed and precision to on-chain
 
 ### Native Automation: Set-and-Forget Smart Contract Execution
 
-Supra's automation framework lets you schedule and trigger smart contract functions with zero upkeep.
+Supra's 0-block delay automation framework lets you schedule and trigger smart contract functions with zero upkeep. Built directly into the execution layer.
 
 * **Use Cases** – Automated liquidations, recurring payments, rebalancing strategies, yield harvesting, and more.
 * **Developer Friendly** – No external keepers or centralized intermediaries required.
@@ -40,10 +40,10 @@ Supra's automation framework lets you schedule and trigger smart contract functi
 
 ### Native SupraNova Bridge: Fast, Secure, Modular Interoperability
 
-SupraNova is our flagship bridge — a secure, modular, and composable interoperability protocol that allows fast asset and message transfers between Supra and other ecosystems.
+SupraNova is our flagship bridge — a secure, modular, and composable interoperability protocol that allows fast asset and message transfers between Supra and other ecosystems. Supporting two different bridging technologies based on use cases
 
-* **HyperNova Protocol** – A trustless proof validation architecture for cross-chain messages.
-* **Token Bridge** – Lock-and-mint bridge model supporting ERC-20s and beyond.
+* [HyperNova](https://supra.com/documents/Supra-HyperNova-Whitepaper.pdf): A trustless bridge protocol that uses the source chain’s consensus layer for event verification using validator signatures.
+* [Hyperloop](https://supra.com/documents/Supra-Hyperloop-Whitepaper.pdf): A fast, multi-signature based game-theoretically secure bridge designed for source chains for which HyperNova style trustless bridging is not applicable or feasible or results in high latency (Layer 2 chains).
 
 <table data-card-size="large" data-view="cards"><thead><tr><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td>Explore SupraNova Bridge →</td><td><a href="https://app.gitbook.com/o/Nk58jmPqKHcBU9zYkcKw/s/VkhtPwRHCu7dT1kTMvdp/">SupraNova Bridge</a></td></tr></tbody></table>
 
