@@ -31,7 +31,7 @@ Please note that the following command will create a `supra` directory within yo
 
 {% code title="execute me!" overflow="wrap" %}
 ```bash
-curl -s https://raw.githubusercontent.com/Entropy-Foundation/supra-dev-hub/refs/heads/main/Scripts/cli/compose.yaml | docker compose -f - up -d
+curl -s https://raw.githubusercontent.com/supra-labs/supra-dev-hub/refs/heads/main/Scripts/cli/compose.yaml | docker compose -f - up -d
 ```
 {% endcode %}
 
