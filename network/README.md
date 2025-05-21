@@ -24,7 +24,7 @@ Supra delivers ultra-fast finality, low-latency oracles, secure automation, and 
 
 Ready to build? We’ve made it easy to get started regardless of your background. Select your preferred VM and unlock the next generation of dApps.
 
-<table data-card-size="large" data-view="cards"><thead><tr><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><mark style="color:red;">Get Started on MoveVM <strong>→</strong></mark></td><td><a href="https://app.gitbook.com/o/Nk58jmPqKHcBU9zYkcKw/s/mTBWRilfF5GuWWSNVrjY/">MoveVM</a></td></tr><tr><td><mark style="color:red;">Get Started on EVM <strong>→</strong></mark></td><td><a href="https://app.gitbook.com/o/Nk58jmPqKHcBU9zYkcKw/s/oDAXpbcTqldUcJ6e1yaj/">EVM</a></td></tr></tbody></table>
+<table data-card-size="large" data-view="cards"><thead><tr><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><mark style="color:red;"><strong>Get Started on MoveVM →</strong></mark></td><td><a href="https://app.gitbook.com/o/Nk58jmPqKHcBU9zYkcKw/s/mTBWRilfF5GuWWSNVrjY/">MoveVM</a></td></tr><tr><td><mark style="color:red;"><strong>Get Started on EVM →</strong></mark></td><td><a href="https://app.gitbook.com/o/Nk58jmPqKHcBU9zYkcKw/s/oDAXpbcTqldUcJ6e1yaj/">EVM</a></td></tr></tbody></table>
 
 ***
 
@@ -35,7 +35,7 @@ Supra’s native oracle network brings unmatched speed and precision to on-chain
 * **Data Feeds** – Pull and push-based price feeds with fast refresh rates and multi-source aggregation.
 * **dVRF (Distributed Verifiable Random Function)** – A next-gen dVRF system that delivers secure, provably fair randomness optimized for performance-critical applications like gaming, NFTs, lotteries, and more.
 
-<table data-card-size="large" data-view="cards"><thead><tr><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>Explore Data Feeds </strong><mark style="color:red;"><strong>→</strong></mark></td><td><a href="https://app.gitbook.com/s/pGVprscCeQzW0QYcaJS9/data-feeds">Data Feeds</a></td></tr><tr><td><strong>Explore dVRF (Randomness) </strong><mark style="color:red;"><strong>→</strong></mark></td><td><a href="https://app.gitbook.com/s/pGVprscCeQzW0QYcaJS9/dvrf">Decentralized VRF (dVRF)</a></td></tr></tbody></table>
+<table data-card-size="large" data-view="cards"><thead><tr><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><mark style="color:red;"><strong>Explore Data Feeds →</strong></mark></td><td><a href="https://app.gitbook.com/s/pGVprscCeQzW0QYcaJS9/data-feeds">Data Feeds</a></td></tr><tr><td><mark style="color:red;"><strong>Explore dVRF (Randomness) →</strong></mark></td><td><a href="https://app.gitbook.com/s/pGVprscCeQzW0QYcaJS9/dvrf">Decentralized VRF (dVRF)</a></td></tr></tbody></table>
 
 ***
 
@@ -46,7 +46,7 @@ Supra's 0-block delay automation framework lets you schedule and trigger smart c
 * **Use Cases** – Automated liquidations, recurring payments, rebalancing strategies, yield harvesting, and more.
 * **Developer Friendly** – No external keepers or centralized intermediaries required.
 
-<table data-card-size="large" data-view="cards"><thead><tr><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td>Explore Automation <mark style="color:red;"><strong>→</strong></mark></td><td><a href="https://app.gitbook.com/o/Nk58jmPqKHcBU9zYkcKw/s/UAaFq9LKN5pQ81ddyiRu/">Automation Network Registry</a></td></tr></tbody></table>
+<table data-card-size="large" data-view="cards"><thead><tr><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><mark style="color:red;"><strong>Explore Automation →</strong></mark></td><td><a href="https://app.gitbook.com/o/Nk58jmPqKHcBU9zYkcKw/s/UAaFq9LKN5pQ81ddyiRu/">Automation Network Registry</a></td></tr></tbody></table>
 
 ***
 
