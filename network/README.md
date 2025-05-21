@@ -12,7 +12,7 @@ Supra delivers ultra-fast finality, low-latency oracles, secure automation, and 
 
 Ready to build? We’ve made it easy to get started regardless of your background. Select your preferred VM and unlock the next generation of dApps.
 
-<table data-card-size="large" data-view="cards"><thead><tr><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>Get Started on MoveVM →</strong></td><td><a href="https://app.gitbook.com/o/Nk58jmPqKHcBU9zYkcKw/s/mTBWRilfF5GuWWSNVrjY/">MoveVM</a></td></tr><tr><td><strong>Get Started on EVM →</strong></td><td><a href="broken-reference">Broken link</a></td></tr></tbody></table>
+<table data-card-size="large" data-view="cards"><thead><tr><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>Get Started on MoveVM →</strong></td><td><a href="https://app.gitbook.com/o/Nk58jmPqKHcBU9zYkcKw/s/mTBWRilfF5GuWWSNVrjY/">MoveVM</a></td></tr><tr><td><strong>Get Started on EVM →</strong></td><td><a href="https://app.gitbook.com/o/Nk58jmPqKHcBU9zYkcKw/s/oDAXpbcTqldUcJ6e1yaj/">EVM</a></td></tr></tbody></table>
 
 ***
 
