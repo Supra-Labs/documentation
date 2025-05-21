@@ -1,6 +1,6 @@
 # Introduction to Docker
 
-Before installing the Supra CLI, you will need to install Docker. It’s helpful to understand what Docker is, how it works, and why we use it for this setup.
+Before installing the Supra CLI, you will need to install Docker. It’s helpful to understand what Docker is, how it works, and why we use it for this setup. This page includes some information that you will find useful once you move on to setting up the Supra CLI.
 
 ***
 
@@ -36,6 +36,10 @@ With Docker, developers can run the **Supra CLI** in a pre-configured environmen
 
 **Docker Compose** is a tool used to define and run multi-container Docker applications using a YAML file (`compose.yaml` or `docker-compose.yml`).
 
+{% hint style="info" %}
+YAML is a human-readable data serialization language. It is commonly used for configuration files.
+{% endhint %}
+
 In our case, the Compose file:
 
 * Defines the container configuration for the Supra CLI
@@ -46,7 +50,7 @@ In our case, the Compose file:
 
 ## Bind Mounts
 
-A **bind mount** is a way to share directories between your host and the container.
+A **bind mount** is a way to share directories between your host machine and the container.
 
 In the Supra CLI setup:
 
@@ -62,7 +66,7 @@ Example: `~/Documents/supra/configs ↔ /supra/configs`&#x20;
 
 ## Entering the Shell of a Container
 
-Once a container is running, you can open a terminal session _inside_ it using:
+Once you proceed with the CLI setup, you'll create a docker container containing the CLI binary. To interact with the CLI, you'll need to enter into the shell of the container. When a docker container is running, you can open a terminal session _inside_ of it using:
 
 ```bash
 docker exec -it supra_cli /bin/bash
