@@ -46,21 +46,21 @@ supra profile new accountA <PRIVATE_KEY> --network testnet
 
 <details>
 
-<summary>Modify the profile</summary>
+<summary>Modify the profile: <code>supra profile modify</code></summary>
 
 The new version of profiles contain the `rpc_url`, `faucet_url`, and `chain_id` associated with the profile. CLI commands will use the stored values of the calling profile for the respective command parameters unless manually overwritten. The above commands to create a new profile or import an existing profile will set the initial values to that of the testnet. If you wish to use the profile on mainnet, you must modify the profile with the mainnet values.\
 \
-To modify a profile, use the following command:
+To modify a profile, use the following command with the desired network:
 
 ```
-supra profile modify accountA --network <localnet/testnet/mainnet/cust
+supra profile modify accountA --network <localnet/testnet/mainnet/custom>
 ```
 
 </details>
 
 <details>
 
-<summary>Change the active profile</summary>
+<summary>Change the active profile: <code>supra profile activate</code></summary>
 
 {% hint style="info" %}
 CLI commands will be executed from the active profile.
@@ -76,7 +76,7 @@ supra profile activate accountA
 
 <details>
 
-<summary>View stored profile public keys</summary>
+<summary>View stored profile public keys: <code>supra profile -l</code></summary>
 
 {% hint style="info" %}
 The active profile will be displayed with a `(*)` by the profile name.
@@ -92,7 +92,7 @@ supra profile -l
 
 <details>
 
-<summary>View stored profile private keys</summary>
+<summary>View stored profile private keys: <code>supra profile -l -r</code></summary>
 
 {% hint style="danger" %}
 This will print the private keys of all profiles to your terminal. Make sure you are not live streaming, recording, screensharing, etc. before executing this command to prevent compromising your keys.
