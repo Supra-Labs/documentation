@@ -10,7 +10,7 @@ Before installing the Supra CLI, you will need to install Docker. It’s helpful
 
 ***
 
-## 🔧 What Is Docker?
+## What Is Docker?
 
 **Docker** is a platform that packages applications into lightweight, portable **containers**. These containers include everything an app needs to run: code, runtime, libraries, and environment variables.
 
@@ -20,19 +20,19 @@ Think of containers as lightweight, isolated virtual machines — but more effic
 
 ***
 
-## 💡 Why Use Docker with the Supra CLI?
+## Why Use Docker with the Supra CLI?
 
 Docker provides a consistent, repeatable environment that eliminates:
 
-* 🧩 OS differences (Linux, Mac, Windows)
-* ⚙️ Dependency/version mismatches
-* ❌ “It works on my machine” issues
+* OS differences (Linux, Mac, Windows)
+* Dependency/version mismatches
+* “It works on my machine” issues
 
 With Docker, developers can run the **Supra CLI** in a pre-configured environment without needing to install the CLI or dependencies locally.
 
 ***
 
-## 📦 What Is Docker Compose?
+## What Is Docker Compose?
 
 **Docker Compose** is a tool used to define and run multi-container Docker applications using a YAML file (`compose.yaml` or `docker-compose.yml`).
 
@@ -44,7 +44,7 @@ In our case, the Compose file:
 
 ***
 
-## 🔗 Bind Mounts
+## Bind Mounts
 
 A **bind mount** is a way to share directories between your host and the container.
 
@@ -55,12 +55,12 @@ In the Supra CLI setup:
 * This means anything you create/do inside these folders within the container will appear on your host — and vice versa.
 
 {% hint style="info" %}
-📂 Example: `~/Documents/supra/configs ↔ /supra/configs`&#x20;
+Example: `~/Documents/supra/configs ↔ /supra/configs`&#x20;
 {% endhint %}
 
 ***
 
-## 🔓 Entering the Shell of a Container
+## Entering the Shell of a Container
 
 Once a container is running, you can open a terminal session _inside_ it using:
 
@@ -80,13 +80,13 @@ This is useful when you want to:
 * Debug issues inside the container
 
 {% hint style="info" %}
-💡 Make sure the container is running first:\
+Make sure the container is running first:\
 Use `docker start supra_cli` if needed.
 {% endhint %}
 
 ***
 
-## ⚙️ Common Docker Commands
+## Common Docker Commands
 
 | Command                                 | Description                                |
 | --------------------------------------- | ------------------------------------------ |
@@ -101,7 +101,7 @@ Use `docker start supra_cli` if needed.
 
 ***
 
-## 🧰 Common Docker Compose Commands
+## Common Docker Compose Commands
 
 | Command                  | Description                                           |
 | ------------------------ | ----------------------------------------------------- |
@@ -114,12 +114,12 @@ Use `docker start supra_cli` if needed.
 | `docker compose build`   | Builds or rebuilds services defined in the file       |
 
 {% hint style="info" %}
-✅ You can also use `docker compose -f <file>` to specify a compose file, including remote files via `curl ... | docker compose -f - up`.
+You can also use `docker compose -f <file>` to specify a compose file, including remote files via `curl ... | docker compose -f - up`.
 {% endhint %}
 
 ***
 
-## 📌 Summary
+## Summary
 
 Docker simplifies the Supra CLI experience by:
 
@@ -131,7 +131,7 @@ If you're new to Docker, this may feel like a lot — but once set up, you’ll 
 
 ***
 
-## 📚 Want to Learn More?
+## Want to Learn More?
 
 * [Docker Overview (Official Docs)](https://docs.docker.com/get-started/overview/)
 * [Docker Compose Overview](https://docs.docker.com/compose/)
