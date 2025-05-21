@@ -22,7 +22,7 @@ We’ll take you through all you need to deploy your first Supra Move contract f
 3. Then we’ll use the testnet faucet.
 4. Finally, we’ll deploy your first Move contract on Supra.&#x20;
 
-The Supra CLI includes easy commands for the Supra Move network that make it beginner friendly and easy to use. If you get stuck anywhere or face any issues, please reach out to us on [Discord →](https://www.discord.gg/supralabs).
+The Supra CLI includes easy commands for the Supra Move network that make it beginner friendly and easy to use. If you get stuck anywhere or face any issues, please reach out to us on [Discord](https://www.discord.gg/supralabs).
 
 {% hint style="info" %}
 For the latest RPC URL, please refer to the [Supra Network Information](../network-information.md) page.
