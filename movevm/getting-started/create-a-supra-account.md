@@ -26,7 +26,7 @@ supra profile new accountA --network testnet
 {% endstep %}
 
 {% step %}
-### Import existing key/profile
+### Or Import an existing key/profile
 
 If you already have a private key on hand that you wish to use, you can opt to import it rather than generating a new one. To import an existing private key, use the following command:
 
@@ -38,21 +38,29 @@ Profile names must be unique. If you attempt to generate or import a profile usi
 supra profile new accountA <PRIVATE_KEY> --network testnet
 ```
 {% endstep %}
+{% endstepper %}
 
-{% step %}
-### Modify the profile
+***
 
-The new version of profiles contain the `rpc_url`, `faucet_url`, and `chain_id` associated with the profile. CLI commands will use the stored values of the calling profile for the respective command parameters unless manually overwritten.\
+## Additional Commands
+
+<details>
+
+<summary>Modify the profile</summary>
+
+The new version of profiles contain the `rpc_url`, `faucet_url`, and `chain_id` associated with the profile. CLI commands will use the stored values of the calling profile for the respective command parameters unless manually overwritten. The above commands to create a new profile or import an existing profile will set the initial values to that of the testnet. If you wish to use the profile on mainnet, you must modify the profile with the mainnet values.\
 \
 To modify a profile, use the following command:
 
 ```
-supra profile modify accountA --network <localnet/testnet/mainnet/custom>
+supra profile modify accountA --network <localnet/testnet/mainnet/cust
 ```
-{% endstep %}
 
-{% step %}
-### Change the active profile
+</details>
+
+<details>
+
+<summary>Change the active profile</summary>
 
 {% hint style="info" %}
 CLI commands will be executed from the active profile.
@@ -63,10 +71,12 @@ To activate another profile, use the following command:
 ```
 supra profile activate accountA
 ```
-{% endstep %}
 
-{% step %}
-### View local public keys
+</details>
+
+<details>
+
+<summary>View stored profile public keys</summary>
 
 {% hint style="info" %}
 The active profile will be displayed with a `(*)` by the profile name.
@@ -77,10 +87,12 @@ If you wish to view existing keys within your current directory, use the followi
 ```
 supra profile -l
 ```
-{% endstep %}
 
-{% step %}
-### View local private keys
+</details>
+
+<details>
+
+<summary>View stored profile private keys</summary>
 
 {% hint style="danger" %}
 This will print the private keys of all profiles to your terminal. Make sure you are not live streaming, recording, screensharing, etc. before executing this command to prevent compromising your keys.
@@ -91,5 +103,5 @@ If you wish to view the private key of your profile(s), use the following comman
 ```
 supra profile -l -r
 ```
-{% endstep %}
-{% endstepper %}
+
+</details>
