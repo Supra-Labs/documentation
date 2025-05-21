@@ -5,7 +5,7 @@ description: Create and deploy your first move module.
 # Write a Module
 
 {% hint style="danger" %}
-If you have not already, open your newly initiatlized project within your code editor of choice on your host machine. Remember, the container `configs` directory is bound to the `supra_configs` directory on your host machine. Any changes made to these files on the host machine will be reflected within the container.
+If you have not already, open your newly initiatlized project within your code editor of choice on your host machine. Remember, the `move_workspace` directory within the container is bound to the `/supra/move_workspace` directory on your host machine. Any changes made to these files on the host machine will be reflected within the container.
 
 \
 If you are using VS Code, we highly recommend that you[ install the Supra Move extension](../../dev/supra-move-vs-code-extension.md).
@@ -59,7 +59,7 @@ module exampleAddress::transfer {
 ```
 {% endcode %}
 
-The `two_by_two` function provided has four parameters. The signer, amount to be transferred, and two destination addresses. The function will transfer the passed amount to both destination addresses.
+The `two_by_two` function provided has four parameters. The signer, amount to be transferred, and two destination addresses. The function will transfer the passed amount to both destination addresses.&#x20;
 
 {% hint style="info" %}
 Signer is a built-in Move resource. It indicates which account is responsible for calling the transaction. This value is automatically injected by the VM and not passed by the user.
