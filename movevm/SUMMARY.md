@@ -90,6 +90,7 @@
             kind: openapi
             spec: supra-testnet-api
       ```
+* [Supra Multisig Guide](supra-multisig-guide.md)
 
 ## Developer Resources <a href="#dev" id="dev"></a>
 
