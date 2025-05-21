@@ -12,7 +12,7 @@ Supra delivers ultra-fast finality, low-latency oracles, secure automation, and 
 
 Ready to build? We’ve made it easy to get started regardless of your background. Select your preferred VM and unlock the next generation of dApps.
 
-<table data-card-size="large" data-view="cards"><thead><tr><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td>Get Started on MoveVM →</td><td><a href="https://app.gitbook.com/o/Nk58jmPqKHcBU9zYkcKw/s/mTBWRilfF5GuWWSNVrjY/">MoveVM</a></td></tr><tr><td>Get Started on EVM →</td><td><a href="broken-reference">Broken link</a></td></tr></tbody></table>
+<table data-card-size="large" data-view="cards"><thead><tr><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>Get Started on MoveVM →</strong></td><td><a href="https://app.gitbook.com/o/Nk58jmPqKHcBU9zYkcKw/s/mTBWRilfF5GuWWSNVrjY/">MoveVM</a></td></tr><tr><td><strong>Get Started on EVM →</strong></td><td><a href="broken-reference">Broken link</a></td></tr></tbody></table>
 
 ***
 
@@ -23,7 +23,7 @@ Supra’s native oracle network brings unmatched speed and precision to on-chain
 * **Data Feeds** – Pull and push-based price feeds with fast refresh rates and multi-source aggregation.
 * **dVRF (Distributed Verifiable Random Function)** – A next-gen dVRF system that delivers secure, provably fair randomness optimized for performance-critical applications like gaming, NFTs, lotteries, and more.
 
-<table data-card-size="large" data-view="cards"><thead><tr><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td>Explore Data Feeds →</td><td><a href="https://app.gitbook.com/s/pGVprscCeQzW0QYcaJS9/data-feeds">Data Feeds</a></td></tr><tr><td>Explore dVRF (Randomness) →</td><td><a href="https://app.gitbook.com/s/pGVprscCeQzW0QYcaJS9/dvrf">Decentralized VRF (dVRF)</a></td></tr></tbody></table>
+<table data-card-size="large" data-view="cards"><thead><tr><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>Explore Data Feeds →</strong></td><td><a href="https://app.gitbook.com/s/pGVprscCeQzW0QYcaJS9/data-feeds">Data Feeds</a></td></tr><tr><td><strong>Explore dVRF (Randomness) →</strong></td><td><a href="https://app.gitbook.com/s/pGVprscCeQzW0QYcaJS9/dvrf">Decentralized VRF (dVRF)</a></td></tr></tbody></table>
 
 ***
 
@@ -34,7 +34,7 @@ Supra's 0-block delay automation framework lets you schedule and trigger smart c
 * **Use Cases** – Automated liquidations, recurring payments, rebalancing strategies, yield harvesting, and more.
 * **Developer Friendly** – No external keepers or centralized intermediaries required.
 
-<table data-card-size="large" data-view="cards"><thead><tr><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td>Explore Automation →</td><td><a href="https://app.gitbook.com/o/Nk58jmPqKHcBU9zYkcKw/s/UAaFq9LKN5pQ81ddyiRu/">Automation Network Registry</a></td></tr></tbody></table>
+<table data-card-size="large" data-view="cards"><thead><tr><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>Explore Automation →</strong></td><td><a href="https://app.gitbook.com/o/Nk58jmPqKHcBU9zYkcKw/s/UAaFq9LKN5pQ81ddyiRu/">Automation Network Registry</a></td></tr></tbody></table>
 
 ***
 
@@ -45,7 +45,7 @@ SupraNova is our flagship bridge — a secure, modular, and composable interoper
 * [HyperNova](https://supra.com/documents/Supra-HyperNova-Whitepaper.pdf): A trustless bridge protocol that uses the source chain’s consensus layer for event verification using validator signatures.
 * [Hyperloop](https://supra.com/documents/Supra-Hyperloop-Whitepaper.pdf): A fast, multi-signature based game-theoretically secure bridge designed for source chains for which HyperNova style trustless bridging is not applicable or feasible or results in high latency (Layer 2 chains).
 
-<table data-card-size="large" data-view="cards"><thead><tr><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td>Explore SupraNova Bridge →</td><td><a href="https://app.gitbook.com/o/Nk58jmPqKHcBU9zYkcKw/s/VkhtPwRHCu7dT1kTMvdp/">SupraNova Bridge</a></td></tr></tbody></table>
+<table data-card-size="large" data-view="cards"><thead><tr><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>Explore SupraNova Bridge →</strong></td><td><a href="https://app.gitbook.com/o/Nk58jmPqKHcBU9zYkcKw/s/VkhtPwRHCu7dT1kTMvdp/">SupraNova Bridge</a></td></tr></tbody></table>
 
 
 
