@@ -50,11 +50,12 @@ A **bind mount** is a way to share directories between your host and the contain
 
 In the Supra CLI setup:
 
-* The `supra_configs/` folder on your host is bind-mounted to the `configs/` folder inside the container.
-* This means anything you write to `configs/` inside the container will appear on your host — and vice versa.
+* The `supra/configs` folder on your host is bind-mounted to the `configs/` folder inside the container.
+* The `supra/move_workspace` folder on your host is bind-mounted to the `move_workspace/` folder inside the container.
+* This means anything you create/do inside these folders within the container will appear on your host — and vice versa.
 
 {% hint style="info" %}
-📂 Example: `~/Documents/supra/supra_configs ↔ /supra/configs`
+📂 Example: `~/Documents/supra/configs ↔ /supra/configs`&#x20;
 {% endhint %}
 
 ***
