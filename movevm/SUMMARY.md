@@ -97,12 +97,9 @@
 * [Supra Dapp Templates](dev/supra-dapp-templates.md)
 * [Supra Move VS Code Extension](dev/supra-move-vs-code-extension.md)
 
-## Links
+## Native Oracles
 
-* [Supra DevHub](https://github.com/Entropy-Foundation/supra-dev-hub/tree/main)
-* [SupraScan Block Explorer](https://suprascan.io)
-* [StarKey Wallet](https://www.starkey.app)
-* [Live Data Feeds](https://supraoracles.com/data)
-* [Whitepapers](https://supraoracles.com/whitepapers)
-* [Security Audits](https://github.com/Entropy-Foundation/security-audits)
-* [Supra's Official GitHub](https://github.com/Entropy-Foundation/)
+* [Data Feeds (Push)](https://docs.supra.com/oracles/data-feeds/push-oracle#tab-supra-l1-move)
+* [dVRF (Randomness)](https://docs.supra.com/oracles/dvrf/v2-guide#tab-supra-move)
+* [Automation](https://docs.supra.com/automation)
+* [SupraNova Bridge](https://docs.supra.com/supranova)
