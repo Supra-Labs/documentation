@@ -22,7 +22,7 @@ You do not need to pass the --package-dir command if your current working direct
 
 Compiling your package will fetch any dependencies defined in your `Move.toml` file before building your package. A new directory named `build` will be created storing the bytecode and sources for your package.
 
-<pre data-title="execute me!"><code><strong>supra move tool compile --package-dir /supra/configs/move_workspace/exampleContract
+<pre data-title="execute me!"><code><strong>supra move tool compile --package-dir /supra/move_workspace/exampleContract
 </strong></code></pre>
 {% endstep %}
 
@@ -51,7 +51,7 @@ Note, there is no faucet for Mainnet. If you are looking to deploy on Mainnet, y
 
 Once your package is compiled and you have tokens to cover the gas, execute the following command to publish your package to the network.
 
-<pre data-title="execute me!"><code><strong>supra move tool publish --package-dir /supra/configs/move_workspace/exampleContract --rpc-url https://rpc-testnet.supra.com
+<pre data-title="execute me!"><code><strong>supra move tool publish --package-dir /supra/move_workspace/exampleContract --rpc-url https://rpc-testnet.supra.com
 </strong></code></pre>
 {% endstep %}
 {% endstepper %}

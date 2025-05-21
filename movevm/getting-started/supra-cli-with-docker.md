@@ -23,17 +23,17 @@ The installation process of Docker is straight forward and requires no additiona
 {% step %}
 ### Start the container with Docker Compose
 
-Open your terminal and `cd` to the directory on your machine where you wish to setup the CLI. For convenience, we recommend creating a directory named `supra` within your `documents` directory. However, this is entirely arbitrary and there will be no repercussions for choosing differently.
+Open your terminal and `cd` to the directory on your machine where you wish to setup the CLI. For convenience, we recommend placing it within the `Documents` directory. However, this is entirely arbitrary and there will be no repercussions for choosing differently.
 
-The following command will use the latest compose file (which you can [view here](https://github.com/Entropy-Foundation/supra-dev-hub/blob/main/Scripts/cli/compose.yaml)) and pipe it into the Docker Compose command. This will pull the latest image, create, and start the container.
+The following command will use the latest compose file (which you can [view here](https://github.com/Entropy-Foundation/supra-dev-hub/blob/main/Scripts/cli/compose.yaml)) and pipe it into the Docker Compose command. This will pull the latest image, create, and start the container.\
+\
+Please note that the following command will create a `supra` directory within your current working directory if one does not already exist.
 
 {% code title="execute me!" overflow="wrap" %}
 ```bash
 curl -s https://raw.githubusercontent.com/Entropy-Foundation/supra-dev-hub/refs/heads/main/Scripts/cli/compose.yaml | docker compose -f - up -d
 ```
 {% endcode %}
-
-Once executed, the `supra_cli` container will be created. If a `supra_configs` directory does not already exist within your current working directory, one will be created for you.&#x20;
 
 You can confirm that the container is running by executing `docker ps --all`. This command will output all docker containers that exist on your machine, whether they are running or stopped.
 {% endstep %}
@@ -49,7 +49,7 @@ docker exec -it supra_cli /bin/bash
 ```
 {% endcode %}
 
-Once inside, execute the `ls` command to gain a simple understanding of the file system. The displayed `configs` directory is bind mounted to the `supra_configs` directory on your host machine. These directories are shared/linked between your host machine and the container.
+Once inside, execute the `ls` command to gain a simple understanding of the file system. The displayed `configs` directory is bind mounted to the `/supra/configs` directory on your host machine. These directories are shared/linked between your host machine and the container.
 
 <figure><img src="../.gitbook/assets/cli_new.png" alt=""><figcaption><p>Note: "supra" is the CLI binary within the container. <br>The compose file automatically setup the alias to interact with the binary using the "supra" command.</p></figcaption></figure>
 {% endstep %}
