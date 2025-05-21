@@ -1,7 +1,5 @@
 ---
-description: >-
-  Interested in building on Supra's Move network? You've come to the right
-  place!
+description: Want to build on the Supra Move blockchain? You've come to the right place!
 layout:
   title:
     visible: true
@@ -17,9 +15,14 @@ layout:
 
 # Getting Started
 
-Here you will find the resources that walk you through installation, initial setup, faucet interactions, and deploying your first Move contract. The Supra CLI provides a number of commands for the Move network that make this process beginner friendly and easy to pick up.
+We’ll take you through all you need to deploy your first Supra Move contract from scratch, all in four broad stages:
 
-If you experience any issues, please reach out to the team within our [Discord server](https://www.discord.gg/supralabs).
+1. First, we will install docker and the Supra CLI.
+2. Then we’ll complete the initial setup.
+3. Then we’ll use the testnet faucet.
+4. Finally, we’ll deploy your first Move contract on Supra.&#x20;
+
+The Supra CLI includes easy commands for the Supra Move network that make it beginner friendly and easy to use. If you get stuck anywhere or face any issues, please reach out to us on [Discord →](https://www.discord.gg/supralabs).
 
 {% hint style="info" %}
 For the latest RPC URL, please refer to the [Supra Network Information](../network-information.md) page.

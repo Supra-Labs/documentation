@@ -25,7 +25,13 @@ The installation process of Docker is straight forward and requires no additiona
 
 Open your terminal and `cd` to the directory on your machine where you wish to setup the CLI. For convenience, we recommend placing it within the `Documents` directory. However, this is entirely arbitrary and there will be no repercussions for choosing differently.
 
-The following command will use the latest compose file (which you can [view here](https://github.com/Entropy-Foundation/supra-dev-hub/blob/main/Scripts/cli/compose.yaml)) and pipe it into the Docker Compose command. This will pull the latest image, create, and start the container.\
+{% code title="execute me!" %}
+```bash
+cd Documents
+```
+{% endcode %}
+
+The following command will use the latest compose file (which you can [view here](https://github.com/Entropy-Foundation/supra-dev-hub/blob/main/Scripts/cli/compose.yaml)) and pipe it into the [Docker Compose command](docker.md#what-is-docker-compose). This will pull the latest image, create, and start the container.\
 \
 Please note that the following command will create a `supra` directory within your current working directory if one does not already exist.
 
@@ -56,6 +62,8 @@ Once inside, execute the `ls` command to gain a simple understanding of the file
 
 {% step %}
 ### Execute the `supra` command
+
+<figure><img src="../.gitbook/assets/Screenshot 2025-05-21 at 1.55.02 AM.png" alt="" width="563"><figcaption><p>Example output of the "supra" command</p></figcaption></figure>
 
 {% hint style="info" %}
 Within the shell of the container, CLI commands operate in the same manner as you would expect on your host machine. For example, executing commands such as `supra move tool init` will initialize the new module within your current working directory. You may view all available arguments of any command by passing the `--help` argument.&#x20;

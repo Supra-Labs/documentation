@@ -92,6 +92,8 @@ Use `docker start supra_cli` if needed.
 
 ## Common Docker Commands
 
+Some of these commands may come in handy later.
+
 | Command                                 | Description                                |
 | --------------------------------------- | ------------------------------------------ |
 | `docker ps --all`                       | Lists all containers (running and stopped) |
@@ -106,6 +108,8 @@ Use `docker start supra_cli` if needed.
 ***
 
 ## Common Docker Compose Commands
+
+Some of these commands may come in handy later.
 
 | Command                  | Description                                           |
 | ------------------------ | ----------------------------------------------------- |

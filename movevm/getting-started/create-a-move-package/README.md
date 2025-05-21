@@ -4,26 +4,11 @@ description: Create and deploy your first move module.
 
 # Create a Move Package
 
-{% hint style="danger" %}
-If you are not currently within the shell of your container, please execute the following command and enter the shell: `docker exec -it supra_cli /bin/bash`&#x20;
-
-If no such container exists, you must [complete the installation guide](../supra-cli-with-docker.md) before proceeding. If your container is not running, you can start your container with the command: \
-`docker start supra_cli`
-{% endhint %}
-
-{% hint style="info" %}
-Reminder, you can view all existing containers on your machine with: `docker ps --all`
-{% endhint %}
-
 ## Initialize your move package
 
 {% stepper %}
 {% step %}
 ### Create a new Move package
-
-{% hint style="info" %}
-Executing the command without the --package-dir argument will initiatlize the package within your current working directory.
-{% endhint %}
 
 {% code title="execute me!" %}
 ```
@@ -31,8 +16,8 @@ supra move tool init --package-dir /supra/move_workspace/exampleContract --name 
 ```
 {% endcode %}
 
-This will create your project directory, including a `Move.toml` file. This is a manifest file that contains important metadata about your package. This includes the package name, version, dependencies, named addresses, and more.\
-\
+This will create your project directory automatically, including a `Move.toml` file. This is a manifest file that contains important metadata about your package. This includes the package name, version, dependencies, named addresses, and more.&#x20;
+
 The `SupraFramework` dependency is automatically populated. This framework includes core components that you will interact with during your time on Supra. The framework package includes clearly defined documentation within the `/doc` directory for you to review alongside the Move code within the `/sources` directory. You can view [this package here](https://github.com/Entropy-Foundation/aptos-core/tree/dev/aptos-move/framework/supra-framework).
 
 {% code title="Move.toml" %}
@@ -59,6 +44,8 @@ subdir = "aptos-move/framework/supra-framework"
 
 {% step %}
 ### Update the named addresses
+
+Open the `move.toml` file with your code editor. You can find these files on your host machine in the `/Documents/supra/move_workspace/exampleContract` directory on your host machine if you followed this setup guide.
 
 Named addresses allow identifiers such as `@exampleAddress` to be used throughout your package, rather than hard coding an address value. When compiled into bytecode, any occurrence of the identifier such as `@exampleAddress` will be replaced with the set value below.\
 \
