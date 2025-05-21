@@ -7,6 +7,7 @@
   * [Create a Supra Account](getting-started/create-a-supra-account.md)
   * [Testnet Faucet](getting-started/testnet-faucet.md)
   * [Create a Move Package](getting-started/create-a-move-package/README.md)
+    * [Initialize a Package](getting-started/create-a-move-package/initialize-a-package.md)
     * [Write a Module](getting-started/create-a-move-package/write-a-module.md)
     * [Compile and Publish](getting-started/create-a-move-package/compile-and-publish.md)
     * [Interact with a Package](getting-started/create-a-move-package/interact-with-a-package.md)
