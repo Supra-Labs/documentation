@@ -1,8 +1,20 @@
+---
+layout:
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
+
 # Overview
 
 Supra is more than just a Layer 1 — it’s a full-stack, high-performance blockchain ecosystem purpose-built to power the next generation of decentralized applications. Whether you're building DeFi, GameFi, AI/ML protocols, or cross-chain solutions, Supra gives you the tools you need to go further, faster.
-
-## Why Build on Supra?
 
 Supra delivers ultra-fast finality, low-latency oracles, secure automation, and seamless bridging — all within one vertically integrated platform.
 
