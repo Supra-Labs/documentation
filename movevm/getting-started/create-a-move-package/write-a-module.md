@@ -16,53 +16,86 @@ If you are using VS Code, we highly recommend that you[ install the Supra Move e
 ### Create a new move file within the `sources` directory.
 
 {% hint style="warning" %}
-In the previous step, we set the named address of `@exampleAddress` to that of your own account. Notice how the name of this module is `exampleAddress::transfer`. Modules are defined with the following format: `ADDRESS::MODULE_NAME` \
-\
 In Move, global storage is a forest with trees rooted at an account address. Accounts can store both resource data and module code. Modules are deployed to an account, rather than a unique address being generated at deployment as you may be custom to with other VMs. \
 \
-At compilation, `exampleAddress` will be replaced with the value you set in the named addresses within the `Move.toml` file. Upon publishing the module, it will be published at that designated account.
+At compilation, `hello_blockchain` will be replaced with the value you set in the named addresses within the `Move.toml` file. Upon publishing the module, it will be published at that designated account.
 {% endhint %}
 
-The sources directory holds the move modules that you will be working on within your project. Within the `sources` directory,  create the `example.move` file with the following code.&#x20;
+The sources directory holds the move modules that you will be working on within your project. Within the `sources` directory,  create the `hello_blockchain.move` file with the following code.
 
-{% hint style="info" %}
-You can create the file through your code editor, or by executing one of the following commands: `touch example.move`  or `echo > example.move`
-{% endhint %}
+<pre data-title="execute me!"><code><strong># Navigate into the sources directory
+</strong><strong>cd move_workspace/exampleContract/sources
+</strong><strong>
+</strong><strong>#Create the move module file with one of the following commands
+</strong>touch hello_blockchain.move
+#Or
+echo > hello_blockchain.move
+</code></pre>
 
-{% code title="example.move" lineNumbers="true" %}
+One created, open the `hello_blockchain.move` file within your code editor and add the following code.
+
+{% code title="hello_blockchain.move" lineNumbers="true" %}
 ```
-module exampleAddress::transfer {
+module hello_blockchain::message {
+    use std::error;
+    use std::signer;
+    use std::string;
+    use supra_framework::event;
 
-    use supra_framework::supra_coin;
-    use supra_framework::coin;
+    //:!:>resource
+    struct MessageHolder has key {
+        message: string::String,
+    }
+    //<:!:resource
 
-    // Function to transfer the specified amount to two destinations from the source signer
-    public entry fun two_by_two(
-        first: &signer,
-        amount_first: u64,
-        dst_first: address,
-        dst_second: address,
-    ) {
-        // Transfer the specified amount to the first destination
-        coin::transfer<supra_coin::SupraCoin>(first, dst_first,amount_first);
-        // Transfer the same amount to the second destination
-        coin::transfer<supra_coin::SupraCoin>(first,dst_second, amount_first);
+    #[event]
+    struct MessageChange has drop, store {
+        account: address,
+        from_message: string::String,
+        to_message: string::String,
     }
 
-     // Function to view the balance of an address
+    /// There is no message present
+    const ENO_MESSAGE: u64 = 0;
+
     #[view]
-    public fun view_balance(address: address): u64 {
-        coin::balance<supra_coin::SupraCoin>(address)
+    public fun get_message(addr: address): string::String acquires MessageHolder {
+        assert!(exists<MessageHolder>(addr), error::not_found(ENO_MESSAGE));
+        borrow_global<MessageHolder>(addr).message
     }
 
+    public entry fun set_message(account: signer, message: string::String)
+    acquires MessageHolder {
+        let account_addr = signer::address_of(&account);
+        if (!exists<MessageHolder>(account_addr)) {
+            move_to(&account, MessageHolder {
+                message,
+            })
+        } else {
+            let old_message_holder = borrow_global_mut<MessageHolder>(account_addr);
+            let from_message = old_message_holder.message;
+            event::emit(MessageChange {
+                account: account_addr,
+                from_message,
+                to_message: copy message,
+            });
+            old_message_holder.message = message;
+        }
+    }
+
+    #[test(account = @0x1)]
+    public entry fun sender_can_set_message(account: signer) acquires MessageHolder {
+        let addr = signer::address_of(&account);
+        supra_framework::account::create_account_for_test(addr);
+        set_message(account, string::utf8(b"Hello, Blockchain"));
+
+        assert!(
+            get_message(addr) == string::utf8(b"Hello, Blockchain"),
+            ENO_MESSAGE
+        );
+    }
 }
 ```
 {% endcode %}
-
-The `two_by_two` function provided has four parameters. The signer, amount to be transferred, and two destination addresses. The function will transfer the passed amount to both destination addresses.&#x20;
-
-{% hint style="info" %}
-Signer is a built-in Move resource. It indicates which account is responsible for calling the transaction. This value is automatically injected by the VM and not passed by the user.
-{% endhint %}
 {% endstep %}
 {% endstepper %}

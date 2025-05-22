@@ -47,7 +47,7 @@ subdir = "aptos-move/framework/supra-framework"
 
 Open the `move.toml` file with your code editor. You can find these files on your host machine in the `/Documents/supra/move_workspace/exampleContract` directory if you followed this setup guide.
 
-Named addresses allow identifiers such as `@exampleAddress` to be used throughout your package, rather than hard coding an address value. When compiled into bytecode, any occurrence of the identifier such as `@exampleAddress` will be replaced with the set value below.\
+Named addresses allow identifiers such as `@hello_blockchain` to be used throughout your package, rather than hard coding an address value. When compiled into bytecode, any occurrence of the identifier such as `@hello_blockchain` will be replaced with the set value below.\
 \
 For now, add the below named address to your `Move.toml` file and set the value to your address. We'll explain why in the next step.
 
@@ -57,7 +57,7 @@ You can view the address of your profiles by executing: `supra profile -l`
 
 ```toml
 [addresses]
-exampleAddress ="YOUR-ADDRESS-HERE"
+hello_blockchain ="YOUR-ADDRESS-HERE"
 ```
 {% endstep %}
 {% endstepper %}
