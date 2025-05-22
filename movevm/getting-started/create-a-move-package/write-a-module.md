@@ -23,7 +23,7 @@ The sources directory holds the move modules that you will be working on within 
 
 {% code title="execute me!" %}
 ```
-touch /supra/move_workspace/exampleContract/sources/hello_blockchain.move
+echo > /supra/move_workspace/exampleContract/sources/hello_blockchain.move
 ```
 {% endcode %}
 
