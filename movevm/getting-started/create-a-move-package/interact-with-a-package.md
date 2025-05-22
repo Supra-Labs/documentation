@@ -4,42 +4,14 @@ description: Create and deploy your first move module.
 
 # Interact with a Package
 
-{% stepper %}
-{% step %}
-### Calling a view function
-
-Command: `supra move tool view`
-
-The `view` command is used to call `view` functions, which do not change the state of the VM in any way. View functions are denoted with `#[view]` above the function declaration.
-
-Execute the following command to better understand the arguments of the command.
-
-```bash
-supra move tool view --help
-```
-{% endstep %}
-
-{% step %}
-### Executing an entry function
-
-Command: `supra move tool run`
-
-The `run` command is used to call `entry` functions, which result in some transaction. `Entry` functions are your gateway to interacting with modules. We are unable to call functions without the `entry` declaration.
-
-Execute the following command to better understand the arguments of the command.
-
-```bash
-supra move tool run --help
-```
-{% endstep %}
-{% endstepper %}
-
 ## Interacting with your module
 
-The `hello_blockchain` module stores a string at an account within the `MessageHolder` resource that can later be retrieved. To try interacting with the contract we will:
+The `hello_blockchain` module stores a string at an account within the `MessageHolder` resource of the calling account that can later be retrieved. To try interacting with the contract we will:\
+
 
 1. Call `set_message` to store a string on-chain
-2. Call `get_message` to view the stored message on-chain
+2. Call `get_message` to view the stored message on-chain\
+
 
 {% stepper %}
 {% step %}
