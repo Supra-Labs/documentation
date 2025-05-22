@@ -16,25 +16,20 @@ If you are using VS Code, we highly recommend that you[ install the Supra Move e
 ### Create a new move file within the `sources` directory.
 
 {% hint style="warning" %}
-In Move, global storage is a forest with trees rooted at an account address. Accounts can store both resource data and module code. Modules are deployed to an account, rather than a unique address being generated at deployment as you may be custom to with other VMs. \
-\
-At compilation, `hello_blockchain` will be replaced with the value you set in the named addresses within the `Move.toml` file. Upon publishing the module, it will be published at that designated account.
+In Move, global storage is a forest with trees rooted at an account address. Accounts can store both resource data and module code. Modules are deployed to an account, rather than a unique address being generated at deployment as you may be custom to with other VMs.
 {% endhint %}
 
-The sources directory holds the move modules that you will be working on within your project. Within the `sources` directory,  create the `hello_blockchain.move` file with the following code.
+The sources directory holds the move modules that you will be working on within your project. Within the `sources` directory of your `exampleContract` package, create the `hello_blockchain.move` file.
 
-<pre data-title="execute me!"><code><strong># Navigate into the sources directory
-</strong><strong>cd move_workspace/exampleContract/sources
-</strong><strong>
-</strong><strong>#Create the move module file with one of the following commands
-</strong>touch hello_blockchain.move
-#Or
-echo > hello_blockchain.move
-</code></pre>
+{% code title="execute me!" %}
+```
+touch /supra/move_workspace/exampleContract/sources/hello_blockchain.move
+```
+{% endcode %}
 
-One created, open the `hello_blockchain.move` file within your code editor and add the following code.
+Once created, open the hello\_blockchain.move file within your code editor and add the following code.
 
-{% code title="hello_blockchain.move" lineNumbers="true" %}
+{% code title="hello_blockchain.move" %}
 ```
 module hello_blockchain::message {
     use std::error;
