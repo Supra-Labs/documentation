@@ -20,7 +20,7 @@ This module also supports updating owners without having to change the auth key.
 
 Supra offers intuitive CLI commands to interact with multisig accounts. Here’s guide for CLI Commands:
 
-#### Create a new multisig account on-chai:
+#### Create a new multisig account on-chain:
 
 ```powershell
 supra move multisig create 
