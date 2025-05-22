@@ -21,9 +21,11 @@ The `hello_blockchain` module stores a string at an account within the `MessageH
 Replace the place holder values denoted by `<>` with your account address before executing the commands.
 {% endhint %}
 
+{% code title="replace & execute me!" %}
 ```
 supra move tool run --function-id '<hello_blockchain>::message::set_message' --args string:"Hello world!" --rpc-url https://rpc-testnet.supra.com
 ```
+{% endcode %}
 {% endstep %}
 
 {% step %}
