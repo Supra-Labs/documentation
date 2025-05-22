@@ -26,7 +26,12 @@ Supra offers intuitive CLI commands to interact with multisig accounts. Here’s
 supra move multisig create 
 --timeout-duration <TIMEOUT_DURATION> 
 --num-signatures-required <NUM_SIGNATURES_REQUIRED>
+--additional-owners <ADDRESSES OF OTHER OWNER/OWNERS>
 ```
+
+{% hint style="info" %}
+Use `--additional-ow`**`ners` Even if you want a single threshold multisig, you must add the other owner's/owners's address to not face "MULTISIG\_TRANSACTION\_INSUFFICIENT\_APPROVALS" ERROR while Executing Proposed Transaction.**
+{% endhint %}
 
 #### Approve a pending multisig transaction:
 
@@ -47,13 +52,13 @@ supra move multisig create-transaction
 #### Execute a multisig transaction that has its full payload stored on-chain:
 
 ```powershell
-supra move multisig execute --multisig-address <MULTISIG_ADDRESS>
+supra move multisig execute --multisig-address <MULTISIG_ADDRESS> --max-gas 500
 ```
 
 #### Removes a proposed multisig transaction (finalizes a rejection):
 
 ```powershell
-supra move multisig execute-reject --multisig-address <MULTISIG_ADDRESS>
+supra move multisig execute-reject --multisig-address <MULTISIG_ADDRESS> --max-gas 500
 ```
 
 #### Execute a multisig transaction where only a payload hash was stored on-chain:
@@ -66,6 +71,7 @@ supra move multisig execute-reject --multisig-address <MULTISIG_ADDRESS>
 supra move multisig execute-with-payload 
 --multisig-address <MULTISIG_ADDRESS> 
 --function-id <FUNCTION_ID>
+ --max-gas 500
 ```
 
 #### Reject a multisig transaction:
@@ -97,24 +103,19 @@ The typical workflow when interacting with a multisig account is as follows:\
 
 
 1. Creation of the Multisig Account:
-   * **`create`:** Instantiates a multisig account with a single default owner.
-   * **`create_with_owners`**: Allows specifying multiple owner addresses during creation.\
+   * **`create`:** Instantiates a multisig account with a single default owner.\
 
-2. Modifying Owners:&#x20;
-   * `add_owners` / `remove_owners` :
-     * Owners can be added or removed from the multisig account as needed.
-     * Operations follow the pre-specified k-of-n signature requirement.\
+2. &#x20;Transaction Creation:
 
-3. Transaction Creation:
-   * `create_transaction`: An owner can initiate a multisig transaction by providing the entire transaction payload.
-   * `create_transaction_with_hash`: For gas efficiency, only a hash of the payload is stored on chain.
-   * A unique transaction ID is assigned to every newly proposed transaction.\
+* `create_transaction`: An owner can initiate a multisig transaction by providing the entire transaction payload.
+* A unique transaction Sequence ID is assigned to every newly proposed transaction.\
 
-4. Transaction Voting (Approval/Rejection):
+
+1. Transaction Voting (Approval/Rejection):
    * `approve`: Other owners can approve the pending transaction by submitting their approval with the transaction ID.
    * `reject`: Conversely, owners can reject a transaction if they do not agree with its content.\
 
-5. Transaction Execution:
+2. Transaction Execution:
    * `execute` or `execute_with_payload` :
      * If enough approvals have accumulated, any owner can execute the transaction.
      * Depending on whether the full payload or just a hash is stored, the appropriate execute function is called.
@@ -122,8 +123,8 @@ The typical workflow when interacting with a multisig account is as follows:\
      * The multisig module first verifies that the payload has received the required number of signatures.
      * The executing owner pays for the gas fee.\
 
-6. Finalizing Rejected Transactions:
-   * `execute_rejected_transaction` :
+3. Finalizing Rejected Transactions:
+   * `execute_reject` :
      * Once a transaction accumulates enough rejections, any owner can finalize the rejection of that transaction.
 
 ## Practical Tips
