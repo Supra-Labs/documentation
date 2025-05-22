@@ -30,7 +30,7 @@ supra move multisig create
 ```
 
 {% hint style="info" %}
-Use `--additional-ow`**`ners` Even if you want a single threshold multisig, you must add the other owner's/owners's address to not face "MULTISIG\_TRANSACTION\_INSUFFICIENT\_APPROVALS" ERROR while Executing Proposed Transaction.**
+Use `--additional-owners` Even if you want a single threshold multisig, you must add the other owner's/owners address to not face "**MULTISIG\_TRANSACTION\_INSUFFICIENT\_APPROVALS**" ERROR while Executing Proposed Transaction.
 {% endhint %}
 
 #### Approve a pending multisig transaction:
