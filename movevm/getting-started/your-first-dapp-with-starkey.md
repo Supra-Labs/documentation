@@ -339,6 +339,10 @@ function App() {
       clearInterval(intervalId);
     }, 5000);
   };
+  
+  useEffect(() => {
+      checkForStarkey();
+  }, []);
 
   const getNetworkData = async () => {
     if (supraProvider) {
