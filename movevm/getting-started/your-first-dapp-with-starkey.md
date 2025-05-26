@@ -110,6 +110,10 @@ The following code checks for the injected StarKey object every 500ms for up to 
       clearInterval(intervalId);
     }, 5000);
   };
+
+  useEffect(() => {
+      checkForStarkey();
+  }, []);
 ```
 {% endstep %}
 
