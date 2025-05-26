@@ -12,13 +12,9 @@ Both frameworks share a few similar foundational designs of code. As such, many 
 * **Additional Features**: Supra includes extra modules (e.g., for randomness, advanced governance) that expand functionality.
 * **Configuration and Constants**: Some constants, such as domain separators or error codes, have been updated to reflect the Supra ecosystem.
 
-
-
 ## Import Paths and Their Changes
 
 There are differences in import paths that set Supra apart:
-
-### Import Paths
 
 #### Aptos Example:
 
