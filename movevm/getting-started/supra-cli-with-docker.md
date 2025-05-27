@@ -31,7 +31,7 @@ cd Documents
 ```
 {% endcode %}
 
-The following command will use the latest compose file (which you can [view here](https://github.com/Entropy-Foundation/supra-dev-hub/blob/main/Scripts/cli/compose.yaml)) and pipe it into the [Docker Compose command](docker.md#what-is-docker-compose). This will pull the latest image, create, and start the container.\
+The following command will use the latest compose file (which you can [view here](https://github.com/Supra-Labs/supra-dev-hub/blob/main/Scripts/cli/compose.yaml)) and pipe it into the [Docker Compose command](docker.md#what-is-docker-compose). This will pull the latest image, create, and start the container.\
 \
 Please note that the following command will create a `supra` directory within your current working directory if one does not already exist.
 
