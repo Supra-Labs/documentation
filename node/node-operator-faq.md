@@ -263,7 +263,7 @@ A: No, your tokens were not lost. If you’re using an operator account, unlocke
 If the transaction is not visible in SupraScan, it might be a UI delay or an indexing issue. You can verify the token transfer using the RPC endpoint directly or the following CLI command:
 
 ```
-./supra move tool view --function-id 0x1::coin::balance --type-args 0x1::supra_coin::SupraCoin --args address:<your_operator_address> --rpc-url <URL_RPC>
+./supra move tool view --function-id 0x1::coin::balance --type-args 0x1::supra_coin::SupraCoin --args address:<your_operator_address>
 ```
 
 Replace `<your_operator_address>` with your actual wallet address to confirm your SUPRA balance.
