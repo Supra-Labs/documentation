@@ -249,6 +249,27 @@ A: This issue can be resolved by increasing the system <mark style="color:green;
 
 </details>
 
+<details>
+
+<summary>Why didn’t my unlocked SUPRA tokens appear in my wallet after a successful unlock transaction from an operator account? Were they lost?</summary>
+
+A: No, your tokens were not lost. If you’re using an operator account, unlocked tokens may be automatically withdrawn as part of the `synchronize_delegation_pool` function. This internal mechanism triggers `execute_pending_withdrawal` automatically for operator accounts once the next lockup cycle has begun. This means:\
+
+
+* You do not need to manually trigger a withdrawal for operator accounts.
+* The withdrawal may be initiated by any transaction (including from other accounts) that calls `synchronize_delegation_pool`.
+* The unlocked tokens are sent to the operator’s account and should be visible in your wallet balance.
+
+If the transaction is not visible in SupraScan, it might be a UI delay or an indexing issue. You can verify the token transfer using the RPC endpoint directly or the following CLI command:
+
+```
+./supra move tool view --function-id 0x1::coin::balance --type-args 0x1::supra_coin::SupraCoin --args address:<your_operator_address> --rpc-url <URL_RPC>
+```
+
+Replace `<your_operator_address>` with your actual wallet address to confirm your SUPRA balance.
+
+</details>
+
 ## General Information & Frequently Asked Questions
 
 <details>
