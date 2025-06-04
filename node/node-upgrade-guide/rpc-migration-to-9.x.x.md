@@ -1,11 +1,11 @@
-# RPC Migration to 9.0.12
+# RPC Migration to 9.x.x
 
 Run the following command to migrate the database and configuration files of your RPC node to the latest version.&#x20;
 
 The database migration requires syncing a snapshot that we have already updated and may take several hours, so you may want to consider running the process in the background.
 
 ```
-./migrate_to_v9.0.x.sh rpc <container_name> <host_supra_home> <validator_ip>
+./migrate_to_v9.x.x.sh rpc <container_name> <host_supra_home> <validator_ip>
 ```
 
 After the script completes:

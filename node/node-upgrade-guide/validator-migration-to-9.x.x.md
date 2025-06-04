@@ -1,9 +1,9 @@
-# Validator Migration to 9.0.12
+# Validator Migration to 9.x.x
 
 To migrate your Validator Node, run the following command:
 
 ```
-./migrate_to_v9.0.x.sh validator <container_name> <host_supra_home>
+./migrate_to_v9.x.x.sh validator <container_name> <host_supra_home>
 ```
 
 **Note:**&#x20;
