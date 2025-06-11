@@ -57,6 +57,7 @@
     * [Standard Library](move-book/reference/standard-library.md)
     * [Coding Conventions](move-book/reference/coding-conventions.md)
 * [Aptos to Supra Cheatsheet](aptos-to-supra-cheatsheet.md)
+* [Ethereum to Supra Move Cheatsheet](ethereum-to-supra-move-cheatsheet.md)
 * [CLI Commands](cli-commands/README.md)
   * [Cheat Sheet](cli-commands/cheat-sheet.md)
   * [Profiles](cli-commands/profiles.md)
