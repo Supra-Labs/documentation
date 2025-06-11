@@ -93,6 +93,7 @@
             spec: supra-testnet-api
       ```
 * [Supra Multisig Guide](supra-multisig-guide.md)
+* [Binary Canonical Serialization (BCS) Standard Guide](binary-canonical-serialization-bcs-standard-guide.md)
 
 ## Developer Resources <a href="#dev" id="dev"></a>
 
