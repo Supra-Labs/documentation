@@ -36,7 +36,7 @@ npx @supranpm/supra-dapp-templates
 * Name your project.
 * Choose a template.
 
-{% embed url="https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FkaUNeiOUvY0TI9c9oVPw%2Fuploads%2FrxMOLktlH4auPeDfjr8b%2FRecording%202025-04-16%20205007.mp4?alt=media&token=2f2ae391-2600-4bac-9556-58b18c9d18f3" %}
+{% embed url="https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FmTBWRilfF5GuWWSNVrjY%2Fuploads%2F9fjzWge44gxJJvel70Kd%2FRecording%202025-06-14%20171305.mp4?alt=media&token=e5d34854-2ff6-4e75-bda1-9911bcf492b1" %}
 {% endstep %}
 {% endstepper %}
 
@@ -85,7 +85,7 @@ We welcome contributions to enhance the functionality, add more dapp templates, 
 
 * Fork the main repository on GitHub.
 
-{% embed url="https://github.com/Entropy-Foundation/Supra-dapp-templates" %}
+{% embed url="https://github.com/Supra-Labs/supra-dapp-templates" %}
 
 * Clone the forked repository to your local machine.
 * Make your changes and push them.
