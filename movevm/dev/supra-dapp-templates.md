@@ -42,7 +42,7 @@ npx @supranpm/supra-dapp-templates
 
 ## Running Your Project:
 
-After you've selected your template and completed the setup, here’s how you can execute and run your project assuming you have used **Supra StarKey Wallet Dapp Template**:
+After you've selected your template and completed the setup, here’s how you can execute and run your project <kbd>assuming</kbd> you have used **Supra StarKey Wallet Dapp Template**:
 
 {% stepper %}
 {% step %}
@@ -77,7 +77,8 @@ And your project should be up and running! Connect to your Starkey Wallet
   Sample Supra SDK with StarKey Wallet integration for building a to-do list dApp and Frontend Integration.
 * **Supra StarKey Wallet Dapp Template:**\
   A Spin the Wheel dapp built on Supra MoveVM Testnet with Supra\_framework, StarKey Wallet & Frontend Integration
-* **SupraVRF Move Template:** Template for dapps using Supra dVRF on MoveVM.
+* **Supra dVRF Template**: Template to get Started with Dapp on Supra dVRF on Supra MoveVM.
+* **Supra Automation Template**: Template to get your first Supra Automation Task Registered for Auto Wallet Top-up Usecase.
 
 ## Contribution:
 
