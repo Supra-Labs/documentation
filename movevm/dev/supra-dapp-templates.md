@@ -69,16 +69,20 @@ And your project should be up and running! Connect to your Starkey Wallet
 
 ### Templates Available in the Package:
 
-`npx @supranpm/supra-dapp-templates` offers multiple templates to accelerate dapp development:\\
+`npx @supranpm/supra-dapp-templates` offers multiple templates to accelerate dapp development:\
 
-* **Basic Smart Contract Template:**\
-  Boilerplate smart contract for quick access.
-* **Supra SDK Dapp Template:**\
-  Sample Supra SDK with StarKey Wallet integration for building a to-do list dApp and Frontend Integration.
-* **Supra StarKey Wallet Dapp Template:**\
-  A Spin the Wheel dapp built on Supra MoveVM Testnet with Supra\_framework, StarKey Wallet & Frontend Integration
-* **Supra dVRF Template**: Template to get Started with Dapp on Supra dVRF on Supra MoveVM.
-* **Supra Automation Template**: Template to get your first Supra Automation Task Registered for Auto Wallet Top-up Usecase.
+
+* **Basic Smart Contract Template:** Boilerplate smart contract for quick access.\
+
+* **Supra SDK Dapp Template:** Sample Supra SDK with StarKey Wallet integration for building a to-do list dApp and Frontend Integration.\
+
+* **Supra StarKey Wallet Dapp Template:** A Spin the Wheel dapp built on Supra MoveVM Testnet with Supra\_framework, StarKey Wallet & Frontend Integration\
+
+* **Supra dVRF Template**: Template to get Started with Dapp on Supra dVRF on Supra MoveVM.\
+
+* **Supra Automation Template**: Template to get your first Supra Automation Task Registered for Auto Wallet Top-up Usecase.\
+
+* **Supra Push Oracles Template:** Template to integrate Supra's push oracle data feeds in Move smart contracts on Supra Move.
 
 ## Contribution:
 
