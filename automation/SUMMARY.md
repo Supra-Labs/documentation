@@ -10,6 +10,7 @@
   * [Calculate task-expiry-time & task-automation-fee](your-first-automation-task/calculate-task-expiry-time-and-task-automation-fee.md)
   * [Register your Automation Task](your-first-automation-task/register-your-automation-task.md)
   * [Canceling Your Automation Task](your-first-automation-task/canceling-your-automation-task.md)
+* [Using --type-args with Automation](using-type-args-with-automation.md)
 * [Use Cases of AutoFi](use-cases-of-autofi.md)
 * [Glossary](glossary.md)
 * [FAQs](faqs.md)

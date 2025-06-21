@@ -166,7 +166,7 @@ module exampleAddress::auto_incr {
         let account_addr = signer::address_of(&account);
         account::create_account_for_test(account_addr);
         // Initialize counter
-        initialize(&account);        
+        init_module(&account);        
         // Check initial value
         assert!(get_counter_value(account_addr) == 0, 1);
         // Test increment
@@ -186,7 +186,7 @@ module exampleAddress::auto_incr {
 
 ```powershell
 supra move tool publish \
---package-dir /supra/configs/move_workspace/<PROJECT_NAME> \ 
+--package-dir /supra/move_workspace/autofi \ 
 --rpc-url https://rpc-testnet.supra.com
 ```
 {% endstep %}
