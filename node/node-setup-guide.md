@@ -1,3 +1,7 @@
+---
+hidden: true
+---
+
 # Node Setup Guide
 
 {% hint style="danger" %}
