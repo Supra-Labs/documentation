@@ -5,6 +5,8 @@
 * [Node Upgrade Guide - Mainnet](node-upgrade-guide-mainnet/README.md)
   * [Upgrade Checklist (Pre-Upgrade Verification)](node-upgrade-guide-mainnet/upgrade-checklist-pre-upgrade-verification.md)
   * [Download the Node Management Scripts for Validator](node-upgrade-guide-mainnet/download-the-node-management-scripts-for-validator.md)
+  * [Download the Node Management Scripts for RPC](node-upgrade-guide-mainnet/download-the-node-management-scripts-for-rpc.md)
+  * [Starting the Supra Nodes](node-upgrade-guide-mainnet/starting-the-supra-nodes.md)
   * [Monitor Node Synchronization](node-upgrade-guide-mainnet/monitor-node-synchronization.md)
   * [CLI Improvements](node-upgrade-guide-mainnet/cli-improvements.md)
   * [Recovery Guide](node-upgrade-guide-mainnet/recovery-guide.md)
