@@ -14,4 +14,4 @@ Welcome aboard—your contributions are vital to shaping the future of decentral
 
 ***
 
-<table data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td></td><td>Node Operator FAQ</td><td></td><td><a href="node-operator-faq.md">node-operator-faq.md</a></td></tr><tr><td></td><td>Node Setup Guide</td><td></td><td><a href="node-setup-guide.md">node-setup-guide.md</a></td></tr><tr><td></td><td>Node Upgrade Guide</td><td></td><td><a href="node-upgrade-guide/">node-upgrade-guide</a></td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td></td><td>Node Operator FAQ</td><td></td><td><a href="node-operator-faq.md">node-operator-faq.md</a></td></tr><tr><td></td><td>Node Setup Guide</td><td></td><td><a href="broken-reference">Broken link</a></td></tr><tr><td></td><td>Node Upgrade Guide</td><td></td><td><a href="node-upgrade-guide/">node-upgrade-guide</a></td></tr></tbody></table>

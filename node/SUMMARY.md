@@ -2,7 +2,6 @@
 
 * [Overview](README.md)
 * [Node Operator FAQ](node-operator-faq.md)
-* [Node Setup Guide](node-setup-guide.md)
 * [Node Upgrade Guide](node-upgrade-guide/README.md)
   * [Upgrade Checklist (Pre-Upgrade Verification)](node-upgrade-guide/upgrade-checklist-pre-upgrade-verification.md)
   * [Download the Node Management Scripts](node-upgrade-guide/download-the-node-management-scripts.md)
