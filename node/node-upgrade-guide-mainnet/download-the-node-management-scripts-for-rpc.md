@@ -2,6 +2,10 @@
 
 Before proceeding with the upgrade, download the latest node management scripts.
 
+Note:
+
+For successful snapshot downloads, pls ensure your hard disk has at least 2TB of space
+
 To download the script, run the following command:
 
 ```
