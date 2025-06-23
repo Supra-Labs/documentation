@@ -22,9 +22,9 @@ Wait for a couple of minutes to see if the process terminates with an error.&#x2
 
 If it does, then please contact [Supra Support](../creating-supradesk-tickets-via-email.md) and share a screenshot or text copy of the error.
 
-If no error is shown, stop the node again and follow the [normal steps](starting-the-supra-node.md) to start it again&#x20;
+If no error is shown, stop the node again and follow the [normal steps](broken-reference) to start it again&#x20;
 
-Finally, follow the steps in the[ Monitor Node Synchronization article](monitor-node-synchronization.md)  to check if your node is in sync.
+Finally, follow the steps in the[ Monitor Node Synchronization article](../node-upgrade-guide-mainnet/monitor-node-synchronization.md)  to check if your node is in sync.
 
 \
 \

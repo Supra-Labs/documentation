@@ -54,7 +54,7 @@ And for RPC nodes, run:
 ./manage_supra_nodes.sh sync --snapshot-source <snapshot_source> rpc <host_supra_home> <network>
 ```
 
-After the command completes, [restart](starting-the-supra-node.md) your node and [monitor](monitor-node-synchronization.md) its logs  to ensure that it is syncing the latest blocks correctly. If your node produces an error, first refer to the [Troubleshooting](recovery-guide.md#troubleshooting-guide)  section below, then, if your issue cannot be resolved by the instructions provided there, reach out to [Supra Support](../creating-supradesk-tickets-via-email.md).
+After the command completes, [restart](broken-reference) your node and [monitor](../node-upgrade-guide-mainnet/monitor-node-synchronization.md) its logs  to ensure that it is syncing the latest blocks correctly. If your node produces an error, first refer to the [Troubleshooting](recovery-guide.md#troubleshooting-guide)  section below, then, if your issue cannot be resolved by the instructions provided there, reach out to [Supra Support](../creating-supradesk-tickets-via-email.md).
 
 ## Troubleshooting Guide
 
