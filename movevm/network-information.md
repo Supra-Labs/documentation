@@ -22,4 +22,4 @@ description: Relative network, faucet, and API details.
 
 #### EVM Faucet
 
-`curl https://rpc-evm-devnet.supra.com/rpc//v1/wallet/evm_faucet/<YOUR_ADDRESS>`
+`curl https://rpc-evm-devnet.supra.com/rpc/v1/wallet/evm_faucet/<YOUR_ADDRESS>`
