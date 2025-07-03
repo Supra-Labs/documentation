@@ -20,6 +20,6 @@ description: Relative network, faucet, and API details.
 
 <table><thead><tr><th>Network</th><th width="361.11328125">Rest API</th><th>Chain ID</th></tr></thead><tbody><tr><td>Devnet</td><td><a href="https://rpc-multivm.supra.com/rpc/v1/eth">https://rpc-multivm.supra.com/rpc/v1/eth</a></td><td>519698972793</td></tr></tbody></table>
 
-#### Stagingnet Faucet
+#### EVM Faucet
 
 `curl https://rpc-multivm.supra.com/rpc/v1/wallet/evm_faucet/<YOUR_ADDRESS>`
