@@ -18,7 +18,7 @@ description: Relative network, faucet, and API details.
 
 ### ​[Supra EVM](https://app.gitbook.com/s/c4EYjCJ7ng67f48XRDDD/network-information#supra-evm)​
 
-<table><thead><tr><th>Network</th><th width="361.11328125">Rest API</th><th>Chain ID</th></tr></thead><tbody><tr><td>Devnet</td><td><a href="https://rpc-multivm.supra.com/rpc/v1/eth">https://rpc-multivm.supra.com/rpc/v1/eth</a></td><td>519698972793</td></tr></tbody></table>
+<table><thead><tr><th>Network</th><th width="361.11328125">Rest API</th><th>Chain ID</th></tr></thead><tbody><tr><td>Testnet Alpha</td><td><a href="https://rpc-evm-devnet.supra.com/rpc/v1/eth">https://rpc-evm-devnet.supra.com/rpc/v1/eth</a></td><td>996447617256</td></tr></tbody></table>
 
 #### EVM Faucet
 
