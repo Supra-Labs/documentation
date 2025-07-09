@@ -23,7 +23,7 @@ In Supra network, You will interact with a single Supra Smart contract to connec
 
 #### Step 1: Create the Supra dVRF Interface[​](https://qa-docs.supraoracles.com/docs/vrf-dev-guide#step-1-create-the-supra-router-contract-interface) <a href="#step-1-create-the-supra-router-contract-interface" id="step-1-create-the-supra-router-contract-interface"></a>
 
-Import interface from [https://github.com/Entropy-Foundation/vrf-interface](https://github.com/Entropy-Foundation/vrf-interface) git repository and add subdirectory mainnet or testnet whatever you would like to use for integration.\\
+Import interface from [https://github.com/Entropy-Foundation/vrf-interface](https://github.com/Entropy-Foundation/vrf-interface) git repository and add subdirectory mainnet or testnet whatever you would like to use for integration.
 
 #### Step 2: Configure Supra dVRF
 
