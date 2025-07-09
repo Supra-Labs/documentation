@@ -56,13 +56,12 @@ Beta version of the commodity feeds are available only on testnets.
 <table><thead><tr><th width="191">Data Pair</th><th width="128">Pair ID</th><th>Pair Category</th></tr></thead><tbody><tr><td>XAU_USD</td><td>5500</td><td>Under Supervision</td></tr><tr><td>XAG_USD</td><td>5501</td><td>Under Supervision</td></tr><tr><td>XPD_USD</td><td>5504</td><td>Under Supervision</td></tr><tr><td>XPT_USD</td><td>5505</td><td>Under Supervision</td></tr><tr><td>XG_USD</td><td>5506</td><td>Under Supervision</td></tr></tbody></table>
 {% endtab %}
 
-{% tab title="Circ." %}
-Supply\\
+{% tab title="Circ. Supply" %}
+
 
 <table><thead><tr><th width="245.34375">Asset</th><th>Index</th><th>Category</th></tr></thead><tbody><tr><td>BTC</td><td>50000</td><td>Under Supervision</td></tr><tr><td>ETH</td><td>50001</td><td>Under Supervision</td></tr><tr><td>SOL</td><td>50002</td><td>Under Supervision</td></tr><tr><td>BNB</td><td>50003</td><td>Under Supervision</td></tr><tr><td>XRP</td><td>50004</td><td>Under Supervision</td></tr><tr><td>DOGE</td><td>50005</td><td>Under Supervision</td></tr><tr><td>TON</td><td>50006</td><td>Under Supervision</td></tr><tr><td>ADA</td><td>50007</td><td>Under Supervision</td></tr><tr><td>TRX</td><td>50008</td><td>Under Supervision</td></tr></tbody></table>
 
-\
-\\
+
 {% endtab %}
 {% endtabs %}
 
