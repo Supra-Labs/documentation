@@ -1,12 +1,6 @@
 # Table of contents
 
 * [Overview](README.md)
-* [Decentralized VRF (dVRF)](dvrf/README.md)
-  * [A Deeper Dive into Supra dVRF](dvrf/a-deeper-dive-into-supra-dvrf.md)
-  * [Developer Guide](dvrf/v2-guide.md)
-  * [Migration to dVRF 3.0](dvrf/migration-to-dvrf-3.0.md)
-  * [VRF Subscription FAQ](dvrf/vrf-subscription-model.md)
-  * [Available Networks](dvrf/networks.md)
 * [Data Feeds](data-feeds/README.md)
   * [Data Feeds Index](data-feeds/data-feeds-index.md)
   * [Pull Oracle](data-feeds/pull-oracle/README.md)

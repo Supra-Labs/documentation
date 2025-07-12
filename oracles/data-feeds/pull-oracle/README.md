@@ -1,17 +1,3 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # Pull Oracle
 
 DORA V2, our latest version of data feeds protocol, uses a combination of Web2 and Web3 methods to achieve ultra-low latency when sending data from Supra to destination chains. First, Web2 methods are used to retrieve data from Supra, while Web3 smart contracts are utilised for cryptographically verifying and writing it on-chain where it lives on immutable ledgers.
