@@ -26,7 +26,7 @@ Supra VRF V2 comes with a subscription model where a user can manage their own g
 
 In order to get whitelisted, please send us a request via this [form](https://forms.gle/MyMbAgdod4QZUpHi6), and our team will whitelist you shortly. Meanwhile, you can go through a detailed explanation of the subscription model to learn more about it.
 
-Please refer to the [VRF Developer Guide](dvrf/v2-guide.md) for a step-by-step explanation of how to consume Supra’s dVRF services.
+Please refer to the [VRF Developer Guide](v2-guide.md) for a step-by-step explanation of how to consume Supra’s dVRF services.
 
 {% hint style="danger" %}
 Important: Please make sure you read and understand [Terms of Use](https://supra.com/terms-of-use/) before start using Supra products and services.
