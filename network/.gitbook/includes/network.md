@@ -10,22 +10,18 @@ title: NETWORK
 
 ## Testnet Faucet
 
-{% code overflow="wrap" %}
-```
-https://rpc-testnet.supra.com/rpc/v1/wallet/faucet/<ADDRESS>
-```
-{% endcode %}
+<pre data-overflow="wrap"><code><strong>https://rpc-testnet.supra.com/rpc/v1/wallet/faucet/&#x3C;ADDRESS>
+</strong></code></pre>
 
 ***
 
 # [Supra EVM](broken-reference)
 
-<table><thead><tr><th width="209">Network</th><th width="402.10009765625">Rest API</th><th>Chain ID</th></tr></thead><tbody><tr><td>Mainnet</td><td>TBA</td><td>TBA</td></tr><tr><td>Testnet Alpha</td><td><a href="https://rpc-evm-devnet.supra.com/rpc/v1/eth">https://rpc-evm-devnet.supra.com/rpc/v1/eth</a></td><td>996447617256</td></tr></tbody></table>
+<table><thead><tr><th width="209">Network</th><th width="402.10009765625">Rest API</th><th>Chain ID</th></tr></thead><tbody><tr><td>RPC Info Soon</td><td>TBA</td><td>TBA</td></tr></tbody></table>
 
-## Stagingnet Faucet
+## Faucet
 
 {% code overflow="wrap" %}
 ```
-https://rpc-evm-devnet.supra.com/rpc/v1/wallet/evm_faucet/<ADDRESS>
 ```
 {% endcode %}
