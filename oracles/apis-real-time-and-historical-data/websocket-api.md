@@ -32,7 +32,7 @@ To initiate a subscription to the data feed, a message is sent to the WebSocket 
     {
       "name": "ohlc_datafeed",
       "resolution": 5,
-      "tradingPairs": ["btc_usd"]
+      "datapairs": ["btc_usd"]
     }
   ]
 }

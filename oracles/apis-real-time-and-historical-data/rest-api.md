@@ -117,7 +117,7 @@ Response
             "24h_high": "97849.9",
             "24h_low": "92720",
             "24h_change": "5.5326790336496980",
-            "tradingPair": "btc_usdt"
+            "dataPair": "btc_usdt"
         }
     ]
 }
