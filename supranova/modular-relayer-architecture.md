@@ -104,10 +104,10 @@ The Committee Updater makes sure that SupraNova can always validate Ethereum blo
 
 ### Rewards and Incentives
 
-| **Actor**         | **Incentive Source** | **Reward Type**                               |
-| ----------------- | -------------------- | --------------------------------------------- |
-| Relayer           | Service Fee          | Paid periodically from treasury               |
-| Committee Updater | Verification Fee     | Paid directly during user bridge transactions |
+| Actor             | Incentive Source | Reward Type                                   |
+| ----------------- | ---------------- | --------------------------------------------- |
+| Relayer           | Service Fee      | Paid periodically from treasury               |
+| Committee Updater | Verification Fee | Paid directly during user bridge transactions |
 
 **Without these actors:**
 
@@ -121,7 +121,7 @@ SupraNova keeps liveness and decentralization by rewarding these permissionless 
 
 ### Failure Handling
 
-| **Failure**                                      | **System Behavior**                                                                   |
+| Failure                                          | System Behavior                                                                       |
 | ------------------------------------------------ | ------------------------------------------------------------------------------------- |
 | <p>Relayer fails to submit proofs</p><p><br></p> | Another relayer can pick up the event and submit                                      |
 | Committee Updater fails to update keys           | Bridge verification pauses for new blocks; liveness resumes once updater submits keys |

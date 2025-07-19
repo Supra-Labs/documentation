@@ -4,6 +4,8 @@ SupraNova’s fee model is designed to sustain a permissionless, decentralized b
 
 <figure><img src=".gitbook/assets/3.png" alt="" width="563"><figcaption></figcaption></figure>
 
+\
+\
 SupraNova applies two levels of fees internally but simplifies the user experience by exposing only the Service Layer Fee during transaction confirmation.\
 
 
@@ -87,7 +89,7 @@ Actors like relayers and committee updaters are permissionless, meaning any one 
 
 They are incentivized through fee rewards:
 
-| **Actor**         | **Task**                   | **Incentive**                                  |
+| Actor             | Task                       | Incentive                                      |
 | ----------------- | -------------------------- | ---------------------------------------------- |
 | Relayer           | Submit proof bundles       | Treasury payouts funded by service fees        |
 | Committee Updater | Update Sync Committee keys | Direct payouts from message passing layer fees |
@@ -105,3 +107,140 @@ SupraNova’s modular fee system makes sure both actor roles remain sustainably 
 * **In the Testnet release, some fees (especially the verification fee) are set to zero or significantly reduced for easier testing.**
 * **In mainnet launch, full fee structures will be enforced.**
 {% endhint %}
+
+***
+
+## Fee Model for our Ethereum to Supra Bridge protocol
+
+This protocol involves a **Token Bridge Service** and a **Message Passing Layer**. The model details various fees and rewards, including:
+
+* **Service Fee (S)**
+* **Relayer Rewards (RR)**
+* **Committee Updater Rewards (CUR)**
+* **Relayer Expense (RG)**
+* **Committee Updater Expense (CUG)**
+* **Verification Fee (V)**
+
+### Key points of the model:
+
+* Users pay a **Service Fee (S)** and **gas costs** when initiating a bridge request.
+* **Relayers** are compensated with **Relayer Rewards (RR)** that cover their expenses (**RG**).
+* **Committee Updaters (CU)** are rewarded (**CUR**) for updating Ethereum sync committee public keys to Supra, covering their expenses (**CUG**).
+* **RG** and **CUG** are treated as constants determined by the Admin.
+
+### Fee Derivation Formulas
+
+Given traffic estimate `X`, and gross margins `SM`, `VM`, `CUM`, `RM`:
+
+* `CUR = CUG / (1 - CUM)`
+* `V = (CUR / X) / (1 - VM)`
+* `RR = (V + RG) / (1 - RM)`
+* `S = RR / (1 - SM)`
+
+***
+
+## Tiered Service Fee Structure
+
+To accommodate varying bridge volumes, SupraNova introduces a **tiered service fee model** based on the **value bridged in USDT**:
+
+| Tier     | Bridged Value Range | Service Fee Rate |
+| -------- | ------------------- | ---------------- |
+| Micro    | < $5,000            | 0.5%             |
+| Standard | $5,000 – $100,000   | 0.3%             |
+| Whale    | > $100,000          | 0.2%             |
+
+***
+
+## Fee Overview and Responsibilities
+
+SupraNova applies two levels of fees internally but simplifies the user experience by exposing only the **Service Layer Fee** during transaction confirmation.
+
+### **Verification Fee**
+
+An internal fee that compensates **Committee Updaters** for:
+
+* Proof generation
+* Signature validation
+* Validator public key updates
+
+**Paid by:** Service Layer (not the user directly)
+
+***
+
+### **Service Layer Fee**
+
+Visible to users and deducted upon initiating a bridge transaction. It covers:
+
+* Operational costs
+* Treasury accumulation
+* Relayer and Committee Updater rewards
+
+| Fee Type          | Purpose                                                                 | Source of Funding       |
+| ----------------- | ----------------------------------------------------------------------- | ----------------------- |
+| Verification Fee  | Covers cryptographic proof verification on Supra                        | Funded from Service Fee |
+| Service Layer Fee | Specific to the token bridge service, customizable by service providers | Paid by bridging users  |
+
+{% hint style="danger" %}
+The entire bridging fee is borne by the bridging users.
+{% endhint %}
+
+***
+
+## Fee Breakdown Example During a Bridge Transaction
+
+{% hint style="info" %}
+**Suppose you are bridging 1 ETH**
+{% endhint %}
+
+| Fee Component                    | Example                            |
+| -------------------------------- | ---------------------------------- |
+| Message Passing Verification Fee | 0.001 $SUPRA equivalent            |
+| Service Layer Fee (token bridge) | Tier-based cut from bridged amount |
+| Relayer Reward                   | Funded from Service Layer Fee      |
+| Committee Updater Reward         | Funded from Service Layer Fee      |
+
+* Net amount minted as wETH will be slightly less than 1 ETH after fees.
+* All fees are transparent and visible during the bridge confirmation step.
+
+***
+
+## Incentivizing Liveness
+
+Both relayers and committee updaters are permissionless roles that ensure network liveness and decentralization.
+
+| Actor            | Task                              | Incentive Source                       |
+| ---------------- | --------------------------------- | -------------------------------------- |
+| Relayer          | Submit proof bundles              | Treasury payouts via Service Layer Fee |
+| CommitteeUpdater | Update Sync Committee public keys | Payouts via Verification Fee           |
+
+Without sufficient rewards:
+
+* Relayers may delay proof submissions
+* Committee updates may lapse, compromising security
+
+SupraNova’s modular fee and reward system ensures both roles remain sustainably incentivized.
+
+{% hint style="info" %}
+**Testnet Fee Settings**
+
+* Some fees (especially the Verification Fee) are reduced or zero for testing purposes.
+* The full model is enforced at Mainnet launch.
+{% endhint %}
+
+***
+
+### Token Bridge Details
+
+<table><thead><tr><th width="123.15625">Network Name</th><th>Hypernova</th><th>Token Bridge</th></tr></thead><tbody><tr><td>Ethereum Sepolia</td><td>0x321124b4eC10812C3684773A5E25C8A698681380</td><td>0xf44E604DC44B2f8ccce22037B2727F0E93d12197</td></tr><tr><td>Supra Testnet</td><td>0x2e80885ae526328fb82d4e7b457630b7abe9a6911ffd43a57597f07d821bd79</td><td>0x9237095ab7d334e9b7a964700a362165121d249f2e7f742232fbee05ea9b07cc</td></tr></tbody></table>
+
+### Address Details
+
+<table><thead><tr><th width="123.15625">Asset Name</th><th>Ethereum (Lock)</th><th>Supra (Mint)</th></tr></thead><tbody><tr><td>WETH</td><td>0xfFf9976782d46CC05630D1f6eBAb18b2324d6B14</td><td>0x1affc9f80131227e0249a44cae92158d378bab4fd900277ca95eb55aea41b5af</td></tr><tr><td>USDC</td><td>0x1c7D4B196Cb0C7B01d743Fbc6116a902379C7238</td><td>0x2b97f311706ad54b49de98c60e42bd91e45c69e91efb899bbbbed92a5ac01569</td></tr></tbody></table>
+
+***
+
+### Asset Transaction Limit
+
+<table><thead><tr><th width="152.296875">Asset Name</th><th>Max Value</th></tr></thead><tbody><tr><td>ETH</td><td><p>184467440737.09551615  ETH</p><p></p><p>Receiver balance should not be more than 18446744073709551615</p></td></tr><tr><td>USDC</td><td><p>18446744073709.551615 USDC</p><p><br>Receiver balance should not be more than 18446744073709551615</p></td></tr></tbody></table>
+
+###

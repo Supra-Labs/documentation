@@ -8,8 +8,7 @@ SupraNova organizes its bridging infrastructure into clearly separated functiona
   This layer remains lightweight and strictly focused on trustless message verification.&#x20;
 
 {% hint style="success" %}
-**In case of HyperNova protocol, the message passing layer validates source chain validator signatures** \
-**and membership proofs.**\
+**In case of HyperNova protocol, the message passing layer validates source chain validator signatures and membership proofs.**\
 \
 **In case of HyperLoop the message passing layer validates the bridge validator signatures.**
 {% endhint %}

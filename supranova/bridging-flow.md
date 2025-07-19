@@ -8,7 +8,7 @@ This section explains how to use the SupraNova Bridge dApp to bridge ETH from Et
 
 Before initiating a bridge transaction, you must connect two wallets:
 
-| **Wallet**                               | **Purpose**                                      |
+| Wallet                                   | Purpose                                          |
 | ---------------------------------------- | ------------------------------------------------ |
 | MetaMask (Ethereum) or any source wallet | To send the ETH and sign the bridge transaction  |
 | Supra Wallet                             | To receive the wrappedETH (wETH) minted on Supra |
@@ -121,7 +121,7 @@ You can now:
 
 ### &#x20;Transaction Lifecycle Summary
 
-| **Stage**          | **System Action**                         | **User Action**       |
+| Stage              | System Action                             | User Action           |
 | ------------------ | ----------------------------------------- | --------------------- |
 | Wallet Connection  | Connect MetaMask and Supra Wallet         | Click Connect Wallet  |
 | Initiate Bridge    | Lock ETH on Ethereum                      | Enter Amount, Confirm |

@@ -77,7 +77,7 @@ This always operates with two blocks. One is the target block (block with the ev
 
 It handles two types of ancestry proofs:
 
-| **Proof Type**             | **Used When**                                                                    |
+| Proof Type                 | Used When                                                                        |
 | -------------------------- | -------------------------------------------------------------------------------- |
 | Block Roots Ancestry Proof | If the Targent block is within 8192 recent slots (\~27 hours)                    |
 | Historical Summaries Proof | If the block is older  than 8192 slots(archived in historical\_summaries vector) |
@@ -95,7 +95,7 @@ The relayer generates an Ancestry proof using Ethereum’s state vectors, which 
 
 #### Handling Edge Cases
 
-| **Scenario**                                   | **Handling logic (Component + Action)**            |
+| Scenario                                       | Handling logic (Component + Action)                |
 | ---------------------------------------------- | -------------------------------------------------- |
 | Block has < required Sync Committee signatures | We always generate Ancestry Proof                  |
 | Sync Committee rotates                         | Committee Updater refreshes keys on Supra          |

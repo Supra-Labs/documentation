@@ -70,7 +70,7 @@ This makes sure that SupraNova bridges only from valid Ethereum blocks.
 
 ### Summary of Components
 
-| **Component**                    | **Role**                                                                                                  |
+| Component                        | Role                                                                                                      |
 | -------------------------------- | --------------------------------------------------------------------------------------------------------- |
 | HyperNovaCore (Ethereum)         | Emit event                                                                                                |
 | Token Bridge Contract (Ethereum) | Lock ETH                                                                                                  |

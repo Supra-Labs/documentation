@@ -76,12 +76,13 @@ SupraNova chose Lock-Mint because:
 
 ### Supported Asset in Initial Release
 
-| **Source Token**            | **Destination Token**    | **Model** |
-| --------------------------- | ------------------------ | --------- |
-| ETH (Ethereum native asset) | wETH (Supra FA standard) | Lock-Mint |
+| Source Token                | Destination Token         | Model     |
+| --------------------------- | ------------------------- | --------- |
+| ETH (Ethereum native asset) | wETH (Supra FA standard)  | Lock-Mint |
+| USDC                        | wUSDC (Supra FA standard) | Lock-Mint |
 
 {% hint style="danger" %}
-**You cannot unlock ETH back to Ethereum yet in this release.**
+**You cannot unlock ETH  or USDC back to Ethereum yet in this release.**
 
 **Supra → Ethereum (burn-unlock model) will be added in a future HyperNova reverse bridge upgrade.**
 {% endhint %}
