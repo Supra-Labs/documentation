@@ -32,7 +32,7 @@ To initiate a subscription to the data feed, a message is sent to the WebSocket 
     {
       "name": "ohlc_datafeed",
       "resolution": 5,
-      "datapairs": ["btc_usd"]
+      "tradingPairs": ["btc_usd"]
     }
   ]
 }
@@ -46,7 +46,7 @@ To initiate a subscription to the data feed, a message is sent to the WebSocket 
   * **resolution**: 5\
     This is the resolution (in minutes) at which data updates will be delivered. A value of 5 means the server will send ohlc (Open price, High price, Low price, close price) updates every 5 minutes. Changing this value will adjust the resolution of updates.\
     Example: 1 =1 minute resolution(bar), 5=5 minutes resolution(bar)
-  *   **dataPairs**:
+  *   **tradingPairs**:
 
       A list of data pairs to subscribe to. This can include single or multiple pairs:
 
@@ -56,9 +56,9 @@ To initiate a subscription to the data feed, a message is sent to the WebSocket 
 
       Example:
 
-       Single pair subscription: "dataPairs": \["btc\_usd"]
+       Single pair subscription: "tradingPairs": \["btc\_usd"]
 
-       Multiple pairs subscription: "dataPairs”: \["btc\_usd", "eth\_usd",btc\_usdt"]
+       Multiple pairs subscription: "tradingPairs”: \["btc\_usd", "eth\_usd",btc\_usdt"]
 
 ### Response Data structure
 
@@ -77,7 +77,7 @@ Example Response
   	"high": "92420.15",
   	"low": "92412.3",
   	"close": "92412.3",
-  	"dataPair": "btc_usd",
+  	"tradingPair": "btc_usd",
   	"currentPrice": 92412.3
 	}
   ]
@@ -103,7 +103,7 @@ Example Response
     The lowest price during the time period.
   * **close**: "92412.3"\
     The closing price for the given time period
-  * **dataPair**: "btc\_usd"\
+  * **tradingPair**: "btc\_usd"\
     The data pair for which this data is provided.
   * **currentPrice**: 92412.3\
     The most recent price of the data pair at the time of data transmission.
@@ -129,7 +129,7 @@ Client and sends the following subscription message to receive real-time ohlc (o
     {
       "name": "hocl_datafeed",
       "resolution": 5,
-      "dataPairs": ["btc_usdt"]
+      "tradingPairs": ["btc_usdt"]
     }
   ]
 }
@@ -149,7 +149,7 @@ Client and sends the following subscription message to receive real-time ohlc (o
       "high": "92420.15",
       "low": "92412.3",
       "close": "92412.3",
-      "dataPair": "btc_usdt",
+      "tradingPair": "btc_usdt",
       "currentPrice": 92412.3
     }
   ]

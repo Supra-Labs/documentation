@@ -117,7 +117,7 @@ Response
             "24h_high": "97849.9",
             "24h_low": "92720",
             "24h_change": "5.5326790336496980",
-            "dataPair": "btc_usdt"
+            "tradingPairs": "btc_usdt"
         }
     ]
 }
@@ -130,6 +130,3 @@ Status Codes
 * 400 Bad Request: The request was invalid or improperly formatted.
 * 404 Not Found: The requested trading pair or data could not be found.
 * 500 Internal Server Error: A server error occurred while processing the request.\
-  \
-  \
-  \\
