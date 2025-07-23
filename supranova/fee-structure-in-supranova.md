@@ -231,11 +231,11 @@ SupraNova’s modular fee and reward system ensures both roles remain sustainabl
 
 ### Token Bridge Details
 
-<table><thead><tr><th width="123.15625">Network Name</th><th>Hypernova</th><th>Token Bridge</th></tr></thead><tbody><tr><td>Ethereum Sepolia</td><td>0x321124b4eC10812C3684773A5E25C8A698681380</td><td>0xf44E604DC44B2f8ccce22037B2727F0E93d12197</td></tr><tr><td>Supra Testnet</td><td>0x2e80885ae526328fb82d4e7b457630b7abe9a6911ffd43a57597f07d821bd79</td><td>0x9237095ab7d334e9b7a964700a362165121d249f2e7f742232fbee05ea9b07cc</td></tr></tbody></table>
+<table><thead><tr><th width="123.15625">Network Name</th><th>Hypernova</th><th>Token Bridge</th></tr></thead><tbody><tr><td>Ethereum Sepolia</td><td>0x50888Fc24e1224E12f5C8a31310A47B98b2A7f75</td><td>0x71eb89D6D0d6ED44526dd8EAcb956735934eC2d5</td></tr><tr><td>Supra Testnet</td><td>0xada99b67a6dbef6b1b30dbd3c059a0a6d52db8ae8994f1304100b81d3f0555bf</td><td>0xeea93baecf106a4d98cc9859afc2f74709bfc664e0fb916fea8ac65fcb5a67da</td></tr></tbody></table>
 
 ### Address Details
 
-<table><thead><tr><th width="123.15625">Asset Name</th><th>Ethereum (Lock)</th><th>Supra (Mint)</th></tr></thead><tbody><tr><td>WETH</td><td>0xfFf9976782d46CC05630D1f6eBAb18b2324d6B14</td><td>0x1affc9f80131227e0249a44cae92158d378bab4fd900277ca95eb55aea41b5af</td></tr><tr><td>USDC</td><td>0x1c7D4B196Cb0C7B01d743Fbc6116a902379C7238</td><td>0x2b97f311706ad54b49de98c60e42bd91e45c69e91efb899bbbbed92a5ac01569</td></tr></tbody></table>
+<table><thead><tr><th width="123.15625">Asset Name</th><th>Ethereum (Lock)</th><th>Supra (Mint)</th></tr></thead><tbody><tr><td>WETH</td><td>0xfFf9976782d46CC05630D1f6eBAb18b2324d6B14</td><td>0x259762e67167464aeb018777395c808493983e2162b3f475cbd7ed0761aa2915</td></tr><tr><td>USDC</td><td>0x1c7D4B196Cb0C7B01d743Fbc6116a902379C7238</td><td>0x31f5836c7163802690e5a170fbf70c48eda42f50a8948219c8a49f3140c3263d</td></tr></tbody></table>
 
 ***
 
