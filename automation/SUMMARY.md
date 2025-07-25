@@ -11,6 +11,7 @@
   * [Register your Automation Task](your-first-automation-task/register-your-automation-task.md)
   * [Canceling Your Automation Task](your-first-automation-task/canceling-your-automation-task.md)
 * [Using --type-args with Automation](using-type-args-with-automation.md)
+* [Automation Dev Assit Tool](https://supra-automation-assist.vercel.app/)
 * [Use Cases of AutoFi](use-cases-of-autofi.md)
 * [Glossary](glossary.md)
 * [FAQs](faqs.md)
