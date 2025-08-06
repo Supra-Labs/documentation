@@ -39,7 +39,7 @@ Supra’s HyperNovaCore verifier validates the proofs
 {% endstep %}
 
 {% step %}
-The Token Bridge Service Contract mints equivalent wrapped ETH (wETH) on Supra to the recipient address
+The Token Bridge Service Contract mints equivalent wrapped asset, supETH on Supra to the recipient address
 
 
 {% endstep %}
@@ -49,7 +49,7 @@ The Token Bridge Service Contract mints equivalent wrapped ETH (wETH) on Supra t
 
 * You bridge 5 ETH from Ethereum.
 * SupraNova locks exactly 5 ETH in the Ethereum bridge vault.
-* After proof validation, Supra mints the equivalent amount of wETH to your wallet, minus any applicable service fee.
+* After proof validation, Supra mints the equivalent amount of supETH to your wallet, minus any applicable service fee.
 
 {% hint style="warning" %}
 **In the current testnet release, fee deductions may be waived or minimal.**
@@ -58,12 +58,12 @@ The Token Bridge Service Contract mints equivalent wrapped ETH (wETH) on Supra t
 #### **Collateral Status:**
 
 * ETH remains locked securely in Ethereum contracts.
-* wETH is fully backed 1:1 by real ETH.
+* supETH is fully backed 1:1 by real ETH.
 
 #### Security Guarantees
 
 * **No Double Spending:** Because ETH remains immobile once locked.
-* **Full Collateralization:** wETH minted on Supra cannot exceed ETH locked on Ethereum.
+* **Full Collateralization:** supETH minted on Supra cannot exceed ETH locked on Ethereum.
 * **Proof-Driven Minting:** No minting happens without complete proof validation across transaction, receipt, and consensus.
 
 ### Why is Lock-Mint chosen?
@@ -76,10 +76,10 @@ SupraNova chose Lock-Mint because:
 
 ### Supported Asset in Initial Release
 
-| Source Token                | Destination Token         | Model     |
-| --------------------------- | ------------------------- | --------- |
-| ETH (Ethereum native asset) | wETH (Supra FA standard)  | Lock-Mint |
-| USDC                        | wUSDC (Supra FA standard) | Lock-Mint |
+| Source Token                | Destination Token           | Model     |
+| --------------------------- | --------------------------- | --------- |
+| ETH (Ethereum native asset) | supETH (Supra FA standard)  | Lock-Mint |
+| USDC                        | supUSDC (Supra FA standard) | Lock-Mint |
 
 {% hint style="danger" %}
 **You cannot unlock ETH  or USDC back to Ethereum yet in this release.**

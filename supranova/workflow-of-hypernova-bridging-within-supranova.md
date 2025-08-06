@@ -3,9 +3,9 @@
 SupraNova uses the HyperNova trustless bridging protocol for bridging from Ethereum to Supra.&#x20;
 
 {% hint style="success" %}
-At a high level, the bridging flow looks like this:
+For esample at a high level, the bridging flow looks like this:
 
-**Ethereum Wallet → Lock ETH → Emit Event → Relayer → Proof Bundle → Supra Verifier → Mint wETH**&#x20;
+**Ethereum Wallet → Lock ETH → Emit Event → Relayer → Proof Bundle → Supra Verifier → Mint supETH**&#x20;
 {% endhint %}
 
 ### The system consists of several coordinated components:
@@ -40,7 +40,7 @@ At a high level, the bridging flow looks like this:
 * That the event originates from the expected bridge contract
 * That the transaction receipt is valid
 
-Upon successful verification, wrapped ETH (wETH) is minted for the user.
+Upon successful verification, the wrapped asset (like supETH) is minted for the user.
 
 #### Below you can see the bridge life cycle:
 
@@ -76,5 +76,5 @@ This makes sure that SupraNova bridges only from valid Ethereum blocks.
 | Token Bridge Contract (Ethereum) | Lock ETH                                                                                                  |
 | Relayer                          | Generate proofs, submit to Supra                                                                          |
 | HyperNovaCore Verifier (Supra)   | Validate proofs on-chain                                                                                  |
-| Token Bridge Contract            | Mint wETH to user                                                                                         |
+| Token Bridge Contract            | Mint supETH to user                                                                                       |
 | Committee Updater                | Publishes new Sync Committee public keys to HypernovaCore Verifier on Supra every \~27 hours (256 epoch). |

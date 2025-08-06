@@ -10,15 +10,15 @@ SupraNova organizes its bridging infrastructure into clearly separated functiona
 {% hint style="success" %}
 **In case of HyperNova protocol, the message passing layer validates source chain validator signatures and membership proofs.**\
 \
-**In case of HyperLoop the message passing layer validates the bridge validator signatures.**
+**In case of HyperLoop, the message passing layer validates the bridge validator signatures.**
 {% endhint %}
 
 
 
-* The Service Layer sits above the Message Layer and consumes validated messages to perform application-specific actions. The Token Bridge, responsible for minting wrapped ETH (wETH) on Supra, is an example of a Service Layer application. Future services could also be built independently at this layer without touching core validation logic.
+* The Service Layer sits above the Message Layer and consumes validated messages to perform application-specific actions. The Token Bridge, responsible for minting wrapped assets (like supETH) on Supra, is an example of a Service Layer application. Future services could also be built independently at this layer without touching core validation logic.
 
 {% hint style="info" %}
-**Future services such as PoEL may operate over the validated event flow but will be covered in their own documentation.**
+**Future services such as PoEL (Proof of Efficient Liquidity) may operate over the validated event flow but will be covered in their own documentation.**
 {% endhint %}
 
 

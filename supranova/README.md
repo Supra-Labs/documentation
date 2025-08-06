@@ -15,7 +15,7 @@ SupraNova is a cross-chain communication framework developed by Supra. It enable
 By combining these models, SupraNova offers both trust-minimized and high-speed bridging capabilities that can be selected per deployment context.
 
 {% hint style="info" %}
-**Our first SupraNova release, focuses on bridging native ETH from Ethereum to the Supra blockchain, using HyperNova. Bridged ETH is minted on Supra as wrapped ETH(wETH) using the FA token standard.**
+**Our first SupraNova release, focuses on bridging native ETH, wETH and USDC from Ethereum to the Supra blockchain, using HyperNova. Bridged ETH and wETH are minted on Supra as supETH (a wrapped token)** **using the FA token standard. Bridges USDC is minted on Supra as supUSDC (a wrapped token) using the FA token standard.**
 {% endhint %}
 
 ***
