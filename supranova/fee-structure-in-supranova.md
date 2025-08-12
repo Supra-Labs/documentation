@@ -168,17 +168,21 @@ To accommodate varying bridge volumes, SupraNova introduces a **tiered service f
 
 ***
 
-## Token Bridge Details
+## SupraNova Address Details
 
-<table><thead><tr><th width="123.15625">Network Name</th><th>Hypernova</th><th>Token Bridge</th></tr></thead><tbody><tr><td>Ethereum Sepolia</td><td>0x50888Fc24e1224E12f5C8a31310A47B98b2A7f75</td><td>0x71eb89D6D0d6ED44526dd8EAcb956735934eC2d5</td></tr><tr><td>Supra Testnet</td><td>0x3ab1136a5dbb76b923d2b02f95b042f5d80b70218a0395755eafb63d4eefc340</td><td>0x76b38ad503118cb7749a835d965b023a2fe4801dba736bfa66e18d1f0339695c</td></tr></tbody></table>
+<table><thead><tr><th width="123.15625">Network Name</th><th>Hypernova</th><th>Token Bridge</th></tr></thead><tbody><tr><td>Ethereum Sepolia</td><td>0x50888Fc24e1224E12f5C8a31310A47B98b2A7f75</td><td>0x71eb89D6D0d6ED44526dd8EAcb956735934eC2d5</td></tr><tr><td>Supra Testnet</td><td>0x3ab1136a5dbb76b923d2b02f95b042f5d80b70218a0395755eafb63d4eefc340</td><td>0x76b38ad503118cb7749a835d965b023a2fe4801dba736bfa66e18d1f0339695c</td></tr><tr><td>Ethereum Mainnet</td><td>0xEF7238503Fdd7671d85F3Cc5e4B9d7D90e99bFF1</td><td>0x7cECd42A15A691EF693512b1D508F1465ec5DA16</td></tr><tr><td>Supra Mainnet</td><td>0xda20f7d0ec813c751926f06004a10bc6ee1eefc96798f6a1aa31447ee146f932</td><td>0xda20f7d0ec813c751926f06004a10bc6ee1eefc96798f6a1aa31447ee146f932</td></tr></tbody></table>
 
 ***
 
-## Address Details
+## Asset Details
 
 #### Testnet
 
-<table><thead><tr><th width="123.15625">Asset Name</th><th>Ethereum (Lock)</th><th>Supra (Mint)</th></tr></thead><tbody><tr><td>WETH</td><td>0xfFf9976782d46CC05630D1f6eBAb18b2324d6B14</td><td>0x1a57888bfcd31ef82a8e3dac93db14335b36f9228d5f050b722151ae2a77153a</td></tr><tr><td>USDC</td><td>0x1c7D4B196Cb0C7B01d743Fbc6116a902379C7238</td><td>0x3ca17a5b04d826f9be112c319e003b3a79b2682c40613876023758dbb0d03e96</td></tr></tbody></table>
+<table><thead><tr><th width="123.15625">Asset Name</th><th width="250.6171875">Ethereum (Lock)</th><th width="95.59765625">Asset Name</th><th>Supra (Mint)</th></tr></thead><tbody><tr><td>WETH</td><td>0xfFf9976782d46CC05630D1f6eBAb18b2324d6B14</td><td>supETH</td><td>0x1a57888bfcd31ef82a8e3dac93db14335b36f9228d5f050b722151ae2a77153a</td></tr><tr><td>USDC</td><td>0x1c7D4B196Cb0C7B01d743Fbc6116a902379C7238</td><td>supUSDC</td><td><p>0x3ca17a5b04d826f9be112c319e003b3a79b2682c40613876023758dbb0d</p><p>03e96</p></td></tr></tbody></table>
+
+#### Mainnet
+
+<table><thead><tr><th width="123.15625">Asset Name</th><th width="252.37890625">Ethereum (Lock)</th><th width="97.3984375">Asset Name</th><th>Supra (Mint)</th></tr></thead><tbody><tr><td>WETH</td><td>0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2</td><td>supETH</td><td>0xe4af154ade9551e7f58a23b8f727ae2dca050f1b74582bb518ba361c889d246d</td></tr><tr><td>USDC</td><td>0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48</td><td>supUSDC</td><td>0xf90b4b9d4a9d87c39fb3140513e52edc3ead5eaddcb9881b02becdeb63c5793d</td></tr></tbody></table>
 
 ***
 
