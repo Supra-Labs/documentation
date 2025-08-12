@@ -142,6 +142,10 @@ contract MigrateToVRF3 {
 {% hint style="info" %}
 Clients need to call `“migrateClient(uint128 _maxGasPrice, uint128 _maxGasLimit) payable`”, specifying the max gas price, max gas limit for their contracts and sending along the ether to deposit. \
 \
+During the migration process, users must ensure their deposit amount is significantly higher than the minimum balance returned by the function: `deposit.getMinBalanceLimit(maxGasPrice, maxGasLimit)` \
+\
+The `Minimum Balance Limit` is the threshold below which the client can no longer issue new VRF requests. If the client’s balance drops to or near this limit, VRF functionality will be blocked, potentially affecting operations or availability.\
+\
 They can only migrate before the end of migration time.
 
 `function migrateClient(uint128 _maxGasPrice, uint128 _maxGasLimit) external payable;`
