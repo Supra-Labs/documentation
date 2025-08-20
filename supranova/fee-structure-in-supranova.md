@@ -188,6 +188,6 @@ To accommodate varying bridge volumes, SupraNova introduces a **tiered service f
 
 ## Asset Transaction Limit
 
-<table><thead><tr><th width="152.296875">Asset Name</th><th>Max Value</th></tr></thead><tbody><tr><td>ETH</td><td><p>184467440737.09551615  ETH</p><p></p><p>Receiver balance should not be more than 18446744073709551615</p></td></tr><tr><td>USDC</td><td><p>18446744073709.551615 USDC</p><p><br>Receiver balance should not be more than 18446744073709551615</p></td></tr></tbody></table>
+<table><thead><tr><th width="152.296875">Asset Name</th><th>Max Global Limit</th><th>Per Transaction Limit</th></tr></thead><tbody><tr><td>ETH</td><td>23000000000000000000  (23 ETH)</td><td>1200000000000000000 (1.2 ETH)</td></tr><tr><td>USDC</td><td>100000000000  (100K USDC)</td><td>5000000000 (5K USDC)</td></tr></tbody></table>
 
 ###
