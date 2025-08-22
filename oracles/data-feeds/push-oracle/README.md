@@ -42,7 +42,8 @@ Mainnet
 
 {% code overflow="wrap" %}
 ```solidity
-Coming soon
+[dependencies]
+core = { git = "https://github.com/Entropy-Foundation/dora-interface", subdir = "supra/mainnet/core", rev = "master" }
 ```
 {% endcode %}
 
