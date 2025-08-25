@@ -1,9 +1,5 @@
 # Developer Guide
 
-{% hint style="info" %}
-Supra dVRF is in transition period from upgrading to dVRF 3.0. Please identify the correct version of Supra dVRF deployed in your preferred [network](networks.md) and pick the relevant dev guide sections accordingly.
-{% endhint %}
-
 Supra dVRF requires a whitelisted subscription to the service with a customer-controlled wallet address to act as the main reference. Once your wallet is whitelisted, you can use it to whitelist any number of  consumer contracts and top up the deposit balance maintained with Supra in order to pay for the gas fees of callback (response) transactions.
 
 * Please refer to the [VRF subscription FAQ](vrf-subscription-model.md) page for a better understanding of how it works.
