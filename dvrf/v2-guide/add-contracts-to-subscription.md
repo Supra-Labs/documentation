@@ -77,3 +77,4 @@ You can remove already whitelisted contracts via subscription manager UI or via 
 removeContractFromWhitelist(contractAddress);
 ```
 
+\
