@@ -45,9 +45,7 @@ A hash of request parameters is stored and validated during callbacks for data i
 
 The Deposit contract is now upgradeable and backward-compatible with older versions. It supports seamless client migration, dynamic gas balance requirements, auto-whitelisting during migration
 
-#### Fund Safety and Locking
-
-Funds are held while a request is pending. Clients cannot withdraw until all requests are resolved, improving safety.
+####
 
 #### Dynamic Minimum Balance Enforcement
 

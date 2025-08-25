@@ -1,4 +1,4 @@
-# Decentralized VRF (dVRF)
+# Overview
 
 On-chain and off-chain applications connected to gaming, lottery, and sampling rely heavily on entropy. It could be a dynamic NFT mint, loot boxes, random opponent pairing, randomized spawn environments, an in-game item upgrade, a lottery, or a selection of contributors for an IDO. Randomness in applications is supposed to ensure fair and equal possibilities for participants. Random Number Generation (RNG) has to be unbiased and tamper-proof to be deemed fair. In other words, the process can't be manipulated by any participant, and the randomness that was generated is immutably and publicly verifiable thereafter.
 
@@ -14,7 +14,7 @@ Supra’s dVRF can provide the exact properties required for a random number gen
 
 **Supra VRF Architecture**
 
-<figure><img src=".gitbook/assets/SupraDVRF.png" alt=""><figcaption><p>Supra distributed VRF architecture overview</p></figcaption></figure>
+<figure><img src=".gitbook/assets/SupraDVRF.png" alt=""><figcaption><p>Supra decentralised VRF (dVRF) architecture overview</p></figcaption></figure>
 
 Available Networks
 
@@ -22,9 +22,9 @@ Please refer to the [_Available Networks_](./#available-networks) _page_ for the
 
 ### Accessing Supra dVRF
 
-Supra VRF V2 comes with a subscription model where a user can manage their own gas expenses for multiple consumer smart contracts.
+Supra VRF V2  operates on a customer-controlled wallet subscription model where your registered wallet address serves as the main reference for access permissions and callback transaction gas fee payments.
 
-In order to get whitelisted, please send us a request via this [form](https://forms.gle/MyMbAgdod4QZUpHi6), and our team will whitelist you shortly. Meanwhile, you can go through a detailed explanation of the subscription model to learn more about it.
+Please visit [https://supra.com/data/dvrf](https://supra.com/data/dvrf) to create your first subscription.&#x20;
 
 Please refer to the [VRF Developer Guide](v2-guide.md) for a step-by-step explanation of how to consume Supra’s dVRF services.
 

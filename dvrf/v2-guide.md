@@ -191,7 +191,7 @@ supra move tool view -–function-id default::example_module::get_rng_number_fro
 ```
 {% endcode %}
 
-\\
+
 {% endtab %}
 
 {% tab title="Solidity" %}
