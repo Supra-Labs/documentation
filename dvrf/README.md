@@ -22,7 +22,7 @@ Please refer to the [_Available Networks_](./#available-networks) _page_ for the
 
 ### Accessing Supra dVRF
 
-Supra VRF V2  operates on a customer-controlled wallet subscription model where your registered wallet address serves as the main reference for access permissions and callback transaction gas fee payments.
+Supra dVRF  operates on a customer-controlled wallet subscription model where your registered wallet address serves as the main reference for access permissions and callback transaction gas fee payments.
 
 Please visit [https://supra.com/data/dvrf](https://supra.com/data/dvrf) to create your first subscription.&#x20;
 
