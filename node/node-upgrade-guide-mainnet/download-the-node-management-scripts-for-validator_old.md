@@ -1,4 +1,8 @@
-# Download the Node Management Scripts for Validator
+---
+hidden: true
+---
+
+# Download the Node Management Scripts for Validator\_OLD
 
 Before proceeding with the upgrade, download the latest node management scripts.
 
