@@ -6,6 +6,7 @@
   * [Upgrade Checklist (Pre-Upgrade Verification)](node-upgrade-guide-mainnet/upgrade-checklist-pre-upgrade-verification.md)
   * [Download the Node Management Scripts for Validator\_OLD](node-upgrade-guide-mainnet/download-the-node-management-scripts-for-validator_old.md)
   * [Download the Node Management Scripts](node-upgrade-guide-mainnet/download-the-node-management-scripts.md)
+  * [Update the Supra Node Docker Image](node-upgrade-guide-mainnet/update-the-supra-node-docker-image.md)
   * [Download the Node Management Scripts for RPC](node-upgrade-guide-mainnet/download-the-node-management-scripts-for-rpc.md)
   * [Starting the Supra Nodes](node-upgrade-guide-mainnet/starting-the-supra-nodes.md)
   * [Monitor Node Synchronization](node-upgrade-guide-mainnet/monitor-node-synchronization.md)
