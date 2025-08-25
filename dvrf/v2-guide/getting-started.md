@@ -1,3 +1,7 @@
+---
+hidden: true
+---
+
 # Getting Started
 
 Before diving into the technical details, let's understand how dVRF works and how to subscribe to consume random numbers.

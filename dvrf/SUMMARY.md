@@ -5,7 +5,7 @@
 * [Developer Guide](v2-guide/README.md)
   * [Getting Started](v2-guide/getting-started.md)
   * [Create your subscription](v2-guide/create-your-subscription.md)
-  * [Add contracts to your subscription](v2-guide/add-contracts-to-your-subscription.md)
+  * [Optional:  Gas Configurations](v2-guide/optional-gas-configurations.md)
   * [Add Funds to your subscription](v2-guide/add-funds-to-your-subscription.md)
   * [Request Random Numbers](v2-guide/request-random-numbers.md)
   * [Other Functions](v2-guide/other-functions.md)
