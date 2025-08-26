@@ -12,28 +12,8 @@ Before requesting random numbers, ensure you have:
 
 
 
-{% tabs %}
-{% tab title="EVM" %}
-### Contract Architecture&#x20;
+Supra dVRF supports both EVM-compatible chains and Supra's native Layer 1 blockchain. Each platform offers the same cryptographic security and verifiability, optimized for their respective ecosystems.
 
-Supra dVRF uses a two-contract system for EVMs:
+<a href="evms.md" class="button primary">EVMs</a>
 
-* **Router Contract**: Handles VRF requests and delivers random numbers to your callback function
-* **Deposit Contract**: Manages user funds, whitelisting, and gas configurations\
-  \
-
-{% endtab %}
-
-{% tab title="Supra L1" %}
-
-{% endtab %}
-{% endtabs %}
-
-### Contract Architecture&#x20;
-
-Supra dVRF uses a two-contract system for EVMs:
-
-* **Router Contract**: Handles VRF requests and delivers random numbers to your callback function
-* **Deposit Contract**: Manages user funds, whitelisting, and gas configurations
-
-however In Supra L1,  dVRF is a Single contract
+<a href="supra-l1-move.md" class="button primary">Supra L1 Move</a>
