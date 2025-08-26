@@ -1,7 +1,3 @@
----
-hidden: true
----
-
 # Add Contracts to subscription
 
 After creating your subscription and configuring gas settings, you need to whitelist your consumer contracts. Only whitelisted contracts can request random numbers from your subscription.

@@ -1,8 +1,4 @@
----
-hidden: true
----
-
-# Optional:  Gas Configurations
+# Gas Configurations
 
 Now that you understand how dVRF works and have created your subscription, it's time to configure gas settings properly. Gas configuration is crucial because it determines both your callback performance and minimum balance requirements. Getting this right ensures reliable random number delivery while managing costs effectively.
 

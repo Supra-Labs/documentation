@@ -2,8 +2,8 @@
 
 Supra dVRF requires a whitelisted subscription to the service with a customer-controlled wallet address to act as the main reference. Once your wallet is whitelisted, you can use it to whitelist any number of  consumer contracts and top up the deposit balance maintained with Supra in order to pay for the gas fees of callback (response) transactions.
 
-* Please refer to the [VRF subscription FAQ](../vrf-subscription-model.md) page for a better understanding of how it works.
-* Please refer to the [Network Addresses](../networks.md) page for Supra dVRF version and contract addresses.&#x20;
+* Please refer to the [VRF subscription FAQ](vrf-subscription-model.md) page for a better understanding of how it works.
+* Please refer to the [Network Addresses](networks.md) page for Supra dVRF version and contract addresses.&#x20;
 
 The following guide explains the steps a user has to follow in order to request random numbers.
 
@@ -207,7 +207,7 @@ In EVM ( Ethereum Virtual Machine) based networks, you will interact with two Su
 
 #### Step 1: Whitelist your admin wallet and Consumer Contracts <a href="#step-1-create-the-supra-router-contract-interface" id="step-1-create-the-supra-router-contract-interface"></a>
 
-This works differently in dVRF 2.0 and dVRF 3.0. Please [chose](../networks.md) accordingly.
+This works differently in dVRF 2.0 and dVRF 3.0. Please [chose](networks.md) accordingly.
 
 <details>
 
@@ -244,7 +244,7 @@ This interface will facilitate the consumer contract to interact with the Supra 
 
 #### Step 3: Configure the Supra Router Contract Address[​](https://qa-docs.supraoracles.com/docs/vrf-dev-guide#step-2-configure-the-supra-router-contract-address) <a href="#step-2-configure-the-supra-router-contract-address" id="step-2-configure-the-supra-router-contract-address"></a>
 
-Contracts that need random numbers should utilize the Supra Router Contract. In order to do that, they need to create an interface and bind it to the on-chain [address](../networks.md) of the Supra router contract.
+Contracts that need random numbers should utilize the Supra Router Contract. In order to do that, they need to create an interface and bind it to the on-chain [address](networks.md) of the Supra router contract.
 
 ```solidity
 contract ExampleContract {
@@ -522,7 +522,7 @@ It is important to note that your wallet address must be registered with Supra b
 * **remove\_contract\_from\_whitelist(contract\_address: address)**\
   The function helps user’s to remove their contract addresses from the whitelist if that is no longer required.\\
 * **client\_setting\_minimum\_balance(min\_balance\_limit\_client: u64)**\
-  This function is for the user to set the minimum limit of the fund they will add in the deposit contract. The higher of the user’s value or, the default value (10 Aptos) will be saved as the minimum balance for the subscription. Total fund balance should be higher than the minimum balance in order to receive random numbers from Supra. Please read ore on Supra subscription model [here](../vrf-subscription-model.md) for a better understanding.\\
+  This function is for the user to set the minimum limit of the fund they will add in the deposit contract. The higher of the user’s value or, the default value (10 Aptos) will be saved as the minimum balance for the subscription. Total fund balance should be higher than the minimum balance in order to receive random numbers from Supra. Please read ore on Supra subscription model [here](vrf-subscription-model.md) for a better understanding.\\
 * **withdraw\_fund(withdraw\_amount: u64)**\
   The function helps users to withdraw funds.\\
 * **check\_client\_fund(client\_address: address)**\

@@ -1,7 +1,3 @@
----
-hidden: true
----
-
 # Other Functions
 
 Beyond requesting random numbers, Supra dVRF provides additional functions for managing your account, monitoring balances, and configuring contract settings. These utility functions help you maintain your VRF integration and optimize your random number generation workflow.

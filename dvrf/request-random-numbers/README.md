@@ -1,7 +1,3 @@
----
-hidden: true
----
-
 # Request Random Numbers
 
 This guide covers how to request random numbers using Supra dVRF after completing the initial setup and whitelisting process.

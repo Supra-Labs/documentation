@@ -1,3 +1,7 @@
+---
+hidden: true
+---
+
 # VRF Subscription FAQ
 
 Supra dVRF is a prepaid subscription model that provides enhanced controls for consumers. This document will walk you through the key features and functionalities of the Supra VRF prepaid subscription.&#x20;

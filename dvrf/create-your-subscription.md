@@ -1,7 +1,3 @@
----
-hidden: true
----
-
 # Create your subscription
 
 To start using dVRF, you need to create a subscription that will manage your random number requests and handle gas payments for callbacks. You can create a subscription in two ways: using the new web interface or through on-chain functions.

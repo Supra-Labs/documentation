@@ -1,7 +1,3 @@
----
-hidden: true
----
-
 # Deposit and Withdraw Funds
 
 After adding contracts, you need to ensure your subscription has sufficient funds to pay for callback gas fees. You can deposit funds through the web interface or using on-chain functions.\
