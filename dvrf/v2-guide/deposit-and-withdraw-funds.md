@@ -52,7 +52,44 @@ public entry fun deposit_funds(sender: &signer, amount: u64) {
 
 ### Withdraw Funds
 
-You can withdraw excess funds from your subscription when needed. **Important**: You cannot withdraw funds while you have pending random number requests
+You can withdraw excess funds from your subscription when needed via UI or via onchain functions.&#x20;
+
+{% hint style="info" %}
+**Important**: You cannot withdraw funds while you have pending random number requests
+{% endhint %}
+
+{% tabs %}
+{% tab title="Via Subscription Manager UI" %}
+
+
+1. Navigate to "My Subscription".
+2. Click "Withdraw Funds" from the Menu.
+3. Enter withdrawal amount.
+4. Confirm transaction in your wallet.
+{% endtab %}
+
+{% tab title="Via Onchain Functions" %}
+EVM Chains
+
+```solidity
+// Withdraw funds
+deposit.withdrawFund(withdrawAmount);
+
+```
+
+Supra L1
+
+```solidity
+// Withdraw funds from subscription
+public entry fun withdraw_funds(sender: &signer, amount: u64) {
+    deposit::withdraw_fund(sender, amount);
+}
+
+```
+{% endtab %}
+{% endtabs %}
+
+
 
 
 
