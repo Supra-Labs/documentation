@@ -1,7 +1,3 @@
----
-hidden: true
----
-
 # A Deeper Dive into Supra dVRF
 
 {% embed url="https://vimeo.com/793270834/a195f25d3f" %}

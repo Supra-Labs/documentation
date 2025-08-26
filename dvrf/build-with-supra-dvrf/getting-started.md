@@ -18,7 +18,7 @@ Understanding the complete dVRF process flow will help you integrate more effect
 
 
 
-<figure><picture><source srcset=".gitbook/assets/Untitled diagram _ Mermaid Chart-2025-08-25-191854.png" media="(prefers-color-scheme: dark)"><img src=".gitbook/assets/Untitled diagram _ Mermaid Chart-2025-08-25-191451.png" alt="" width="375"></picture><figcaption></figcaption></figure>
+<figure><picture><source srcset="../.gitbook/assets/Untitled diagram _ Mermaid Chart-2025-08-25-191854.png" media="(prefers-color-scheme: dark)"><img src="../.gitbook/assets/Untitled diagram _ Mermaid Chart-2025-08-25-191451.png" alt="" width="375"></picture><figcaption></figcaption></figure>
 
 **Why use subscriptions?**
 
