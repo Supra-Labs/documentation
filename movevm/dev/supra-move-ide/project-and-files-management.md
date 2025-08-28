@@ -19,7 +19,7 @@ The IDE makes it easy to manage your projects directly in the browser. All proje
 
 * **Import / Export**: Use the Import and Export buttons to load a project from a .zip file or to save your currently selected project as a .zip file for backup or sharing.
 
-<figure><img src="https://netalabs.gitbook.io/supra-ide/~gitbook/image?url=https%3A%2F%2Flh7-rt.googleusercontent.com%2Fdocsz%2FAD_4nXdOWScEW5tx-eadUJTo1vQ2xt4Ftn2rwv3UZdJ4fyVlHCkBvnsI_ZOOfeGamcc0t20644E-nI3pd19Y12zNbwHBmQHbOr2spMFALttaQIaYoGB7IVp_oTSupSX8NHVyPl98dw1i%3Fkey%3D4NMBPIGagqp7hkgc5QATsw&#x26;width=300&#x26;dpr=4&#x26;quality=100&#x26;sign=30f00625&#x26;sv=2" alt="" width="188"><figcaption></figcaption></figure>
+<figure><img src="https://netalabs.gitbook.io/supra-ide/~gitbook/image?url=https%3A%2F%2Flh7-rt.googleusercontent.com%2Fdocsz%2FAD_4nXdOWScEW5tx-eadUJTo1vQ2xt4Ftn2rwv3UZdJ4fyVlHCkBvnsI_ZOOfeGamcc0t20644E-nI3pd19Y12zNbwHBmQHbOr2spMFALttaQIaYoGB7IVp_oTSupSX8NHVyPl98dw1i%3Fkey%3D4NMBPIGagqp7hkgc5QATsw&#x26;width=300&#x26;dpr=4&#x26;quality=100&#x26;sign=30f00625&#x26;sv=2" alt="" width="375"><figcaption></figcaption></figure>
 
 ## File & Folder Management
 
