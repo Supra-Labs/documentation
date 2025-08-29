@@ -16,7 +16,6 @@ The easiest way to manage your contracts is through the web interface at [supra.
   * Go to [supra.com/data/dvrf](https://supra.com/data/dvrf)
   * Connect your wallet (subscription owner)
   * Click on "My Subscription"
-  * Select "Manage Contracts" or "Add Contract"
 * **Add New Contract**
   * Click "Add Contract"
   * Enter your contract address

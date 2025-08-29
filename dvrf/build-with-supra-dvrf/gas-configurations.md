@@ -26,9 +26,11 @@ Supra dVRF in EVM chains has four gas parameters configured at two levels.  If p
 * **Callback Gas Limit**: Gas limit for specific contract (≤ maxGasLimit)\
 
 
-#### Change via UI You are prompted to set these value at the subscription creation stage.  You can also modify them later from the menu.&#x20;
+#### Change via UI
 
-#### Change Via Onchain functions
+You are prompted to set these value at the subscription creation stage.  You can also modify them later from the menu.&#x20;
+
+#### Change via On chain functions
 
 ```solidity
 // Setting subscription-level at the time of subscription creation
