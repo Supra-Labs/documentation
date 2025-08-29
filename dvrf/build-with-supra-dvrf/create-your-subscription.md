@@ -2,16 +2,14 @@
 
 To start using dVRF, you need to create a subscription that will manage your random number requests and handle gas payments for callbacks. You can create a subscription in two ways: using the new web interface or through on-chain functions.
 
-
-
 {% tabs %}
 {% tab title="Via the web interface" %}
-The easiest way to create your dVRF subscription is through our web interface at [supra.com/data/dvrf](https://supra.com/data/dvrf).
+The easiest way to create your dVRF subscription is through subscription manager UI at [supra.com/data/dvrf](https://supra.com/data/dvrf).
 
 #### Prerequisites
 
-* MetaMask or StarKey wallet installed and configured
-* Sufficient funds in your wallet for gas fees
+* MetaMask or StarKey wallet installed and configured.
+* Sufficient funds in your wallet for gas fees.
 * Connected to the appropriate network (see [Available Networks](https://docs.supra.com/dvrf/networks))
 
 #### Steps
@@ -28,8 +26,8 @@ The easiest way to create your dVRF subscription is through our web interface at
 
 3.  **Create New Subscription**
 
+    * Fill in the required details.
     * Click "Create Subscription"
-    * Fill in the required details:
 
     **For EVM Chains:**
 
@@ -38,20 +36,18 @@ The easiest way to create your dVRF subscription is through our web interface at
 
     **For Supra L1:**
 
-    * **Max Gas Fee**: Maximum Gas fee you are willing to spend for your callback transaction
+    * **Max Transaction Fee**: Maximum Gas fee you are willing to spend for your callback transaction.
 
 
 4. **Review and Confirm**
-   * Review your Gas configuration settings
-   * Confirm the transaction in your wallet
-   * Wait for transaction confirmation\
+   * Review your Gas configuration settings.
+   * Confirm the transaction in your wallet.
+   * Wait for transaction confirmation.\
 
 5. **Verification**
-   * Once confirmed, your subscription will be active
-   * You can view your subscription details in the "My Subscription" section
-   * Your wallet address is now registered as the subscription manager
-
-
+   * Once confirmed, your subscription will be active.
+   * You can view your subscription details in the "My Subscription" section.
+   * Your wallet address is now registered as the subscription manager.
 {% endtab %}
 
 {% tab title="Via Onchain functions" %}
@@ -90,14 +86,11 @@ Supra L1
 
 **Check subscription status**: Use web interface or `getSubscriptionByClient()` function
 
-After creating your subscription, verify it's working correctly:
-
-
-
-\
-
+After creating your subscription, verify it's working correctly.
 {% endtab %}
 {% endtabs %}
+
+
 
 Still not comfortable with Minimum Balance,  Max Gas Limit, Max Gas price or Max Gas Fee? In the next section we talk about it.&#x20;
 

@@ -57,7 +57,7 @@ updateCallbackGasLimit(contractAddress, newGasLimit);
 {% tab title="Supra L1" %}
 &#x20;Supra L1 uses simplified configuration with a single parameter:
 
-* **Max Gas Fee**: Combined parameter that handles both price and limit
+* **Max Transaction Fee**: Combined parameter that handles both price and limit
 {% endtab %}
 {% endtabs %}
 
