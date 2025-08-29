@@ -73,10 +73,9 @@ interface IDeposit {
 
 Supra L1
 
-```solidity
-/ Create subscription on Supra L1
-public entry fun create_subscription(
-    sender: &signer,
+<pre class="language-solidity"><code class="lang-solidity"><strong>// Create subscription on Supra L1
+</strong>public entry fun create_subscription(
+    sender: &#x26;signer,
     max_gas_fee: u64,
     initial_deposit: u64
 ) {
@@ -85,7 +84,7 @@ public entry fun create_subscription(
     deposit::deposit_fund(sender, initial_deposit);
 }
 
-```
+</code></pre>
 
 #### Verification
 
