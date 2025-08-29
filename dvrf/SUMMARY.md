@@ -3,6 +3,7 @@
 ## Learn Supra dVRF
 
 * [Overview](README.md)
+* [Supra  dVRF: Architecture Guide](learn-supra-dvrf/supra-dvrf-architecture-guide.md)
 * [A Deeper Dive into Supra dVRF](learn-supra-dvrf/a-deeper-dive-into-supra-dvrf.md)
 
 ## Build with Supra dVRF
