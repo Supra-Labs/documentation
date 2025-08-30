@@ -53,7 +53,7 @@ Supra current reports more than 100 US traded stock prices during standard US tr
 {% tab title="Commodities" %}
 Beta version of the commodity feeds are available only on testnets.
 
-<table><thead><tr><th width="191">Data Pair</th><th width="128">Pair ID</th><th>Pair Category</th></tr></thead><tbody><tr><td>XAU_USD</td><td>5500</td><td>Under Supervision</td></tr><tr><td>XAG_USD</td><td>5501</td><td>Under Supervision</td></tr><tr><td>XPD_USD</td><td>5504</td><td>Under Supervision</td></tr><tr><td>XPT_USD</td><td>5505</td><td>Under Supervision</td></tr><tr><td>XG_USD</td><td>5506</td><td>Under Supervision</td></tr></tbody></table>
+<table><thead><tr><th width="191">Data Pair</th><th width="128">Pair ID</th><th>Pair Category</th></tr></thead><tbody><tr><td>XAU_USD</td><td>5500</td><td>Under Supervision</td></tr><tr><td>XAG_USD</td><td>5501</td><td>Under Supervision</td></tr><tr><td>WTI_USD</td><td>5503</td><td>Under Supervision</td></tr><tr><td>XPD_USD</td><td>5504</td><td>Under Supervision</td></tr><tr><td>XPT_USD</td><td>5505</td><td>Under Supervision</td></tr><tr><td>XG_USD</td><td>5506</td><td>Under Supervision</td></tr></tbody></table>
 {% endtab %}
 
 {% tab title="Circ. Supply" %}
