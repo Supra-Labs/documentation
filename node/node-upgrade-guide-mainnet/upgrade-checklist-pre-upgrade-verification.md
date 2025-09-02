@@ -16,7 +16,7 @@ Please make sure your system meets the following minimum hardware requirements:
 | CPU              | Intel Xeon or AMD EPYC @ 3.2 GHz+ |
 | RAM              | 64 GB                             |
 | Disk Type        | SSD                               |
-| Disk Space       | Minimum 2 TB                      |
+| Disk Space       | Minimum 500 GB                    |
 | Network Speed    | 2 Gbps or more                    |
 | Architecture     | x86/64                            |
 | Operating System | Linux(Ubuntu 22.04 recommended)   |
@@ -27,7 +27,6 @@ The node requires open ports to communicate with the blockchain network.
 
 | Network | Required Port |
 | ------- | ------------- |
-| testnet | 26000         |
 | Mainnet | 30000         |
 
 \

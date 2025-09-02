@@ -25,5 +25,4 @@ This installs the following scripts:
 | `manage_supra_nodes.sh` | This handles node updates, syncing, and restarts.                      |
 | ----------------------- | ---------------------------------------------------------------------- |
 | `migrate_to_vX.X.X.sh`  | This is a migration script for upgrading the database and CLI profile. |
-| `migrate_to_vX.X.X.sh`  | This is a migration script for upgrading the database and CLI profile. |
 

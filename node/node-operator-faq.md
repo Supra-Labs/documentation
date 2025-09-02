@@ -21,18 +21,8 @@ Below are the hardware requirements:
 * **CPU:** Intel Xeon @ 2.8GHz or higher
 * **Architecture:** x86/64
 * **Disk Type:** SSD
-* **Minimum Disk Size:** 2TB
-* **Network Bandwidth:** 1Gbps
-
-</details>
-
-<details>
-
-<summary>My testnet RPC nodes are experiencing increasing disk usage. Are there any pruning options?</summary>
-
-Yes, it’s expected for now. We'll release an update that enables pruning in the near future.
-
-It's not currently possible.
+* **Minimum Disk Size:** 500GB
+* **Network Bandwidth:** 2Gbps
 
 </details>
 
@@ -175,16 +165,6 @@ A: If you see the "Corruption: IO error," restart the network using the snapshot
 
 <details>
 
-<summary>What should I do if there is an RPC error on startup?</summary>
-
-Step 1: Open ports 26000 and 27000.
-
-Step 2: Restart the container using <mark style="color:green;">`docker restart container-id`</mark>`.`
-
-</details>
-
-<details>
-
 <summary>How can I resolve a "Grafana setup IP not whitelisted" error?</summary>
 
 If your IP is not whitelisted, please provide your IPv4 to the Supra team on Discord to get access to the Grafana script.
@@ -210,16 +190,6 @@ or
 <mark style="color:green;">`sudo -E ./nodeops-monitoring-telegraf.sh`</mark>
 
 <mark style="color:green;">`# For other distributions`</mark>
-
-</details>
-
-<details>
-
-<summary>How do I resolve the "RPC node out of sync" error?</summary>
-
-`INFO rpc_node::listener: RPC node out of sync!`
-
-A: To resolve the "RPC node out of sync" error, restart the node from the latest snapshot using the instructions provided for snapshots.
 
 </details>
 
