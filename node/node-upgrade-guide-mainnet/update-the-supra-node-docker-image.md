@@ -11,7 +11,7 @@ For Validator Node use the command below:
 For RPC Nodes  use the command below:
 
 ```
-./manage_supra_nodes.sh update rpc v9.1.x <container_name> <host_supra_home> <network> <validator_ip>
+./manage_supra_nodes.sh update rpc v9.1.13 <container_name> <host_supra_home> <network> <validator_ip>
 ```
 
 \
