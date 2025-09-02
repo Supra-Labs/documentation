@@ -5,7 +5,7 @@ DORA V2, our latest version of data feeds protocol, uses a combination of Web2 a
 Please refer to the following resources for a better understanding of DORA price feeds.
 
 * [Data Feeds](../) - This explains how Supra calculates the **S-Value** for data feeds.
-* [Data Feeds Index](../data-feeds-index.md) - This provides a list of data feeds currently offered by Supra.
+* [Data Feeds Index](../data-feeds-index/) - This provides a list of data feeds currently offered by Supra.
 * [Available Networks](networks.md) - This lists available networks and Supra contract addresses.
 
 {% hint style="danger" %}

@@ -9,7 +9,7 @@ Integrating with Supra price feeds is quick and easy. The price feed value publi
 Please refer to the below resources for a better understanding of our price feeds.
 
 * [Data Feeds](../) - This explains how Supra calculates the **S-value** for an asset.
-* [Data Feeds Index](../data-feeds-index.md) - This provides a list of data pairs currently offered by Supra.
+* [Data Feeds Index](../data-feeds-index/) - This provides a list of data pairs currently offered by Supra.
 * [Available Networks](networks.md) - This is a list of available networks and Supra contract addresses.
 
 {% hint style="danger" %}
@@ -284,7 +284,7 @@ contract ISupraSValueFeedExample {
 
 **Step 3: Get The S-Value Crypto Price**
 
-Now you can access the S-Values for any of the [trading pairs](../data-feeds-index.md) Supra publishes. THe below sample code retrieves S-value for single as well as multiple data pairs for demonstration purposes. You may use it as appropriate.
+Now you can access the S-Values for any of the [trading pairs](../data-feeds-index/) Supra publishes. THe below sample code retrieves S-value for single as well as multiple data pairs for demonstration purposes. You may use it as appropriate.
 
 <pre class="language-solidity" data-overflow="wrap"><code class="lang-solidity">// requesting s-value for a single pair
 function getPrice(uint256 _priceIndex)

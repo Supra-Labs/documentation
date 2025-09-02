@@ -1,4 +1,4 @@
-# Data Feeds Index
+# Data Feeds List
 
 Welcome to our data feeds catalog, the gateway to seamlessly integrating real-world data on-chain. This will help you empower your smart contracts and applications to interact with external data securely.\
 \
@@ -29,7 +29,7 @@ You may access Supra's data feeds by referring to the index of each data pair. W
 {% endtab %}
 
 {% tab title="Primary Rates" %}
-Supra can read data from any blockchain, aggregate and validate it, and subsequently publish that data onto destination chains for their smart contracts. A number of liquid staking protocols employ this functionality to publish, request, and read redemption rates of liquid staking tokens across multiple chains.\\
+Supra can read data from any blockchain, aggregate and validate it, and subsequently publish that data onto destination chains for their smart contracts. A number of liquid staking protocols employ this functionality to publish, request, and read redemption rates of liquid staking tokens across multiple chains.
 
 <table><thead><tr><th>Data Pair</th><th width="170">Pair ID</th><th>Pair Category</th></tr></thead><tbody><tr><td>USDY_USD (Primary Exchange Rate)</td><td>185</td><td>Supra Premium</td></tr><tr><td>mevETH_ETH (Primary Exchange Rate)</td><td>251</td><td>Supra Premium</td></tr><tr><td>mETH_ETH (Primary Exchange rate)</td><td>299</td><td>Supra Premium</td></tr><tr><td>wstETH_stETH (Primary Exchange rate)</td><td>325</td><td>Supra Premium</td></tr><tr><td>uniETH_ETH (Primary exchange rate)</td><td>326</td><td>Supra Premium</td></tr><tr><td>wUSDM_USDM (Primary exchange rate)</td><td>433</td><td>Supra Premium</td></tr><tr><td>vASTR_ASTR(Primary Exchange Rate)</td><td>455</td><td>Coming Soon</td></tr><tr><td>STONE_ETH(Primary Exchange Rate)</td><td>456</td><td>Supra Premium</td></tr><tr><td>sfrxETH_ETH(Primary Exchange Rate)</td><td>457</td><td>Supra Premium</td></tr><tr><td>yUSD_USDT (Primary exchange rate)</td><td>495</td><td>Supra premium</td></tr><tr><td>stSUI_SUI (Primary exchange rate)</td><td>539</td><td>Supra premium</td></tr><tr><td>nBasis_USD (Primary Exchange rate) </td><td>541</td><td>Supra Premium</td></tr><tr><td>nCREDIT_USD(Primary Exchange rate) </td><td>543</td><td>Supra Premium </td></tr><tr><td>nPAYFI_USD(Primary Exchange rate) </td><td>544</td><td>Supra Premium </td></tr><tr><td>nINSTO_USD(Primary Exchange rate) </td><td>545</td><td>Supra Premium </td></tr><tr><td>nETF_USD(Primary Exchange rate) </td><td>546</td><td>Supra Premium </td></tr><tr><td>nBTC_USD(Primary Exchange rate) </td><td>547</td><td>Supra Premium </td></tr></tbody></table>
 
@@ -51,9 +51,15 @@ Supra current reports more than 100 US traded stock prices during standard US tr
 {% endtab %}
 
 {% tab title="Commodities" %}
-Beta version of the commodity feeds are available only on testnets.
+Supra reports commodity prices from every week Sunday 21.00.00 UTC to Friday 21.00.00 UTC
 
 <table><thead><tr><th width="191">Data Pair</th><th width="128">Pair ID</th><th>Pair Category</th></tr></thead><tbody><tr><td>XAU_USD</td><td>5500</td><td>Under Supervision</td></tr><tr><td>XAG_USD</td><td>5501</td><td>Under Supervision</td></tr><tr><td>WTI_USD</td><td>5503</td><td>Under Supervision</td></tr><tr><td>XPD_USD</td><td>5504</td><td>Under Supervision</td></tr><tr><td>XPT_USD</td><td>5505</td><td>Under Supervision</td></tr><tr><td>XG_USD</td><td>5506</td><td>Under Supervision</td></tr></tbody></table>
+{% endtab %}
+
+{% tab title="Economic Data" %}
+Supra now publishes US based popular economic indicators enabling vast number of use web3 onchain.
+
+<table><thead><tr><th width="203.62890625">Data Pair</th><th>Update frequency</th><th width="128">Pair ID</th><th>Pair Category</th></tr></thead><tbody><tr><td>TBill Yield (3 Months)</td><td> daily at EOD </td><td>20000</td><td>Under Supervision</td></tr><tr><td>TBond Yield (2 Years)</td><td> daily at EOD </td><td>20001</td><td>Under Supervision</td></tr><tr><td>TBond Yield (5 Years)</td><td> daily at EOD </td><td>20002</td><td>Under Supervision</td></tr><tr><td>TBond Yield (7 Years)</td><td> daily at EOD </td><td>20003</td><td>Under Supervision</td></tr><tr><td>TBond Yield `(10 Years)</td><td> daily at EOD </td><td>20004</td><td>Under Supervision</td></tr><tr><td>TBond Yield `(30 Years)</td><td> daily at EOD </td><td>20005</td><td>Under Supervision</td></tr><tr><td>Consumer Price Index (CPI-U) Annual</td><td> daily at EOD</td><td>20006</td><td>Under Supervision</td></tr><tr><td>Inflation Rate</td><td>Coming Soon</td><td>Coming Soon</td><td>Coming Soon</td></tr><tr><td>Fed Funds Rate</td><td>Monthly</td><td>20008</td><td>Under Supervision</td></tr><tr><td>GDP (Annual) </td><td>Coming Soon</td><td>Coming Soon</td><td>Coming Soon</td></tr></tbody></table>
 {% endtab %}
 
 {% tab title="Circ. Supply" %}
