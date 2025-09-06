@@ -1,4 +1,4 @@
-# SupraMove VS Code Extension
+# Supra Move VS Code Extension
 
 Welcome to the official documentation for the **Supra Move VS Code Extension**, a comprehensive developer tool designed to streamline development on the Supra MoveVM.
 
@@ -63,7 +63,8 @@ pub age: u32,
 ### Using Built-in Supra Explorer
 
 {% hint style="success" %}
-**NEW in v3.1.1** - Supra explorer functionality! Supra logo tray integration for easy access to all explorer features.
+**NEW in v3.1.1** \
+Supra explorer functionality with Supra logo tray integration for easy access to all explorer features.
 {% endhint %}
 
 #### **Account Resource & Module Explorer**
