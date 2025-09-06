@@ -1,65 +1,94 @@
-# Supra Move VS Code Extension
+# SupraMove VS Code Extension
 
-Welcome to the official documentation for the **Supra Move VS Code Extension,** a one-stop developer tool designed to streamline development on the Supra MoveVM.
+Welcome to the official documentation for the **Supra Move VS Code Extension**, a comprehensive developer tool designed to streamline development on the Supra MoveVM.
 
-## Download & Installation
+## Quick Installation
 
-Visit the VS Code Marketplace and download the[ Supra Extension Here.](https://marketplace.visualstudio.com/items?itemName=Supra.supramove)
+### Via VS Code Marketplace
 
-OR, **Install via VS Code Extensions Activity Bar:**
+Visit the [VS Code Marketplace](https://marketplace.visualstudio.com/items/?itemName=Supra.supramove) and click **"Install"** to automatically open VS Code and install it.
 
-* Open VS Code.
-* Navigate to the **Extensions view** (click the Extensions icon in the Activity Bar on the left).
-* Click the search bar on the top and type name "Supra Move" and click Install.
+### Method 2: Extensions Activity Bar
 
-{% embed url="https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FkaUNeiOUvY0TI9c9oVPw%2Fuploads%2F5Ine6OmTCcldyEUzMlyJ%2FRecording%202025-04-18%20164745.mp4?alt=media&token=530bd3b7-4392-4b24-8fcf-08c3b403a164" %}
+1. Open VS Code
+2. Navigate to the **Extensions view** (`Ctrl+Shift+X` or click the Extensions icon in the Activity Bar)
+3. Search for **"Supra Move"**
+4. Click **Install** on the official Supra extension
+
+{% hint style="info" %}
+After installation, look for the **Supra logo** in your VS Code tray to access In-built explorer features!
+{% endhint %}
 
 ## Getting Started
 
-Once the extension is installed:
+### **IntelliSense** and **Syntax Highlighting**
 
-1. Create a new `.move` file or open an existing one.
+{% stepper %}
+{% step %}
+#### Create or Open a Move File
 
-{% hint style="warning" %}
-Verify that VS Code sets the file’s language to “move” (check the bottom-right corner of the window). This ensures both syntax highlighting and IntelliSense are activated.
+Create a new `.move` file or open an existing one in your workspace.
+
+{% hint style="info" %}
+**Verify that VS Code sets the file's language to "move" (check the bottom-right corner of the window)**
 {% endhint %}
+{% endstep %}
 
-2. Start typing Move code. For instance, you can try the following sample module code:
+{% step %}
+#### Start Coding
+
+Begin typing Move code. Try this sample module to see the extension in action:
 
 ```
-module Hello::0xhello {
+module your_addre::hellomessage {
 
-    use supra_framework::
-    use std::
-
-struct TestStruct has copy {
-    pub name: String,
-    pub age: u32,
+    use supra_framework::  // IntelliSense will suggest available modules.
+    use std::              // Auto-complete shows: vector, signer, table, etc.
+    
+struct TestStruct has copy // drop down box showing drop, key, store etc.
+{ 
+pub name: String,
+pub age: u32,    
+} 
 
 }
 ```
+{% endstep %}
+{% endstepper %}
 
-#### As you type, you should see:
+### Using Built-in Supra Explorer
 
-* **Syntax Highlighting:** Keywords, functions, namespaces, and variables are color-coded.
-* **IntelliSense Suggestions:** When you type `use supra_framework::`, a drop-down appears with available functions such as `chain_id` and when u type `use std:`, a drop-down apperars with available functions as `signer`.
+{% hint style="success" %}
+**NEW in v3.1.1** - Supra explorer functionality! Supra logo tray integration for easy access to all explorer features.
+{% endhint %}
 
-## Key Features
+#### **Account Resource & Module Explorer**
 
-### Syntax Highlighting
+* Fetch and display resources & Modules in real-time by account address.
+* **Source code viewer** for on-chain modules by clicking on any module name.
 
-* **Enhanced Readability:** Improve code clarity with color-coded syntax that highlights keywords, types, and functions.
+#### **Event Explorer**
 
-### IntelliSense & Auto-Completion
+* **Real-time event tracking** by Tx hash.
+* **Event details** and parameter inspection
 
-* Get instant suggestions for namespaces, functions, and struct attributes as you type.
+## Support & Troubleshooting
 
-## What Developers No Longer Need to Do:
+#### **IntelliSense not activating?**
 
-* Function signatures and current module dropdown suggestions are readily available as you code.
-* Auto-completion minimizes typos, letting you focus on your application logic.
-* Stay within VS Code without the need to reference external documentation repeatedly.
+* Ensure your file has the `.move` extension
+* Check that the language mode shows "move" in the status bar
+
+#### **Explorer features not visible?**
+
+* Look for the Supra logo in your VS Code interface
+* Make sure you're running the latest version (3.1.1)
+* Check the VS Code activity bar and side panels and make sure "SupraMove" is not hidden.
+
+***
 
 ## Extension in Action
 
-{% embed url="https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FkaUNeiOUvY0TI9c9oVPw%2Fuploads%2FKPCp4YlECJyez2XG9jIo%2Fdddd.mp4?alt=media&token=9e10b752-774a-43be-be0e-a7e9a0dac1c9" %}
+{% hint style="danger" %}
+Demo coming soon!
+{% endhint %}

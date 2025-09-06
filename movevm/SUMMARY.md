@@ -103,7 +103,7 @@
   * [IDE Core Actions](dev/supra-move-ide/ide-core-actions.md)
   * [Contract Interactions & Transaction History](dev/supra-move-ide/contract-interactions-and-transaction-history.md)
   * [Accounts and Balance](dev/supra-move-ide/accounts-and-balance.md)
-* [Supra Move VS Code Extension](dev/supra-move-vs-code-extension.md)
+* [SupraMove VS Code Extension](dev/supra-move-vs-code-extension.md)
 * [Supra Dapp Templates](dev/supra-dapp-templates.md)
 
 ## Native Oracles
