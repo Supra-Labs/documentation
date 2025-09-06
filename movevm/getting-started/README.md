@@ -1,16 +1,5 @@
 ---
 description: Want to build on the Supra Move blockchain? You've come to the right place!
-layout:
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # Getting Started

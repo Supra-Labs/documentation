@@ -4,20 +4,24 @@ Welcome to the official documentation for the **Supra Move VS Code Extension**, 
 
 ## Quick Installation
 
-### Via VS Code Marketplace
-
-Visit the [VS Code Marketplace](https://marketplace.visualstudio.com/items/?itemName=Supra.supramove) and click **"Install"** to automatically open VS Code and install it.
-
-### Method 2: Extensions Activity Bar
-
+{% tabs %}
+{% tab title=" Via Extensions Activity Bar" %}
 1. Open VS Code
-2. Navigate to the **Extensions view** (`Ctrl+Shift+X` or click the Extensions icon in the Activity Bar)
+2. Navigate to the **Extensions view** (click the Extensions icon in the Activity Bar)
 3. Search for **"Supra Move"**
 4. Click **Install** on the official Supra extension
+{% endtab %}
+
+{% tab title="Via VS Code Marketplace" %}
+Visit the [VS Code Marketplace](https://marketplace.visualstudio.com/items/?itemName=Supra.supramove) and click **"Install"** to automatically open VS Code Desktop Application and install it.
+{% endtab %}
+{% endtabs %}
 
 {% hint style="info" %}
 After installation, look for the **Supra logo** in your VS Code tray to access In-built explorer features!
 {% endhint %}
+
+***
 
 ## Getting Started
 
@@ -72,6 +76,8 @@ pub age: u32,
 * **Real-time event tracking** by Tx hash.
 * **Event details** and parameter inspection
 
+***
+
 ## Support & Troubleshooting
 
 #### **IntelliSense not activating?**
@@ -89,6 +95,6 @@ pub age: u32,
 
 ## Extension in Action
 
-{% hint style="danger" %}
-Demo coming soon!
-{% endhint %}
+{% embed url="https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FmTBWRilfF5GuWWSNVrjY%2Fuploads%2FpmtpxpXxt3YANOan9y8g%2Fexten.mp4?alt=media&token=14dc9050-a0ce-47c4-8309-04397374a607" fullWidth="false" %}
+Demo
+{% endembed %}
