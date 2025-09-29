@@ -3,7 +3,7 @@
 ## Learn Supra dVRF
 
 * [Overview](README.md)
-* [Supra  dVRF: Architecture Guide](learn-supra-dvrf/supra-dvrf-architecture-guide.md)
+* [Supra dVRF: Architecture Guide](learn-supra-dvrf/supra-dvrf-architecture-guide.md)
 * [A Deeper Dive into Supra dVRF](learn-supra-dvrf/a-deeper-dive-into-supra-dvrf.md)
 
 ## Build with Supra dVRF
@@ -18,7 +18,11 @@
   * [Supra L1 Move](build-with-supra-dvrf/request-random-numbers/supra-l1-move.md)
 * [Other Functions](build-with-supra-dvrf/other-functions.md)
 * [Best Practices and Common Issues](build-with-supra-dvrf/best-practices-and-common-issues.md)
-* [Developer Guide](build-with-supra-dvrf/v2-guide.md)
 * [VRF Subscription FAQ](build-with-supra-dvrf/vrf-subscription-model.md)
 * [Migration to dVRF 3.0](build-with-supra-dvrf/migration-to-dvrf-3.0.md)
 * [Available Networks](build-with-supra-dvrf/networks.md)
+
+## Supra L1 dVRF
+
+* [V2 Developer Guide](supra-l1-dvrf/v2-guide.md)
+* [Page 1](supra-l1-dvrf/page-1.md)
