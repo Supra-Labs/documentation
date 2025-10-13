@@ -1,5 +1,6 @@
 ---
 description: Relative network, faucet, and API details.
+hidden: true
 ---
 
 # Network Information

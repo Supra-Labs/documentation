@@ -1,5 +1,6 @@
 ---
 description: Interested in building on Supra's EVM network? You've come to the right place!
+hidden: true
 ---
 
 # Getting Started
