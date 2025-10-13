@@ -24,9 +24,7 @@ Please refer to the [_Available Networks_](./#available-networks) _page_ for the
 
 Supra dVRF  operates on a customer-controlled wallet subscription model where your registered wallet address serves as the main reference for access permissions and callback transaction gas fee payments.
 
-Please visit [https://supra.com/data/dvrf](https://supra.com/data/dvrf) to create your first subscription.&#x20;
-
-Please refer to the [VRF Developer Guide](supra-l1-dvrf/v2-guide.md) for a step-by-step explanation of how to consume Supra’s dVRF services.
+Please refer to the [VRF Developer Guide](build-supra-l1-dvrf-2.0/v2-guide.md) for a step-by-step explanation of how to consume Supra’s dVRF services.
 
 {% hint style="danger" %}
 Important: Please make sure you read and understand [Terms of Use](https://supra.com/terms-of-use/) before start using Supra products and services.

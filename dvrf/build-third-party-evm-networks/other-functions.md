@@ -2,7 +2,7 @@
 
 Beyond requesting random numbers, Supra dVRF provides additional functions for managing your account, monitoring balances, and configuring contract settings. These utility functions help you maintain your VRF integration and optimize your random number generation workflow.
 
-### Interact with deposit contract
+### Interact with deposit contract - EVM networks
 
 The simplest way to interact with the deposit contract is through Remix IDE.
 

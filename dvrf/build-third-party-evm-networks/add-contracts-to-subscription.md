@@ -25,9 +25,7 @@ The easiest way to manage your contracts is through the web interface at [supra.
     * **Callback Gas Price**: Must be ≤ your subscription's maxGasPrice
     * **Callback Gas Limit**: Must be ≤ your subscription's maxGasLimit
 
-    **For Supra L1:**
 
-    * Gas settings are inherited from subscription level
 *   **Submit and Confirm**
 
 
@@ -48,16 +46,6 @@ interface IDeposit {
 ```
 
 
-
-For Supra L1
-
-```solidity
-// Add contract to whitelist
-public entry fun add_contract(sender: &signer, contract_address: address) {
-    deposit::add_contract_to_whitelist(contract_address);
-}
-
-```
 {% endtab %}
 {% endtabs %}
 

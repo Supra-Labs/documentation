@@ -6,7 +6,7 @@ After adding contracts, you need to ensure your subscription has sufficient fund
 {% tabs %}
 {% tab title="Deposit via Web Interface" %}
 1. **Navigate to Subscription Management**
-   * Go to [supra.com/data/dvrf](https://supra.com/data/dvrf)
+   * Go to [supra.com/data/dvrf](https://supra.com/data/dvrf)  (for third party EVM networks only)
    * Connect your wallet (subscription owner)
    * Click on "My Subscription"
 2. **Add Funds**
@@ -33,17 +33,6 @@ interface IDeposit {
 
 // Check minimum balance requirement (additional)
 uint128 minBalance = deposit.getMinBalanceLimit(maxGasPrice, maxGasLimit);
-```
-
-For Supra L1
-
-```solidity
-move
-// Deposit funds to subscription
-public entry fun deposit_funds(sender: &signer, amount: u64) {
-    deposit::deposit_fund(sender, amount);
-}
-
 ```
 {% endtab %}
 {% endtabs %}
@@ -76,23 +65,6 @@ EVM Chains
 deposit.withdrawFund(withdrawAmount);
 
 ```
-
-Supra L1
-
-```solidity
-// Withdraw funds from subscription
-public entry fun withdraw_funds(sender: &signer, amount: u64) {
-    deposit::withdraw_fund(sender, amount);
-}
-
-```
 {% endtab %}
 {% endtabs %}
 
-
-
-
-
-####
-
-####

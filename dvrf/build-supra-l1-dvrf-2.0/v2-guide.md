@@ -2,8 +2,8 @@
 
 Supra dVRF requires a whitelisted subscription to the service with a customer-controlled wallet address to act as the main reference. Once your wallet is whitelisted, you can use it to whitelist any number of  consumer contracts and top up the deposit balance maintained with Supra in order to pay for the gas fees of callback (response) transactions.
 
-* Please refer to the [VRF subscription FAQ](../build-with-supra-dvrf/vrf-subscription-model.md) page for a better understanding of how it works.
-* Please refer to the [Network Addresses](../build-with-supra-dvrf/networks.md) page for Supra dVRF version and contract addresses.&#x20;
+* Please refer to the [VRF subscription FAQ](../build-third-party-evm-networks/vrf-subscription-model.md) page for a better understanding of how it works.
+* Please refer to the [Network Addresses](../learn-supra-dvrf/networks.md) page for Supra dVRF version and contract addresses.&#x20;
 
 The following guide explains the steps a user has to follow in order to request random numbers.
 
@@ -17,16 +17,7 @@ Important: Please make sure you read and understand [Terms of Use](https://supra
 In Supra network, You will interact with a single Supra Smart contract to connect and consume Supra VRF.
 {% endhint %}
 
-
-
-<details>
-
-<summary><strong>Whitelisting on  SUPRA L1 for VRF 2.0</strong> </summary>
-
-Send us a request via this [form](https://forms.gle/WFvpBXg67GmDrokv5) to get your wallet registered with Supra.\
-
-
-</details>
+**Whitelisting on  SUPRA L1 is still required for VRF 2.0** Send us a request via this [form](https://forms.gle/WFvpBXg67GmDrokv5) to get your wallet registered with Supra
 
 #### Step 1: Create the Supra dVRF Interface[​](https://qa-docs.supraoracles.com/docs/vrf-dev-guide#step-1-create-the-supra-router-contract-interface) <a href="#step-1-create-the-supra-router-contract-interface" id="step-1-create-the-supra-router-contract-interface"></a>
 
@@ -201,8 +192,6 @@ Retrieve random number
 supra move tool view -–function-id default::example_module::get_rng_number_from_nonce --args u64:{nonce}
 ```
 {% endcode %}
-
-
 {% endtab %}
 
 {% tab title="Aptos Move" %}
@@ -300,7 +289,7 @@ It is important to note that your wallet address must be registered with Supra b
 * **remove\_contract\_from\_whitelist(contract\_address: address)**\
   The function helps user’s to remove their contract addresses from the whitelist if that is no longer required.\\
 * **client\_setting\_minimum\_balance(min\_balance\_limit\_client: u64)**\
-  This function is for the user to set the minimum limit of the fund they will add in the deposit contract. The higher of the user’s value or, the default value (10 Aptos) will be saved as the minimum balance for the subscription. Total fund balance should be higher than the minimum balance in order to receive random numbers from Supra. Please read ore on Supra subscription model [here](../build-with-supra-dvrf/vrf-subscription-model.md) for a better understanding.\\
+  This function is for the user to set the minimum limit of the fund they will add in the deposit contract. The higher of the user’s value or, the default value (10 Aptos) will be saved as the minimum balance for the subscription. Total fund balance should be higher than the minimum balance in order to receive random numbers from Supra. Please read ore on Supra subscription model [here](../build-third-party-evm-networks/vrf-subscription-model.md) for a better understanding.\\
 * **withdraw\_fund(withdraw\_amount: u64)**\
   The function helps users to withdraw funds.\\
 * **check\_client\_fund(client\_address: address)**\
@@ -391,3 +380,4 @@ aptos move view -–function-id default::example_module::get_rng_number_from_non
 {% endcode %}
 {% endtab %}
 {% endtabs %}
+

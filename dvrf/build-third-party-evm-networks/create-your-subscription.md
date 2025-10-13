@@ -1,10 +1,14 @@
+---
+description: '** Builders on Supra L!'
+---
+
 # Create your subscription
 
 To start using dVRF, you need to create a subscription that will manage your random number requests and handle gas payments for callbacks. You can create a subscription in two ways: using the new web interface or through on-chain functions.
 
 {% tabs %}
 {% tab title="Via the web interface" %}
-The easiest way to create your dVRF subscription is through subscription manager UI at [supra.com/data/dvrf](https://supra.com/data/dvrf).
+The easiest way to create your dVRF subscription is through subscription manager UI at [supra.com/data/dvrf](https://supra.com/data/dvrf). (Currently EVM networks only.  This feature will go live soon for Supra L1).
 
 #### Prerequisites
 
@@ -17,7 +21,6 @@ The easiest way to create your dVRF subscription is through subscription manager
 1. **Connect Your Wallet**
    * Navigate to [supra.com/data/dvrf](https://supra.com/data/dvrf)
    * Click "Connect Wallet"
-   * Select either MetaMask or StarKey wallet
    * Approve the connection request\
 
 2. **Access Subscription Management**
@@ -33,10 +36,6 @@ The easiest way to create your dVRF subscription is through subscription manager
 
     * **Max Gas Price**: Maximum gas price you're willing to pay for callback transactions.
     * **Max Gas Limit**: Maximum gas limit allocated for callback transactions.
-
-    **For Supra L1:**
-
-    * **Max Transaction Fee**: Maximum Gas fee you are willing to spend for your callback transaction.
 
 
 4. **Review and Confirm**
@@ -64,23 +63,6 @@ interface IDeposit {
     ) external payable;
 }
 ```
-
-
-
-Supra L1
-
-<pre class="language-solidity"><code class="lang-solidity"><strong>// Create subscription on Supra L1
-</strong>public entry fun create_subscription(
-    sender: &#x26;signer,
-    max_gas_fee: u64,
-    initial_deposit: u64
-) {
-    // Call the deposit module to create subscription
-    deposit::add_client_to_whitelist(sender, max_gas_fee);
-    deposit::deposit_fund(sender, initial_deposit);
-}
-
-</code></pre>
 
 #### Verification
 
