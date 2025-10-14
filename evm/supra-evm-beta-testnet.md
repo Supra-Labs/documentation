@@ -5,8 +5,8 @@ Supra EVM Beta Testnet powered by **SupraBTM** (Supra's conflict specification-a
 #### Performance Highlights
 
 * **\~4× speedup** over traditional sequential execution
-* **\~1.5-1.7× speedup** over Monad's 2-phase optimistic parallel execution
-* **Executes in \~50% less time** compared to Monad's approach
+* **\~1.5-1.7× speedup** over 2-phase optimistic parallel execution
+* **Executes in \~50% less time** compared to known state-of-the-art
 * Evaluated on 10,000 historical Ethereum blocks
 
 **Detailed Technical Analysis**: For a comprehensive comparison of both approaches, read our study: [Supra vs Monad: Towards the Best Parallel Execution of the Ethereum Virtual Machine](https://supra.com/academy/supra-vs-monad-towards-the-best-parallel-execution-of-the-ethereum-virtual-machine/)
@@ -144,7 +144,7 @@ Block_num	Concurrency_level	Block_size	Seq. Time	iBTM Time
 14000022	12	                339	        7.706865ms	2.026971ms
 ```
 
-#### What Happends Next?
+#### What's Next?
 
 Community members are already verifying benchmark results. [Check them out here on X.](https://x.com/SUPRA_Labs)
 
