@@ -146,7 +146,7 @@ Block_num	Concurrency_level	Block_size	Seq. Time	iBTM Time
 
 #### What's Next?
 
-Community members are already verifying benchmark results. [Check them out here on X.](https://x.com/SUPRA_Labs)
+Community members are already verifying benchmark results. [Check them out here on X.](https://x.com/SUPRA_Labs/status/1977835502645772781)
 
 {% hint style="success" %}
 Join the conversation. **$2,500 is on the line for the first dev who proves us wrong.**
