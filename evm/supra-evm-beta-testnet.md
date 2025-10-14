@@ -74,7 +74,7 @@ cd supraevmbeta
 **Download the Dataset**
 
 ```bash
-# Download the dataset (~14 GB)
+# Download the dataset 
 gdown --id 1zgP48T3IAmg5yDkaN4h9RaD09klMN5QF
 
 # Extract it
