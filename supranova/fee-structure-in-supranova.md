@@ -178,16 +178,18 @@ To accommodate varying bridge volumes, SupraNova introduces a **tiered service f
 
 #### Testnet
 
-<table><thead><tr><th width="123.15625">Asset Name</th><th width="250.6171875">Ethereum (Lock)</th><th width="95.59765625">Asset Name</th><th>Supra (Mint)</th></tr></thead><tbody><tr><td>WETH</td><td>0xfFf9976782d46CC05630D1f6eBAb18b2324d6B14</td><td>supETH</td><td>0x1a57888bfcd31ef82a8e3dac93db14335b36f9228d5f050b722151ae2a77153a</td></tr><tr><td>USDC</td><td>0x1c7D4B196Cb0C7B01d743Fbc6116a902379C7238</td><td>supUSDC</td><td><p>0x3ca17a5b04d826f9be112c319e003b3a79b2682c40613876023758dbb0d</p><p>03e96</p></td></tr></tbody></table>
+<table><thead><tr><th width="123.15625">Asset Name</th><th width="250.6171875">Ethereum (Lock)</th><th width="95.59765625">Asset Name</th><th>Supra (Mint)</th></tr></thead><tbody><tr><td>WETH</td><td>0xfFf9976782d46CC05630D1f6eBAb18b2324d6B14</td><td>supETH</td><td>0x1a57888bfcd31ef82a8e3dac93db14335b36f9228d5f050b722151ae2a77153a</td></tr><tr><td>USDC</td><td>0x1c7D4B196Cb0C7B01d743Fbc6116a902379C7238</td><td>supUSDC</td><td><p>0x3ca17a5b04d826f9be112c319e003b3a79b2682c40613876023758dbb0d</p><p>03e96</p></td></tr><tr><td>USDT</td><td>0xaA8E23Fb1079EA71e0a56F48a2aA51851D8433D0</td><td>supUSDT</td><td>0x2946e0f1a942ab8eb6f763f19da3d7540609aba8b00fb54e680cac5e048f8d0</td></tr><tr><td>SolvBTC</td><td>0xE33109766662932a26d978123383ff9E7bdeF346</td><td>supSolvBTC</td><td>0x420c8751a043b5b216cf02a011b0d563f3638eb082f91f0d879254e388f2b53a</td></tr><tr><td>WBTC</td><td>0x29f2D40B0605204364af54EC677bD022dA425d03</td><td>supBTC</td><td>0x7ca33bcce4f4bb7904ac7b46e3613b6b62dae55cc89923706aac1ad1c244e3e6</td></tr></tbody></table>
 
 #### Mainnet
 
-<table><thead><tr><th width="123.15625">Asset Name</th><th width="252.37890625">Ethereum (Lock)</th><th width="97.3984375">Asset Name</th><th>Supra (Mint)</th></tr></thead><tbody><tr><td>WETH</td><td>0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2</td><td>supETH</td><td>0xe4af154ade9551e7f58a23b8f727ae2dca050f1b74582bb518ba361c889d246d</td></tr><tr><td>USDC</td><td>0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48</td><td>supUSDC</td><td>0xf90b4b9d4a9d87c39fb3140513e52edc3ead5eaddcb9881b02becdeb63c5793d</td></tr></tbody></table>
+<table><thead><tr><th width="123.15625">Asset Name</th><th width="252.37890625">Ethereum (Lock)</th><th width="97.3984375">Asset Name</th><th>Supra (Mint)</th></tr></thead><tbody><tr><td>WETH</td><td>0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2</td><td>supETH</td><td>0xe4af154ade9551e7f58a23b8f727ae2dca050f1b74582bb518ba361c889d246d</td></tr><tr><td>USDC</td><td>0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48</td><td>supUSDC</td><td>0xf90b4b9d4a9d87c39fb3140513e52edc3ead5eaddcb9881b02becdeb63c5793d</td></tr><tr><td>USDT</td><td>0xdAC17F958D2ee523a2206206994597C13D831ec7</td><td>supUSDT</td><td>0x7b6463ca7a54ee37e113c8333db9c0af49de39555ee1cb44837db4c085f8964</td></tr><tr><td>SolvBTC</td><td>0x7A56E1C57C7475CCf742a1832B028F0456652F97</td><td>supSolvBTC</td><td>0x224bee573e0ae84ba7f1eee4f7063a945ad7a268bea7ab9e004f6890177a480b</td></tr><tr><td>WBTC</td><td>0x2260fac5e5542a773aa44fbcfedf7c193bc2c599</td><td>supBTC</td><td>0x348b1a4fa68803cbda3b50326a90e59b21e80c3ced93588b20950b5c0697a67e</td></tr></tbody></table>
 
 ***
 
 ## Asset Transaction Limit
 
-<table><thead><tr><th width="152.296875">Asset Name</th><th>Max Global Limit</th><th>Per Transaction Limit</th></tr></thead><tbody><tr><td>ETH</td><td>23000000000000000000  (23 ETH)</td><td>1200000000000000000 (1.2 ETH)</td></tr><tr><td>USDC</td><td>100000000000  (100K USDC)</td><td>5000000000 (5K USDC)</td></tr></tbody></table>
+#### Mainnet
+
+<table><thead><tr><th width="152.296875">Asset Name</th><th>Max Global Limit</th><th>Per Transaction Limit</th></tr></thead><tbody><tr><td>ETH</td><td>23000000000000000000 (23 ETH)</td><td>4500000000000000000 (4.5 ETH)</td></tr><tr><td>USDC</td><td>100000000000  (100K USDC)</td><td>20000000000 (20K USDC)</td></tr><tr><td>USDT</td><td>100000000000 (100K USDT)</td><td>20000000000 (20K USDT)</td></tr><tr><td>SolvBTC</td><td>1000000000000000000 (1 solvBTC)</td><td>200000000000000000 (0.2 solvBTC)</td></tr><tr><td>WBTC</td><td>100000000 (1 wBTC)</td><td>20000000 (0.2 wBTC)</td></tr></tbody></table>
 
 ###
