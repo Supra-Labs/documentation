@@ -1,6 +1,6 @@
-# Supra EVM Beta Testnet
+# SupraEVM Beta
 
-Supra EVM Beta Testnet powered by **SupraBTM** (Supra's conflict specification-aware Block Transactional Memory) - a parallel transaction execution framework that achieves breakthrough performance in EVM transaction processing.
+SupraEVM Beta powered by **SupraBTM** & **Hydrangea** (Supra's conflict specification-aware Block Transactional Memory) - a parallel transaction execution framework that achieves breakthrough performance in EVM transaction processing.
 
 #### Performance Highlights
 
