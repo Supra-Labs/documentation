@@ -1,6 +1,6 @@
 # SupraEVM Beta
 
-SupraEVM Beta powered by **SupraBTM** & **Hydrangea** (Supra's conflict specification-aware Block Transactional Memory) - a parallel transaction execution framework that achieves breakthrough performance in EVM transaction processing.
+SupraEVM Beta powered by **SupraBTM** (Supra's conflict specification-aware Block Transactional Memory) - a parallel transaction execution framework that achieves breakthrough performance in EVM transaction processing.
 
 #### Performance Highlights
 
@@ -21,23 +21,36 @@ It leverages Software Transactional Memory (STM) principles, conflict analysis, 
 
 ***
 
-### Release Information: v0 (In-Memory Beta)
+### Release Information:&#x20;
 
-#### What's Included
+#### v1 (SupraBTM + RocksDB)
 
-✅ Stable and fully functional integration of iBTM with [Hydrangea](https://x.com/SUPRA_Labs/status/1933726886393221246)\
-✅ In-memory EVM execution with SupraBTM\
-✅ Binary-only release\
-✅ Historical Ethereum block dataset (10,000 blocks)\
-✅ Performance benchmarking tools (Sequential vs SupraBTM)
+* Integration of iBTM with Hydrangea
+* **Persistent EVM execution with SupraBTM + RocksDB**
+* Binary-only release via Docker
+* Historical Ethereum block dataset
+* **Monad Comparison**: Final testing against Monad 2PE.
+
+{% hint style="info" %}
+**Important Notes for v1**:
+
+* Binary-only release via Docker
+* Developers cannot deploy or test their own smart contracts in this version, for Performancing benchmarking only.
+{% endhint %}
+
+#### v0 (In-Memory Beta)
+
+* Stable and fully functional integration of iBTM with [Hydrangea](https://x.com/SUPRA_Labs/status/1933726886393221246)
+* **In-memory EVM execution with SupraBTM**
+* Binary-only release
+* Historical Ethereum block dataset
+* Performance benchmarking tools (**Sequential vs SupraBTM**)
 
 {% hint style="info" %}
 **Important Notes for v0**:\
 
 
 * **In-Memory Execution Only**: This version operates entirely in-memory and does NOT include persistent storage.
-* **Binary Release**: This is a binary-only public release
-* **Benchmarking Focus**: This release is for demonstrating the performance of SupraBTM over Sequential execution on in-memory operations
 * **No Custom Contract Testing**: Developers cannot deploy or test their own smart contracts in this version
 {% endhint %}
 
@@ -57,7 +70,7 @@ It leverages Software Transactional Memory (STM) principles, conflict analysis, 
 
 ***
 
-### Installation & Setup
+### SupraBTM Binary Installation & Setup
 
 {% stepper %}
 {% step %}
@@ -99,12 +112,17 @@ mkdir stats
 
 ```bash
 docker run --rm \
-  -v ./data_bdf:/data \
-  -v "$PWD/stats:/out" \
-  davidsupra/ibtm:latest \
-  --data-dir /data \
-  --output-dir /out
+ --cpuset-cpus="0-7" \
+ -v ./data_bdf:/data \
+ -v "$PWD/stats:/out" \
+ rohitkapoor9312/ibtm-image:latest\
+ --data-dir /data \
+ --output-dir /out
 ```
+
+{% hint style="info" %}
+\--cpuset-cpus="0-7" creates affinity for cpu cores, and can be adjusted according to experiment.
+{% endhint %}
 {% endstep %}
 {% endstepper %}
 
@@ -143,6 +161,142 @@ Block_num	Concurrency_level	Block_size	Seq. Time	iBTM Time
 14000018	12	                115	        2.135975ms	748.909µs
 14000022	12	                339	        7.706865ms	2.026971ms
 ```
+
+### Monad 2PE vs SupraBTM Benchmarking
+
+{% hint style="info" %}
+This section continues forward after setting up SupraBTM Binary following above setup
+{% endhint %}
+
+#### Monad Setup Minimum System Requirements
+
+```markup
+---------------------
+Server:     f4.metal.medium
+CPU:        AMD 4564P, 16 cores @ 4.5 GHz*
+RAM:        192 GB
+Storage:    2 × 480 GB NVMe + 2 × 1.9 TB NVMe
+Networking: 2 × 10 Gbps NICs
+*AMD Ryzen 9950x, AMD Ryzen 7950x, AMD EPYC 4584PX, etc.
+---------------------
+```
+
+#### Installation & Setup
+
+{% stepper %}
+{% step %}
+**Setting up the Benchmark Environment**
+
+```bash
+# Create a directory to store all benchmark-related files & Navigate in it.
+mkdir monad-bench
+cd ./monad-bench
+```
+{% endstep %}
+
+{% step %}
+**Download the shell script**
+
+```bash
+# Download the shell script 
+gdown 1JF9K7_nXMsptlTNHB9Jf7mV4SUwCsza-
+```
+{% endstep %}
+
+{% step %}
+**Make the script executable and run it.**
+
+{% hint style="info" %}
+Please note that the process may take some time as it clones the Monad execution repository and sets up the full benchmarking environment.
+{% endhint %}
+
+**For MAC:**
+
+```bash
+chmod +x monad_full_setup.sh
+./monad_full_setup.sh monad
+```
+
+**For Linux:**
+
+```bash
+chmod +x monad_full_setup.sh./monad_full_setup.sh monad
+```
+
+**It will set up the Monad 2PE experiment, basically, it automates the entire setup process as follows:**
+
+1. **Repository Setup** – Clones the Monad Execution repository at a specific commit.
+2. **Submodule Initialization** – Initializes all required submodules.
+3. **Benchmark Data Preparation** – Downloads benchmark and test files needed for execution.
+4. **Dataset Handling** – Downloads the dataset via gdown (skips if already present).
+5. **Code Updates** – Applies local patches for error handling and CMake configuration updates.
+6. **Docker Image Build** – Builds the docker image for the benchmark.
+{% endstep %}
+
+{% step %}
+**For Execution move to the root directory to run the docker image**
+
+```bash
+cd ./monad
+
+sudo docker run -it --rm \
+--privileged \
+-v $(pwd):/workspace \
+monad-dev-image
+```
+{% endstep %}
+
+{% step %}
+**Above command will take you inside Docker, go to the workspace by running.**&#x20;
+
+```bash
+cd ./workspace
+
+CC=gcc-15 CXX=g++-15 CFLAGS="-march=haswell" CXXFLAGS="-march=haswell" ASMFLAGS="-march=haswell" \
+./scripts/configure.sh && ./scripts/build.sh
+
+POOL_THREADS=8 POOL_FIBERS=2 taskset -c 0-7 ./build/test/ethereum_test/monad-ethereum-test --fork Prague
+```
+
+{% hint style="info" %}
+You can change the number of threads by setting `POOL_THREADS` and `POOL_FIBERS` to compare performance at different configurations of 2PE.
+
+Copies all benchmark results and log files from the container to the host machine under the `monad/monad_2pe_logs.txt` directory for analysis and record-keeping.
+{% endhint %}
+{% endstep %}
+{% endstepper %}
+
+### Final Analysis SupraBTM vs Monad 2PE.
+
+**Get logs for both iBTM and 2PE in one repository:**
+
+```
+./stats/
+├── monad_2pe_logs.txt
+└── execution_time.txt
+```
+
+**Download and move the python script into `./stats` and run**
+
+```bash
+# Download the python script in ./stats/
+gdown 1shdmZWrZHgz0bxyjkn9efzL-soHuWRn7
+# Run
+python3 analysis.py execution_time.txt monad_2pe_logs.txt
+```
+
+**The script outputs both console and file summaries.** Results are stored in:&#x20;
+
+* Consolidated file saved in output/consolidated\_th8\_fib2.csv → per-block metrics
+* &#x20;summary/summary\_th8\_fib2.txt → aggregated statistics
+
+#### Sample output
+
+<figure><img src=".gitbook/assets/unknown.png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src=".gitbook/assets/unknown (1).png" alt=""><figcaption></figcaption></figure>
+
+***
 
 #### What's Next?
 
