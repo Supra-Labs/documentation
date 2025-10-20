@@ -58,15 +58,14 @@ It leverages Software Transactional Memory (STM) principles, conflict analysis, 
 
 ### Minimum System Requirements
 
-**Docker**: Required for running the pre-compiled binary
-
-**Operating Systems Supported:**
-
 * Linux (Ubuntu 20.04+, Debian 11+)
-* macOS (Intel and Apple Silicon)
 * Windows with WSL2
 * gdown (for dataset download)
-* **CPU**: 8/8+ cores recommended for optimal performance with 32 GB
+* **Docker**: Required for running the pre-compiled binary
+* **Networking**: 2 × 10 Gbps NICs
+* **CPU**: AMD 4564P, 16 cores @ 4.5 GHz with 128 GB
+* **Storage**: 2 × 480 GB NVMe + 2 × 1.9 TB NVMe
+* AMD Ryzen 9950x, AMD Ryzen 7950x, AMD EPYC 4584PX, etc.
 
 ***
 
@@ -168,21 +167,6 @@ Block_num	Concurrency_level	Block_size	Seq. Time	iBTM Time
 This section continues forward after setting up SupraBTM Binary following above setup
 {% endhint %}
 
-#### Monad Setup Minimum System Requirements
-
-```markup
----------------------
-Server:     f4.metal.medium
-CPU:        AMD 4564P, 16 cores @ 4.5 GHz*
-RAM:        192 GB
-Storage:    2 × 480 GB NVMe + 2 × 1.9 TB NVMe
-Networking: 2 × 10 Gbps NICs
-*AMD Ryzen 9950x, AMD Ryzen 7950x, AMD EPYC 4584PX, etc.
----------------------
-```
-
-#### Installation & Setup
-
 {% stepper %}
 {% step %}
 **Setting up the Benchmark Environment**
@@ -210,20 +194,12 @@ gdown 1JF9K7_nXMsptlTNHB9Jf7mV4SUwCsza-
 Please note that the process may take some time as it clones the Monad execution repository and sets up the full benchmarking environment.
 {% endhint %}
 
-**For MAC:**
-
 ```bash
 chmod +x monad_full_setup.sh
 ./monad_full_setup.sh monad
 ```
 
-**For Linux:**
-
-```bash
-chmod +x monad_full_setup.sh./monad_full_setup.sh monad
-```
-
-**It will set up the Monad 2PE experiment, basically, it automates the entire setup process as follows:**
+It will set up the Monad 2PE experiment, basically, it automates the entire setup process as follows:
 
 1. **Repository Setup** – Clones the Monad Execution repository at a specific commit.
 2. **Submodule Initialization** – Initializes all required submodules.
@@ -266,7 +242,7 @@ Copies all benchmark results and log files from the container to the host machin
 {% endstep %}
 {% endstepper %}
 
-### Final Analysis SupraBTM vs Monad 2PE.
+#### Final Analysis SupraBTM vs Monad 2PE.
 
 **Get logs for both iBTM and 2PE in one repository:**
 
