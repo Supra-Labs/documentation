@@ -15,7 +15,7 @@ SupraEVM Beta powered by **SupraBTM** (Supra's conflict specification-aware Bloc
 
 ### What is SupraBTM?
 
-**SupraBTM** is built on **iBTM (Intelligent Block Transactional Memory)**, a parallel transaction execution framework inspired by BlockSTM and designed to bring scalable, concurrent execution to Ethereum-like environments.
+**SupraBTM** is built on [**iBTM (Intelligent Block Transactional Memory)**](https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.AFT.2025.29), a parallel transaction execution framework inspired by BlockSTM and designed to bring scalable, concurrent execution to Ethereum-like environments.
 
 It leverages Software Transactional Memory (STM) principles, conflict analysis, and adaptive scheduling to achieve high throughput while preserving safety and determinism. Supra's iBTM adapts STM principles to the EVM context, allowing parallel execution of Ethereum transactions. It integrates seamlessly into the RISE-PEVM framework, extending its architecture to support intelligent dependency resolution and adaptive conflict management.
 
