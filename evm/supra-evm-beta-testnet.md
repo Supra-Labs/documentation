@@ -43,7 +43,7 @@ It leverages Software Transactional Memory (STM) principles, conflict analysis, 
 **Important Notes for v1**:
 
 * Binary-only release via Docker
-* Developers cannot deploy or test their own smart contracts in this version, for Performancing benchmarking only.
+* Developers cannot deploy or test their own smart contracts in this version, for Performing benchmarking only.
 {% endhint %}
 
 #### v0 (In-Memory Beta)
