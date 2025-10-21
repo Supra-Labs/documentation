@@ -181,6 +181,8 @@ cd ./monad-bench
 {% step %}
 **Download the shell script**
 
+Before proceeding, ensure that your SSH key is properly configured and added to your Git account to enable secure cloning of the repository. If not, follow this link to setup: [Generating a new SSH key and adding it to the ssh-agent - GitHub Docs](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+
 ```bash
 # Download the shell script 
 gdown 1JF9K7_nXMsptlTNHB9Jf7mV4SUwCsza-
@@ -199,33 +201,50 @@ chmod +x monad_full_setup.sh
 ./monad_full_setup.sh monad
 ```
 
-It will set up the Monad 2PE experiment, basically, it automates the entire setup process as follows:
+The script `monad_full_setup.sh` automates the setup required to benchmark historical Ethereum blocks using the Monad framework.&#x20;
 
-1. **Repository Setup** – Clones the Monad Execution repository at a specific commit.
-2. **Submodule Initialization** – Initializes all required submodules.
-3. **Benchmark Data Preparation** – Downloads benchmark and test files needed for execution.
-4. **Dataset Handling** – Downloads the dataset via gdown (skips if already present).
-5. **Code Updates** – Applies local patches for error handling and CMake configuration updates.
-6. **Docker Image Build** – Builds the docker image for the benchmark.
+1. **Repository Setup**: It begins by cloning the Monad repository and checking out the specific commit 8ffc2b985c34c7cf361a5ea1712321f8f8ec7b6b to ensure reproducible builds and updates the submodules.
+2. **Benchmark Data Preparation**: Downloads the required historical block datasets containing 500 random blocks from 10,000 historical ethereum blocks.\
+   Each dataset consists of:
+
+* Parses the RLP-encoded block and decodes its transactions and header.
+* The blockchain state snapshot initialization before executing the given block.
+* Loads the pre-state from JSON and commits to the database to initialize the execution environment.
+* Creates a BlockState and EVM instance
+
+3. **Code Updates**: The benchmark is implemented in historical\_test.cpp.\
+   For each block file, the test:\
+
+   1. Logs key performance metrics, including block number, thread count, fiber count, block size, and average execution time, to `monad_2pe_logs.txt`.
+   2. Execution parameters such as the number of threads and fibers are configurable via the environment variables `POOL_THREADS` and `POOL_FIBERS`.
+   3. Comment out line [47](https://github.com/category-labs/monad/blob/8ffc2b985c34c7cf361a5ea1712321f8f8ec7b6b/category/execution/ethereum/block_hash_buffer.cpp#L47) from `block_hash_buffer.cpp`, to support executing random blocks by providing the pre-state which would not meet the bounds imposed for executing a block.
+   4. Comment out the line[ 463](https://github.com/category-labs/monad/blob/8ffc2b985c34c7cf361a5ea1712321f8f8ec7b6b/category/execution/ethereum/execute_transaction.cpp#L463) from `exeute_transaction.cpp`, to resolve the state issues while during execution with multiple fibers.
+   5. Moved line [281](https://github.com/category-labs/monad/blob/8ffc2b985c34c7cf361a5ea1712321f8f8ec7b6b/category/execution/ethereum/execute_block.cpp#L281) from `execute_block.cpp`, after the while loop since block transaction execution when all the worker threads complete their execution tasks.
+   6. Turn off the compiler testing flag at lines [75](https://github.com/category-labs/monad/blob/8ffc2b985c34c7cf361a5ea1712321f8f8ec7b6b/docker/Dockerfile#L75) and [91 ](https://github.com/category-labs/monad/blob/8ffc2b985c34c7cf361a5ea1712321f8f8ec7b6b/docker/Dockerfile#L91)and comment lines [87](https://github.com/category-labs/monad/blob/8ffc2b985c34c7cf361a5ea1712321f8f8ec7b6b/docker/Dockerfile#L87) to[ 96 ](https://github.com/category-labs/monad/blob/8ffc2b985c34c7cf361a5ea1712321f8f8ec7b6b/docker/Dockerfile#L96)from the `Dockerfile`, in order to execute the historical benchmarks with minimal steps.
+
+{% hint style="info" %}
+The Monad 2PE setup instructions are from us based on our experience of running the available codebase [https://github.com/category-labs/monad](https://github.com/category-labs/monad) (commit hash: `8ffc2b985c34c7cf361a5ea1712321f8f8ec7b6b`). We want to leave it to other devs or Monad devs to choose to run experiments their own way as long as it satisfies their needs for testing Monad execution. Our scripts are more to make life easy to run historical tests.
+{% endhint %}
 {% endstep %}
 
 {% step %}
-**For Execution move to the root directory to run the docker image**
+**Builds the docker image for the benchmark.**
 
 ```bash
 cd ./monad
-
-sudo docker run -it --rm \
---privileged \
--v $(pwd):/workspace \
-monad-dev-image
+sudo docker build -t monad-dev-image -f docker/Dockerfile .
 ```
 {% endstep %}
 
 {% step %}
-**Above command will take you inside Docker, go to the workspace by running.**&#x20;
+**Run the docker image and it'll you inside Docker then go to the workspace by:**
 
 ```bash
+sudo docker run -it --rm \
+--privileged \
+-v $(pwd):/workspace \
+monad-dev-image
+
 cd ./workspace
 
 CC=gcc-15 CXX=g++-15 CFLAGS="-march=haswell" CXXFLAGS="-march=haswell" ASMFLAGS="-march=haswell" \
@@ -263,8 +282,8 @@ python3 analysis.py execution_time.txt monad_2pe_logs.txt
 
 **The script outputs both console and file summaries.** Results are stored in:&#x20;
 
-* Consolidated file saved in output/consolidated\_th8\_fib2.csv → per-block metrics
-* &#x20;summary/summary\_th8\_fib2.txt → aggregated statistics
+* Consolidated file saved in `output/consolidated_th8_fib2.csv` → per-block metrics
+* &#x20;`summary/summary_th8_fib2.txt` → aggregated statistics
 
 #### Sample output
 
