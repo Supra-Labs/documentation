@@ -31,7 +31,7 @@ It leverages Software Transactional Memory (STM) principles, conflict analysis, 
 
 ### Release Information:&#x20;
 
-#### v1 (SupraBTM + RocksDB)
+#### v1 (SupraBTM + RocksDB) - Current Version
 
 * Integration of iBTM with Hydrangea
 * **Persistent EVM execution with SupraBTM + RocksDB**
