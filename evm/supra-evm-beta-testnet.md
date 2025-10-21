@@ -102,7 +102,7 @@ unzip ./data_bdf.zip
 ```
 
 {% hint style="success" %}
-**You can go to the the** <kbd>./data\_bdf</kbd> **folder to check the Block Dataset.**\
+**You can go to the** `./data_bdf` **folder to check the Block Dataset.**\
 This will take time depending on your hardware specs as well as internet connection.
 {% endhint %}
 {% endstep %}
