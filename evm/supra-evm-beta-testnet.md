@@ -13,6 +13,14 @@ SupraEVM Beta powered by **SupraBTM** (Supra's conflict specification-aware Bloc
 
 ***
 
+### Quick Navigation
+
+* [SupraBTM vs Sequential Execution](supra-evm-beta-testnet.md#suprabtm-binary-installation-and-setup)
+* [SupraBTM vs. Monad](supra-evm-beta-testnet.md#monad-2pe-vs-suprabtm-benchmarking)
+* [View Results & Analysis](supra-evm-beta-testnet.md#final-analysis-suprabtm-vs-monad-2pe)
+
+***
+
 ### What is SupraBTM?
 
 **SupraBTM** is built on [**iBTM (Intelligent Block Transactional Memory)**](https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.AFT.2025.29), a parallel transaction execution framework inspired by BlockSTM and designed to bring scalable, concurrent execution to Ethereum-like environments.
