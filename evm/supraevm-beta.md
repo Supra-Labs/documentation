@@ -15,9 +15,9 @@ SupraEVM Beta powered by **SupraBTM** (Supra's conflict specification-aware Bloc
 
 ### Quick Navigation
 
-* [SupraBTM vs Sequential Execution](./#suprabtm-binary-installation-and-setup)
-* [SupraBTM vs. Monad](./#monad-2pe-vs-suprabtm-benchmarking)
-* [View Results & Analysis](./#final-analysis-suprabtm-vs-monad-2pe)
+* [SupraBTM vs Sequential Execution](supraevm-beta.md#suprabtm-binary-installation-and-setup)
+* [SupraBTM vs. Monad](supraevm-beta.md#monad-2pe-vs-suprabtm-benchmarking)
+* [View Results & Analysis](supraevm-beta.md#final-analysis-suprabtm-vs-monad-2pe)
 
 ***
 
@@ -296,9 +296,9 @@ python3 analysis.py execution_time.txt monad_2pe_logs.txt
 
 #### Sample output
 
-<figure><img src="../.gitbook/assets/unknown.png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/unknown.png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/unknown (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/unknown (1).png" alt=""><figcaption></figcaption></figure>
 
 ***
 
