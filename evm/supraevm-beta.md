@@ -305,7 +305,7 @@ python3 analysis.py execution_time.txt monad_2pe_logs.txt
 #### What's Next?
 
 {% hint style="success" %}
-**$25,000 is on the line for the first dev who proves us wrong.** [**Check Bounty Page Here.**](supraevm-beta-bounty.md)
+**25,000 USDC is on the line for the first dev who proves us wrong.** [**Check Bounty Page Here.**](supraevm-beta-bounty.md)
 {% endhint %}
 
 ***

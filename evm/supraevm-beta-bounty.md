@@ -1,13 +1,13 @@
 # SupraEVM Beta Bounty
 
-We're offering a **$25,000** bounty to any developer or team that can prove that they have a faster and provably-correct parallel execution algorithm for the Ethereum Virtual Machine (EVM) than Supra’s BTM (Supra's conflict specification-aware Block Transactional Memory).
+We're offering a **25,000 USDC** bounty to any developer or team that can prove that they have a faster and provably-correct parallel execution algorithm for the Ethereum Virtual Machine (EVM) than Supra’s BTM (Supra's conflict specification-aware Block Transactional Memory).
 
 ### Key Rules:
 
 1. The competing algorithm must be open-sourced and provably correct over 100,000 real Ethereum blocks.
 2. It must run on commodity hardware (up to 16 cores) to ensure decentralization.
-3. If no one beats our algorithm, the most comprehensive benchmarking report showing that we’re the best still wins $10,000.
-4. If someone does outperform us under these conditions, they will receive the full $25,000 prize.
+3. If no one beats our algorithm, the most comprehensive benchmarking report showing that we’re the best still wins **10,000 USDC**.
+4. If someone does outperform us under these conditions, they will receive the full **25,000** **USDC** prize.
 
 {% hint style="success" %}
 The competition runs for one month (**Ending Nov 21st**), and payouts are made one month after verification. Let’s find out who has the fastest EVM parallel execution in the world!
