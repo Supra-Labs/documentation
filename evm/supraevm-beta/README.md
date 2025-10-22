@@ -15,9 +15,9 @@ SupraEVM Beta powered by **SupraBTM** (Supra's conflict specification-aware Bloc
 
 ### Quick Navigation
 
-* [SupraBTM vs Sequential Execution](supra-evm-beta-testnet.md#suprabtm-binary-installation-and-setup)
-* [SupraBTM vs. Monad](supra-evm-beta-testnet.md#monad-2pe-vs-suprabtm-benchmarking)
-* [View Results & Analysis](supra-evm-beta-testnet.md#final-analysis-suprabtm-vs-monad-2pe)
+* [SupraBTM vs Sequential Execution](./#suprabtm-binary-installation-and-setup)
+* [SupraBTM vs. Monad](./#monad-2pe-vs-suprabtm-benchmarking)
+* [View Results & Analysis](./#final-analysis-suprabtm-vs-monad-2pe)
 
 ***
 
@@ -296,18 +296,16 @@ python3 analysis.py execution_time.txt monad_2pe_logs.txt
 
 #### Sample output
 
-<figure><img src=".gitbook/assets/unknown.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/unknown.png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src=".gitbook/assets/unknown (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/unknown (1).png" alt=""><figcaption></figcaption></figure>
 
 ***
 
 #### What's Next?
 
-Community members are already verifying benchmark results. [Check them out here on X.](https://x.com/SUPRA_Labs/status/1977835502645772781)
-
 {% hint style="success" %}
-Join the conversation. **$2,500 is on the line for the first dev who proves us wrong.**
+**$25,000 is on the line for the first dev who proves us wrong.** [**Check Bounty Page Here.**](supraevm-beta-bounty.md)
 {% endhint %}
 
 ***

@@ -18,4 +18,5 @@
     * [Deploying Smart Contract](getting-started/foundry/deploying-smart-contract.md)
   * [Your First Solidity Contract](getting-started/your-first-move-contract.md)
 * [Network Information](network-information.md)
-* [SupraEVM Beta](supra-evm-beta-testnet.md)
+* [SupraEVM Beta](supraevm-beta/README.md)
+  * [SupraEVM Beta Bounty](supraevm-beta/supraevm-beta-bounty.md)
