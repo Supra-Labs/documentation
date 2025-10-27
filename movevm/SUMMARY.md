@@ -69,6 +69,7 @@
     * [Publish a Package](typescript-sdk/guides/publish-a-package.md)
   * [Documentation](https://sdk-docs.supra.com/index.html)
   * [Repository](https://github.com/Entropy-Foundation/supra-l1-sdk/tree/master)
+* [Python SDK](python-sdk.md)
 * [Rest API](rest-api/README.md)
   * [Mainnet](rest-api/mainnet/README.md)
     * ```yaml
