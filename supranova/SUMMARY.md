@@ -13,3 +13,4 @@
 * [Token Bridging Model - Lock-Mint](token-bridging-model-lock-mint.md)
 * [Future Roadmap](future-roadmap.md)
 * [Audit Reports](audit-reports.md)
+* [SupraNova Bridge Admin Functionalities](supranova-bridge-admin-functionalities.md)
