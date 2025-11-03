@@ -100,11 +100,12 @@ mkdir stats
 ```bash
 sudo docker run --rm \
   --cpuset-cpus="0-7" \
-  -v ./data_bdf:/data \
+  -v "$PWD/data_bdf:/data" \
   -v "$PWD/stats:/out" \
-  davidsupra/ibtm:latest \
+  rohitkapoor9312/ibtm-image:latest \
   --data-dir /data \
-  --output-dir /out
+  --output-dir /out \
+  --inmemory
 ```
 
 {% hint style="info" %}
