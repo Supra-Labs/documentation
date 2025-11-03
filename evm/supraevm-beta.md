@@ -109,7 +109,7 @@ sudo docker run --rm \
 ```
 
 {% hint style="info" %}
-\--cpuset-cpus="0-7" creates affinity for cpu cores, and can be adjusted according to experiment.
+`--cpuset-cpus="0-7"` creates affinity for cpu cores, and can be adjusted according to experiment.
 {% endhint %}
 {% endstep %}
 {% endstepper %}
