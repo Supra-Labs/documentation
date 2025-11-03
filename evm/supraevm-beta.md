@@ -31,36 +31,15 @@ It leverages Software Transactional Memory (STM) principles, conflict analysis, 
 
 ### Release Information:&#x20;
 
-#### v1 (SupraBTM + RocksDB) - Current Version
-
-* Integration of iBTM with Hydrangea
-* **Persistent EVM execution with SupraBTM + RocksDB**
-* Binary-only release via Docker
-* Historical Ethereum block dataset
-* **Monad Comparison**: Final testing against Monad 2PE.
-
-{% hint style="info" %}
-**Important Notes for v1**:
-
-* Binary-only release via Docker
-* Developers cannot deploy or test their own smart contracts in this version, for Performing benchmarking only.
-{% endhint %}
-
-#### v0 (In-Memory Beta)
+#### v0.1 (In-Memory Beta) - Current Version
 
 * Stable and fully functional integration of iBTM with [Hydrangea](https://x.com/SUPRA_Labs/status/1933726886393221246)
-* **In-memory EVM execution with SupraBTM**
+* In-memory EVM execution with SupraBTM
 * Binary-only release
 * Historical Ethereum block dataset
-* Performance benchmarking tools (**Sequential vs SupraBTM**)
-
-{% hint style="info" %}
-**Important Notes for v0**:\
-
-
-* **In-Memory Execution Only**: This version operates entirely in-memory and does NOT include persistent storage.
-* **No Custom Contract Testing**: Developers cannot deploy or test their own smart contracts in this version
-{% endhint %}
+* Performance benchmarking tools:
+  * Sequential vs SupraBTM
+  * Monad Comparison: Final testing against Monad 2PE.
 
 ***
 
@@ -119,13 +98,13 @@ mkdir stats
 **Run the Benchmark by pulling the docker image!!**
 
 ```bash
-docker run --rm \
- --cpuset-cpus="0-7" \
- -v ./data_bdf:/data \
- -v "$PWD/stats:/out" \
- rohitkapoor9312/ibtm-image:latest\
- --data-dir /data \
- --output-dir /out
+sudo docker run --rm \
+  --cpuset-cpus="0-7" \
+  -v ./data_bdf:/data \
+  -v "$PWD/stats:/out" \
+  davidsupra/ibtm:latest \
+  --data-dir /data \
+  --output-dir /out
 ```
 
 {% hint style="info" %}
