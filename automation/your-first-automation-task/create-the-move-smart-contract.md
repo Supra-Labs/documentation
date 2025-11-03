@@ -2,6 +2,28 @@
 
 For this guide we'll create an automation contract that will increment a default value with each automated transaction once the automaton task gets started. We can then use the view function and/or SupraScan to see the updated value, old value, timestamp, and total increments.
 
+{% hint style="info" %}
+<mark style="color:$success;">**Best Practice for Gas Optimization:**</mark> \
+**If you're using AutoFi's trade contracts (limit orders, DCA, etc.) then:**
+
+* Initialize storage in init\_module (runs once at deployment)&#x20;
+* Do NOT initialize storage inside your automation task function (runs repeatedly)&#x20;
+* This pattern minimises gas by avoiding storage creation and you can save automation the fee.
+* Storage creation is required only once hence Performing it in the init module or a dedicated setup function.&#x20;
+* Handling storage creation within the automation function would require a high gas limit, which is unnecessary for a one-time operation. **Hence**, **this approach is more efficient.**\
+
+
+**Example:**&#x20;
+
+```solidity
+// Storage created once 
+fun init_module(account: &signer) { move_to(account, Counter { value: 0, ... }); }
+
+// Task only operates on existing storage 
+public entry fun auto_increment(account: &signer) acquires Counter { let counter = borrow_global_mut(account_addr); counter.value = counter.value + 1; }
+```
+{% endhint %}
+
 ## Initialize your move package
 
 {% stepper %}
