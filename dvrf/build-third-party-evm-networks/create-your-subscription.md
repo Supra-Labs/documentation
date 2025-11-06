@@ -1,18 +1,14 @@
----
-description: '** Builders on Supra L!'
----
-
 # Create your subscription
 
 To start using dVRF, you need to create a subscription that will manage your random number requests and handle gas payments for callbacks. You can create a subscription in two ways: using the new web interface or through on-chain functions.
 
 {% tabs %}
 {% tab title="Via the web interface" %}
-The easiest way to create your dVRF subscription is through subscription manager UI at [supra.com/data/dvrf](https://supra.com/data/dvrf). (Currently EVM networks only.  This feature will go live soon for Supra L1).
+The easiest way to create your dVRF subscription is through subscription manager UI at [supra.com/data/dvrf](https://supra.com/data/dvrf).
 
 #### Prerequisites
 
-* MetaMask or StarKey wallet installed and configured.
+* MetaMask wallet installed and configured.
 * Sufficient funds in your wallet for gas fees.
 * Connected to the appropriate network (see [Available Networks](https://docs.supra.com/dvrf/networks))
 
@@ -30,12 +26,9 @@ The easiest way to create your dVRF subscription is through subscription manager
 3.  **Create New Subscription**
 
     * Fill in the required details.
+      * **Max Gas Price**: Maximum gas price you're willing to pay for callback transactions.
+      * **Max Gas Limit**: Maximum gas limit allocated for callback transactions.
     * Click "Create Subscription"
-
-    **For EVM Chains:**
-
-    * **Max Gas Price**: Maximum gas price you're willing to pay for callback transactions.
-    * **Max Gas Limit**: Maximum gas limit allocated for callback transactions.
 
 
 4. **Review and Confirm**
@@ -50,9 +43,7 @@ The easiest way to create your dVRF subscription is through subscription manager
 {% endtab %}
 
 {% tab title="Via Onchain functions" %}
-For developers who prefer programmatic subscription creation, you can interact directly with the smart contracts.\
-\
-EVM Chains
+For developers who prefer programmatic subscription creation, you can interact directly with the smart contracts.
 
 ```solidity
 // Interface for dVRF 3.0 Deposit Contract

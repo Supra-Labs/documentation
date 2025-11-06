@@ -24,5 +24,8 @@
 
 ## Build - Supra L1 (dVRF 2.0)
 
+* [Getting Started](build-supra-l1-dvrf-2.0/getting-started.md)
+* [Create your subscription](build-supra-l1-dvrf-2.0/create-your-subscription.md)
+* [Gas Configurations](build-supra-l1-dvrf-2.0/gas-configurations.md)
 * [V2 Developer Guide](build-supra-l1-dvrf-2.0/v2-guide.md)
 * [Page 1](build-supra-l1-dvrf-2.0/page-1.md)
