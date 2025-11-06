@@ -26,7 +26,7 @@ The easiest way to create your dVRF subscription is through subscription manager
 3.  **Create New Subscription**
 
     * Fill in the required details.
-      * **Max Gas Fee**: Maximum gas fee you're willing to pay for callback transactions.
+      * **Max Transaction Fee**: Maximum gas fee you're willing to pay for callback transactions.
     * Click "Create Subscription"
 
 
