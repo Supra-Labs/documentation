@@ -22,12 +22,13 @@
 * [VRF Subscription FAQ](build-third-party-evm-networks/vrf-subscription-model.md)
 * [Migration to dVRF 3.0 on EVM (thirdparty)](build-third-party-evm-networks/migration-to-dvrf-3.0.md)
 
-## Build - Supra L1 (dVRF 2.0)
+## Build - Supra L1
 
-* [Getting Started](build-supra-l1-dvrf-2.0/getting-started.md)
-* [Create your subscription](build-supra-l1-dvrf-2.0/create-your-subscription.md)
-* [Gas Configurations](build-supra-l1-dvrf-2.0/gas-configurations.md)
-* [Add Modules to subscription](build-supra-l1-dvrf-2.0/add-modules-to-subscription.md)
-* [Deposit and Withdraw Funds](build-supra-l1-dvrf-2.0/deposit-and-withdraw-funds.md)
-* [V2 Developer Guide](build-supra-l1-dvrf-2.0/v2-guide.md)
-* [Page 1](build-supra-l1-dvrf-2.0/page-1.md)
+* [Getting Started](build-supra-l1/getting-started.md)
+* [Create your subscription](build-supra-l1/create-your-subscription.md)
+* [Gas Configurations](build-supra-l1/gas-configurations.md)
+* [Add Modules to subscription](build-supra-l1/add-modules-to-subscription.md)
+* [Deposit and Withdraw Funds](build-supra-l1/deposit-and-withdraw-funds.md)
+* [Request Random Numbers in Supra L1](build-supra-l1/request-random-numbers-in-supra-l1.md)
+* [V2 Developer Guide](build-supra-l1/v2-guide.md)
+* [Page 1](build-supra-l1/page-1.md)
