@@ -76,7 +76,7 @@ Minimum Balance = Minimum Balance = max_txn_fee × min_request_count
 
 ### **Monitoring Your Funds**
 
-#### **Create a Balance Monitoring Script**
+Supra doesn't send automated email alerts and users are advised to implement their own balance monitoring.
 
 #### **Recommended Alert Thresholds**
 
@@ -84,10 +84,6 @@ Minimum Balance = Minimum Balance = max_txn_fee × min_request_count
 * **200% of minimum balance**: Schedule deposit soon
 * **100% of minimum balance**: Urgent - new requests will be blocked
 * **At minimum balance**: Critical - immediate deposit required
-
-Set up your own monitoring at these levels:
-
-
 
 Here's an example structure for monitoring:
 
@@ -101,7 +97,6 @@ public fun get_subscription_health(client_address: address): (u64, u64, u64, boo
     
     (total, minimum, effective, at_minimum)
 }
-
 ```
 
 ### Dev tips for better experience
