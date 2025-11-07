@@ -1,8 +1,4 @@
----
-hidden: true
----
-
-# V2 Developer Guide
+# Legacy VRF - V2 Developer Guide
 
 Supra dVRF requires a whitelisted subscription to the service with a customer-controlled wallet address to act as the main reference. Once your wallet is whitelisted, you can use it to whitelist any number of  consumer contracts and top up the deposit balance maintained with Supra in order to pay for the gas fees of callback (response) transactions.
 

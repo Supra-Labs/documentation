@@ -28,5 +28,5 @@
 * [Add Contracts to Subscription](build-supra-l1/add-contracts-to-subscription.md)
 * [Deposit and Withdraw Funds](build-supra-l1/deposit-and-withdraw-funds.md)
 * [Request Random Numbers](build-supra-l1/request-random-numbers.md)
-* [V2 Developer Guide](build-supra-l1/v2-guide.md)
 * [Page 1](build-supra-l1/page-1.md)
+* [Legacy VRF - V2 Developer Guide](build-supra-l1/v2-guide.md)
