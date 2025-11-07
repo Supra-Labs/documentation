@@ -72,19 +72,37 @@ Minimum Balance = Minimum Balance = max_txn_fee × min_request_count
 **Where:**
 
 * `min_request_count` = Minimum number of requests Supra requires you to be able to afford (typically 30)
+*
+
+### **Monitoring Your Funds**
+
+#### **Create a Balance Monitoring Script**
+
+#### **Recommended Alert Thresholds**
+
+* **300% of minimum balance**: Plan your next deposit
+* **200% of minimum balance**: Schedule deposit soon
+* **100% of minimum balance**: Urgent - new requests will be blocked
+* **At minimum balance**: Critical - immediate deposit required
+
+Set up your own monitoring at these levels:
 
 
 
-### Deposit Balance Alerts
+Here's an example structure for monitoring:
 
-The system automatically sends email notifications when your  deposit balance drops to critical levels:
+```solidity
+#[view]
+public fun get_subscription_health(client_address: address): (u64, u64, u64, bool) {
+    let total = deposit::check_client_fund(client_address);
+    let minimum = deposit::check_min_balance_client_v2(client_address);
+    let effective = deposit::check_effective_balance_v2(client_address);
+    let at_minimum = deposit::has_minimum_balance_reached_v2(client_address);
+    
+    (total, minimum, effective, at_minimum)
+}
 
-* **300% of minimum balance**: Early warning - good time to plan your next deposit
-* **100% of minimum balance**: Critical alert - new requests will be blocked soon
-* **25% of minimum balance**: Final warning - immediate action required
-
-💡 **Good news**: These alert thresholds can be changed via UI to match your operational needs.\
-
+```
 
 ### Dev tips for better experience
 
