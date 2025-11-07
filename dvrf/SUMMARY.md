@@ -25,7 +25,7 @@
 * [Getting Started](build-supra-l1/getting-started.md)
 * [Create your subscription](build-supra-l1/create-your-subscription.md)
 * [Gas Configurations](build-supra-l1/gas-configurations.md)
-* [Add Modules to subscription](build-supra-l1/add-modules-to-subscription.md)
+* [Add Contracts to Subscription](build-supra-l1/add-contracts-to-subscription.md)
 * [Deposit and Withdraw Funds](build-supra-l1/deposit-and-withdraw-funds.md)
 * [Request Random Numbers](build-supra-l1/request-random-numbers.md)
 * [V2 Developer Guide](build-supra-l1/v2-guide.md)

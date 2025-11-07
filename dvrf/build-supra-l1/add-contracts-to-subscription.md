@@ -1,4 +1,4 @@
-# Add Modules to subscription
+# Add Contracts to Subscription
 
 After creating your subscription and configuring gas settings, you need to whitelist your consumer contracts. Only whitelisted contracts can request random numbers from your subscription.
 
@@ -18,9 +18,9 @@ The easiest way to manage your contracts is through the web interface at [supra.
   * Click on "My Subscription"
 * **Add New Contract**
   * Click "Add Contract"
-  * Enter your module address
+  * Enter your contract address
   * Configure gas settings for this specific contract
-* **Configure Module Gas Settings(optional):**
+* **Configure contract Gas Settings(optional):**
   * **max\_callback\_txn\_fee** : Must be ≤ your subscription's **max\_txn\_fee.**  This is Optional - if not set, inherits wallet-level **max\_txn\_fee**.
 *   **Submit and Confirm.**
 
@@ -53,7 +53,7 @@ deposit::init_vrf_module<T>(client: &signer): SupraVRFPermit<T>
 
 
 
-#### **Disabling a Module**
+#### **Disabling a Contract**
 
 Temporarily stop a module from making requests without removing it:
 
@@ -68,7 +68,7 @@ deposit::disable_module<T>(client: &signer)
 deposit::disable_module<ClientExample>(&signer);
 ```
 
-#### **Re-enabling a Module**
+#### **Re-enabling a Contract**
 
 Reactivate a previously disabled module:
 
