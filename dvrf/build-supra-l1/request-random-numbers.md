@@ -1,4 +1,4 @@
-# Request Random Numbers in Supra L1
+# Request Random Numbers
 
 Ready to get random? Follow these four simple steps to integrate Supra dVRF into your Move module and start requesting verifiable random numbers.
 
@@ -337,12 +337,48 @@ module example::example_module {
 }
 ```
 
-### Next Steps
+### **Best Practices**
 
-After implementing the request functionality, you can:
+✅ **Always Verify Callbacks**: Never skip `verify_callback()` - it's your security layer
 
-* Monitor your remaining balance
-* Update gas parameters for your contracts
-* Scale your random number requests based on your application needs
+✅ **Handle Nonce Collisions**: Use unique storage per nonce to avoid overwriting
+
+✅ **Set Appropriate Confirmations**: Higher confirmations = more security but slower delivery
+
+✅ **Store Request Context**: Link nonces to requesters or application state for proper handling
+
+✅ **Use Client Seeds Wisely**: Add entropy from user input, timestamps, or external data
+
+✅ **Monitor Your Balance**: Ensure sufficient funds for callback transaction fees
+
+✅ **Error Handling**: Implement proper error codes and assertions.
+
+
+
+### **Troubleshooting**
+
+**Request fails with "module not whitelisted":**
+
+* Ensure you called `init_vrf_module<T>()` in `init_module()`
+* Verify your wallet is whitelisted first.
+
+**Callback never arrives:**
+
+* Check your balance is above minimum.
+* Verify callback function name matches exactly.
+* Ensure module is enabled: `deposit::is_module_enabled<T>()`
+
+**Verification fails:**
+
+* Don't modify the callback parameters.
+* Pass all parameters exactly as received.
+* Ensure you're using correct module type. `<T>`
+
+**"Nonce already exists" error:**
+
+* Don't reuse nonces - each request gets a unique nonce.
+* Clear old nonce data before making new requests.
+
+
 
 The random numbers generated are cryptographically secure and verifiable, making them suitable for gaming, NFT minting, and other blockchain applications requiring true randomness.
