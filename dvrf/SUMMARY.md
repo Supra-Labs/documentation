@@ -28,5 +28,6 @@
 * [Create your subscription](build-supra-l1-dvrf-2.0/create-your-subscription.md)
 * [Gas Configurations](build-supra-l1-dvrf-2.0/gas-configurations.md)
 * [Add Modules to subscription](build-supra-l1-dvrf-2.0/add-modules-to-subscription.md)
+* [Deposit and Withdraw Funds](build-supra-l1-dvrf-2.0/deposit-and-withdraw-funds.md)
 * [V2 Developer Guide](build-supra-l1-dvrf-2.0/v2-guide.md)
 * [Page 1](build-supra-l1-dvrf-2.0/page-1.md)
