@@ -1,6 +1,6 @@
-# EVMs
+# Request Random Numbers
 
-### Supra dVRF Contract Architecture in EVMs
+### Supra dVRF Contracts Architecture in EVMs
 
 Supra dVRF uses a two-contract system:
 
@@ -9,6 +9,15 @@ Supra dVRF uses a two-contract system:
 
 
 Ready to get random? Follow these four simple steps to integrate Supra dVRF into your smart contract and start requesting verifiable random numbers.
+
+### Prerequisites
+
+Before requesting random numbers, ensure you have:
+
+* ✅ Whitelisted wallet address with configured gas parameters
+* ✅ Deposited sufficient funds in the Deposit Contract
+* ✅ Whitelisted your consumer contract address
+*
 
 ### Step 1:  Create the Router Interface
 
