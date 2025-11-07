@@ -12,13 +12,11 @@ Before requesting random numbers, ensure you have:
 
 
 
-### **Step 1: Import the Supra VRF Interface**
+### **Step 1: Import the Supra dVRF Interface**
 
-Add the Supra VRF framework dependency to your module's `Move.toml` file.
+Add the Supra dVRF framework dependency to your module's `Move.toml` file.
 
 #### **For Testnet:**
-
-toml
 
 ```toml
 [dependencies]
@@ -31,8 +29,6 @@ supra_vrf = {
 
 #### **For Mainnet:**
 
-toml
-
 ```toml
 [dependencies]
 supra_vrf = { 
@@ -43,8 +39,6 @@ supra_vrf = {
 ```
 
 #### **Import in Your Module:**
-
-move
 
 ```solidity
 module example::example_module {
@@ -347,7 +341,7 @@ module example::example_module {
 
 After implementing the request functionality, you can:
 
-* Monitor your balance using Deposit Contract view functions
+* Monitor your remaining balance
 * Update gas parameters for your contracts
 * Scale your random number requests based on your application needs
 
