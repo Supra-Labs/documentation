@@ -1,6 +1,6 @@
 # SupraEVM Beta Bounty
 
-We're offering a **30,000 USDC** bounty to any developer or team that can prove that they have a faster and provably correct parallel execution algorithm for the Ethereum Virtual Machine (EVM) than Supra’s BTM (Supra's conflict specification-aware Block Transactional Memory). The purpose of parallel execution is to handle large payloads with a lot of smart contract contention.
+We're offering a 4**0,000 USDC** bounty to any developer or team that can prove that they have a faster and provably correct parallel execution algorithm for the Ethereum Virtual Machine (EVM) than Supra’s BTM (Supra's conflict specification-aware Block Transactional Memory). The purpose of parallel execution is to handle large payloads with a lot of smart contract contention.
 
 {% hint style="info" %}
 **Check The Benchmarking** [**Guide Here**](supraevm-beta.md)**.**
@@ -15,7 +15,7 @@ We're offering a **30,000 USDC** bounty to any developer or team that can prove 
 * The final benchmark report must include TPS results per configuration and the overall average to identify the true winner.
 * If no competing algorithm outperforms SupraBTM under these conditions, the most comprehensive benchmarking report demonstrating this outcome will still be awarded 10,000 USDC.
 * 500 USDC each will be granted to up to 10 participants who publish and share valid experimental results, regardless of outcome.
-* If a participant successfully outperforms SupraBTM under the above verified and reproducible conditions, they will receive the full 30,000 USDC bounty.
+* If a participant successfully outperforms SupraBTM under the above verified and reproducible conditions, they will receive the full 40,000 USDC bounty.
 * By the end of the campaign, if no one surpasses SupraBTM benchmarks, the best overall data report among valid submissions will receive 10,000 USDC.
 
 {% hint style="success" %}
