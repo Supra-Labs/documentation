@@ -1,6 +1,6 @@
 # SupraEVM Beta Bounty
 
-We're offering a 4**0,000 USDC** bounty to any developer or team that can prove that they have a faster and provably correct parallel execution algorithm for the Ethereum Virtual Machine (EVM) than Supra’s BTM (Supra's conflict specification-aware Block Transactional Memory). The purpose of parallel execution is to handle large payloads with a lot of smart contract contention.
+We're offering a **40,000 USDC** bounty to any developer or team that can prove that they have a faster and provably correct parallel execution algorithm for the Ethereum Virtual Machine (EVM) than Supra’s BTM (Supra's conflict specification-aware Block Transactional Memory). The purpose of parallel execution is to handle large payloads with a lot of smart contract contention.
 
 {% hint style="info" %}
 **Check The Benchmarking** [**Guide Here**](supraevm-beta.md)**.**
