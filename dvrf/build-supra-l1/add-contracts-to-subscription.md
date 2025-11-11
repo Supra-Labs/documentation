@@ -7,26 +7,6 @@ After creating your subscription and configuring gas settings, you need to white
 {% endhint %}
 
 {% tabs %}
-{% tab title="Via Subscription Manager UI" %}
-The easiest way to manage your contracts is through the web interface at [supra.com/data/dvrf](https://supra.com/data/dvrf).
-
-#### Steps
-
-* **Navigate to Contract Management**
-  * Go to [supra.com/data/dvrf](https://supra.com/data/dvrf)
-  * Connect your wallet (subscription owner)
-  * Click on "My Subscription"
-* **Add New Contract**
-  * Click "Add Contract"
-  * Enter your contract address
-  * Configure gas settings for this specific contract
-* **Configure contract Gas Settings(optional):**
-  * **max\_callback\_txn\_fee** : Must be ≤ your subscription's **max\_txn\_fee.**  This is Optional - if not set, inherits wallet-level **max\_txn\_fee**.
-*   **Submit and Confirm.**
-
-
-{% endtab %}
-
 {% tab title="Via Onchain Contracts" %}
 **Whitelisting Your Module**
 
@@ -46,8 +26,6 @@ deposit::init_vrf_module<T>(client: &signer): SupraVRFPermit<T>
 * `SupraVRFPermit<T>` - A capability that authorizes your module to interact with Supra VRF
 
 **Important**: Store the returned `SupraVRFPermit<T>` capability in your module. This permit is required for all VRF requests.
-
-
 {% endtab %}
 {% endtabs %}
 
