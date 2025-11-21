@@ -1,7 +1,7 @@
 # SupraEVM Beta
 
 {% hint style="success" %}
-**40,000 USDC is on the line for the first dev who proves us wrong.** [**Check Bounty Page Here.**](supraevm-beta-bounty.md)
+**1,000,000 USDC is on the line for the first dev who proves us wrong.** [**Check Bounty Page Here.**](supraevm-beta-bounty.md)
 {% endhint %}
 
 SupraEVM Beta powered by **SupraBTM** (Supra's conflict specification-aware Block Transactional Memory) - a parallel transaction execution framework that achieves breakthrough performance in EVM transaction processing.
@@ -206,8 +206,7 @@ The script `monad_full_setup.sh` automates the setup required to benchmark histo
 * Creates a BlockState and EVM instance
 
 3. **Code Updates**: The benchmark is implemented in historical\_test.cpp.\
-   For each block file, the test:\
-
+   For each block file, the test:<br>
    1. Logs key performance metrics, including block number, thread count, fiber count, block size, and average execution time, to `monad_2pe_logs.txt`.
    2. Execution parameters such as the number of threads and fibers are configurable via the environment variables `POOL_THREADS` and `POOL_FIBERS`.
    3. Comment out line [47](https://github.com/category-labs/monad/blob/8ffc2b985c34c7cf361a5ea1712321f8f8ec7b6b/category/execution/ethereum/block_hash_buffer.cpp#L47) from `block_hash_buffer.cpp`, to support executing random blocks by providing the pre-state which would not meet the bounds imposed for executing a block.
