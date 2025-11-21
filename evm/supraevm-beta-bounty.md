@@ -19,7 +19,7 @@ We're offering a **40,000 USDC** bounty to any developer or team that can prove 
 * By the end of the campaign, if no one surpasses SupraBTM benchmarks, the best overall data report among valid submissions will receive 10,000 USDC.
 
 {% hint style="success" %}
-The competition runs for one month (**Ending Nov 21st**), and payouts are made one month after verification. Let’s find out who has the fastest EVM parallel execution in the world!&#x20;
+The competition runs for one month (Starting Oct 21st to **Ending Nov 21st**), and payouts are made one month after verification. Let’s find out who has the fastest EVM parallel execution in the world!&#x20;
 {% endhint %}
 
 ### **System Setup Requirements**
