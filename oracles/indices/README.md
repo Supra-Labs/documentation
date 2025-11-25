@@ -18,5 +18,3 @@ Important: Please make sure you read and understand [Terms of Use](https://supra
 
 If you are interested in creating your own index or build derivative products, please feel free to contact the Supra team.
 
-\
-\\
