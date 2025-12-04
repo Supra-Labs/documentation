@@ -1,3 +1,7 @@
+---
+hidden: true
+---
+
 # SupraEVM Beta
 
 {% hint style="success" %}
