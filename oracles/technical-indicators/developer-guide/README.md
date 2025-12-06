@@ -107,9 +107,9 @@ let candles = supra_oracle_ti::get_latest_candles_from_specific_time(
 
 Please refer below links or specific Indicator subpage for detailed examples.
 
-* [Simple Moving Average(SMA) ](../indicators-list/relative-strength-index-rsi.md)
-* [Exponential Moving Average(EMA)](../indicators-list/exponential-moving-average-ema.md)
-* [Relative Strength Index(RSI)](../indicators-list/relative-strength-index-rsi.md)
+* [Simple Moving Average(SMA) ](relative-strength-index-rsi.md)
+* [Exponential Moving Average(EMA)](exponential-moving-average-ema.md)
+* [Relative Strength Index(RSI)](relative-strength-index-rsi.md)
 
 ***
 
