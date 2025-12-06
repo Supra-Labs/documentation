@@ -51,29 +51,9 @@ struct CandleInfo has copy, drop {
 
 **Important**: All technical indicators use the **closing price** for calculations. All timestamps are in milliseconds.
 
-#### Storage Design
-
-Technical indicator data is organized using:
-
-**Ring Buffers**: Circular data structures that automatically overwrite old data when capacity is reached. This provides efficient storage for historical candles.
-
-**Smart Tables**: Data organized by:
-
-* Asset pair ID (e.g., 1 for BTC, 3 for ETH)
-* Candle duration in milliseconds
-* Indicator type and period
-
-**Historical Values**: Previous EMA values and RSI smoothed averages are stored for recursive calculations.
-
 #### Data Availability
 
-Indicators become available after the candle closes:
-
-* **SMA**: Available after n periods close
-* **EMA**: Available after n periods close (initial EMA = SMA, then exponentially smoothed)
-* **RSI**: Available after n+1 periods close (uses Wilder's smoothing)
-
-**Example**: For a 5-minute timeframe with 20-period SMA, the indicator is first available after 100 minutes (20 candles × 5 minutes).
+Indicators become available after the candle closes. **Example**: For a 5-minute timeframe with 20-period SMA, the indicator is first available after 100 minutes (20 candles × 5 minutes).
 
 ***
 
@@ -81,7 +61,7 @@ Indicators become available after the candle closes:
 
 #### Method 1: Get Latest Candles
 
-Get the most recent n closed candles.&#x20;
+Get the most recent "n" closed candles.&#x20;
 
 ```move
 #[view]
@@ -288,17 +268,7 @@ Use these values for `candle_duration` parameter (in milliseconds):<br>
 | 4 hours   | 14\_400\_000                |
 | 1 day     | 86\_400\_000                |
 
-**Tip**: Define constants in your contract for readability:
 
-move
-
-```move
-const FIVE_MIN: u64 = 300_000;
-const FIFTEEN_MIN: u64 = 900_000;
-const ONE_HOUR: u64 = 3_600_000;
-const FOUR_HOURS: u64 = 14_400_000;
-const ONE_DAY: u64 = 86_400_000;
-```
 
 ### Missing Candles Tolerance
 
@@ -314,15 +284,14 @@ The `missing_candles_tolerance_percentage` parameter uses **two-decimal fixed-po
 
 Candles may be missing if there were no trades during that period. The system only stores real candles with actual trades—no synthetic candles are created.
 
-The `missing_candles_tolerance_percentage` parameter controls how the system handles gaps:
+The `missing_candles_tolerance_percentage` parameter controls how the system handles gaps and uses two-decimal fixed-point precision.
+
+**Example**: `1000`  means 10.00%  and `5000` means 50%  tolerance for missing candles.<br>
 
 * If missing candles exceed the tolerance, the function returns `none`
-* This prevents indicators from being calculated on incomplete data
 * Set tolerance based on your strategy's sensitivity to data gaps
 
 **Best Practice**: Always check if the returned option has data before using it.
-
-move
 
 ```move
 let sma = supra_oracle_ti::compute_sma(pair_id, 20, ONE_HOUR, 1000);
@@ -392,8 +361,6 @@ Querying large amounts of historical data costs gas. Optimize by:
 * Only querying the data you need
 * Caching frequently accessed values
 * Using pre-calculated indicators instead of raw candles when possible
-
-
 
 ```move
 // ❌ Inefficient: Querying 200 candles every transaction

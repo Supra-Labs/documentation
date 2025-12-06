@@ -50,7 +50,7 @@ Phase 1 establishes the foundation with SMA, EMA, and RSI. Future phases may inc
 * **Bollinger Bands**: Volatility-based bands around moving averages
 * **MACD**: Moving Average Convergence Divergence for trend momentum
 * **Stochastic Oscillator**: Momentum indicator comparing closing price to price range
-* **Volume Indicators**: On-chain volume-based technical analysis
-* **Custom Indicators**: Protocol-specific technical calculations
+
+
 
 The vision is to create a comprehensive technical analysis layer on Supra L1, empowering developers to build sophisticated, autonomous trading systems and DeFi protocols that react intelligently to market conditions—all without leaving the blockchain.
