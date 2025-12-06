@@ -68,23 +68,19 @@ src="https://supra.com/data/widgets?widgetType=vertical&instrumentPairs=btc_usdt
 2. subTextColor  : Sets the colour of the sub-text.\
    Example:\
    `Hex: subTextColor=%23444 (This sets the color to #444)`\
-   &#x20;`RGB: subTextColor=rgb(68, 68, 68)`\
-
+   &#x20;`RGB: subTextColor=rgb(68, 68, 68)`<br>
 3. gridBg : Sets the background colour of the grid.\
    Example:\
    `Hex: gridBg=yellow`\
-   &#x20;`RGB: gridBg=rgb(255, 255, 0)`\
-
+   &#x20;`RGB: gridBg=rgb(255, 255, 0)`<br>
 4. gridBgHover :  Sets the background colour of the grid on hover.\
    Example:\
    `Hex: gridBgHover=green`\
-   &#x20;`RGB: gridBgHover=rgb(0, 255, 0)`\
-
+   &#x20;`RGB: gridBgHover=rgb(0, 255, 0)`<br>
 5. mainBG :  Sets the main background colour.\
    Example:\
    `Hex: mainBG=red`\
-   &#x20;`RGB: mainBG=rgb(255, 0, 0)`\
-
+   &#x20;`RGB: mainBG=rgb(255, 0, 0)`<br>
 6. chartBgColor :  Sets the background color of the chart.\
    Example:\
    `Hex: chartBgColor=white`\
@@ -97,8 +93,7 @@ src="https://supra.com/data/widgets?widgetType=vertical&instrumentPairs=btc_usdt
 When using Hex values in the URL, ensure that you encode the hash (#) as %23. For example:
 
 * Hex color #444 becomes %23444.
-* Hex color #ffffff becomes %23ffffff.\
-
+* Hex color #ffffff becomes %23ffffff.<br>
 
 #### Example with Encoded Colors
 

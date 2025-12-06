@@ -129,4 +129,4 @@ Status Codes
 * 200 OK: The request was successful, and data is returned.
 * 400 Bad Request: The request was invalid or improperly formatted.
 * 404 Not Found: The requested trading pair or data could not be found.
-* 500 Internal Server Error: A server error occurred while processing the request.\
+* 500 Internal Server Error: A server error occurred while processing the request.<br>
