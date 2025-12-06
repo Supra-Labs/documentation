@@ -137,11 +137,7 @@ Use these values for `candle_duration` parameter (in milliseconds):
 | 4 hours   | 14\_400\_000                |
 | 1 day     | 86\_400\_000                |
 
-### Missing Candles Tolerance
 
-The `missing_candles_tolerance_percentage` parameter uses **two-decimal fixed-point** precision:
-
-**Example**: `1000`  means 10.00%  and `5000` means 50%  tolerance for missing candles.
 
 ***
 
@@ -149,16 +145,17 @@ The `missing_candles_tolerance_percentage` parameter uses **two-decimal fixed-po
 
 #### Missing Candles
 
-Candles may be missing if there were no trades during that period. The system only stores real candles with actual trades—no synthetic candles are created.
+Candles may be missing for several reasons:
+
+1. Oracle feeds down
+2. Supra network not producing blocks
+3. No active trades during the period
+
+**Supra's Approach**: Contract logic will strictly adhere to the users time parameters and will check with the missing candles tolerance percentage user has specified.   If the requested calculation period has more than the specified percentage of missing candles query returns `none` .  Please Set tolerance based on your strategy's sensitivity to data gaps. Always check if the returned option has data before using it.
 
 The `missing_candles_tolerance_percentage` parameter controls how the system handles gaps and uses two-decimal fixed-point precision.
 
-**Example**: `1000`  means 10.00%  and `5000` means 50%  tolerance for missing candles.<br>
-
-* If missing candles exceed the tolerance, the function returns `none`
-* Set tolerance based on your strategy's sensitivity to data gaps
-
-**Best Practice**: Always check if the returned option has data before using it.
+**Example**: `1000`  means 10.00%  and `5000` means 50%  tolerance for missing candles.
 
 ```move
 let sma = supra_oracle_ti::compute_sma(pair_id, 20, ONE_HOUR, 1000);

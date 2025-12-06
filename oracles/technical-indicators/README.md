@@ -27,23 +27,7 @@ Bringing technical indicators on-chain unlocks entirely new possibilities for de
   * SMA/EMA: 9, 20, 50, 200
   * RSI: 7, 14, 21
 
-**Data Source**: All calculations use the closing price of each timeframe. The closing price is determined as the last verified price available before the period closes, sourced directly from Supra's DORA oracle feeds.<br>
-
-### Edge Cases and Data Handling
-
-#### Missing Candles
-
-Candles may be missing for several reasons:
-
-1. Oracle fees down
-2. Supra network not producing blocks
-3. No active trades during the period
-
-**Supra's Approach**: The on-chain logic only considers candles with actual trades. No backfilling or creation of synthetic candles occurs. Technical indicators are calculated based on available real candles, not constrained by calendar time.
-
-**Example**: If calculating a 5-period SMA and two candles are missing from the most recent timeframe, the logic goes further back in time to collect the last 5 actual candles with trades.
-
-
+**Data Source**: All calculations use the closing price of each timeframe. The closing price is determined as the last verified price available before the period closes, sourced directly from Supra's DORA oracle feeds.
 
 ### Looking Ahead
 
