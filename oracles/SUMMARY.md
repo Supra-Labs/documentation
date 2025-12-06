@@ -28,5 +28,5 @@
     * [Exponential Moving Average (EMA)](technical-indicators/indicators-list/exponential-moving-average-ema.md)
     * [Relative Strength Index (RSI)](technical-indicators/indicators-list/relative-strength-index-rsi.md)
   * [Developer Guide](technical-indicators/developer-guide/README.md)
-    * [Examples : Market Analysis with TI](technical-indicators/developer-guide/examples-market-analysis-with-ti.md)
-    * [Example 2:  Complete Trading Bot](technical-indicators/developer-guide/example-2-complete-trading-bot.md)
+    * [Example1 : Market Analysis with TI](technical-indicators/developer-guide/example1-market-analysis-with-ti.md)
+    * [Example2:  Complete Trading Bot with TI](technical-indicators/developer-guide/example2-complete-trading-bot-with-ti.md)

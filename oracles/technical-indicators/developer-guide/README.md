@@ -6,7 +6,7 @@ This guide shows you how to integrate on-chain technical indicators (SMA, EMA, R
 
 **Supported in Phase 1:**
 
-* **Assets**: BTC, SUPRA, ETH, SOL, SUI, APT, BNB
+* **Assets**: BTC\_USDT, SUPRA\_USDT , ETH\_USDT, SOL\_USDT, BNB\_USDT
 * **Indicators**: SMA, EMA, RSI
 * **Timeframes**: 5m, 15m, 1h, 4h, 1d
 * **Supported Periods**:
@@ -15,9 +15,7 @@ This guide shows you how to integrate on-chain technical indicators (SMA, EMA, R
 
 ***
 
-### Data Architecture
-
-#### Price Candles Data Structure
+### Price Candles Data Structure
 
 **TimestampedValue**: Basic structure combining a value with its timestamp
 
@@ -103,150 +101,21 @@ let candles = supra_oracle_ti::get_latest_candles_from_specific_time(
 );
 ```
 
-
-
 ***
 
 ### Reading Technical Indicators
 
-### Simple Moving Average (SMA)
+Please refer below links or specific Indicator subpage for detailed examples.
 
-```move
-#[view]
-public fun compute_sma(
-    pair_id: u32,                                  // Unique identifier of the trading pair
-    period: u64,                                   // Number of candles to average [9, 20, 50, 200]
-    candle_duration: u64,                          // Duration in milliseconds
-    missing_candles_tolerance_percentage: u64      // Max missing candles (two-decimal fixed-point)
-): Option<u128>
-```
-
-**Returns**:
-
-* `some(sma)` if the indicator can be computed (scaled by DECIMAL\_BUFFER)
-* `none` if insufficient history, invalid period, or tolerance exceeded
-
-**Parameters**:
-
-* `missing_candles_tolerance_percentage`: Expressed with two-decimal precision (e.g., 5000 = 50.00%, 1000 = 10.00%)
-
-**Example**:
-
-```move
-use supra_oracle::supra_oracle_ti;
-use std::option;
-
-// Get 20-period SMA for BTC on 1-hour timeframe with 10% tolerance
-let sma = supra_oracle_ti::compute_sma(
-    1,            // pair_id (BTC)
-    20,           // period
-    3_600_000,    // candle_duration (1 hour)
-    1000          // 10.00% missing candles tolerance
-);
-
-if (option::is_some(&sma)) {
-    let sma_value = option::extract(&mut sma);
-    // Use sma_value in your logic
-}
-```
-
-### Exponential Moving Average (EMA)
-
-```move
-#[view]
-public fun compute_ema(
-    pair_id: u32,                                  // Unique identifier of the trading pair
-    period: u64,                                   // EMA period [9, 20, 50, 200]
-    candle_duration: u64,                          // Duration in milliseconds
-    missing_candles_tolerance_percentage: u64      // Max missing candles (two-decimal fixed-point)
-): (Option<u128>, Option<u64>, Option<u64>)
-```
-
-**Returns**: A tuple with:
-
-* `Option<u128>`: Latest EMA value (scaled), or `none` if unavailable
-* `Option<u64>`: Number of missing candles since last EMA update
-* `Option<u64>`: Total candles formed from first candle to latest update
-
-**Example**:
-
-```move
-// Get 9-period and 50-period EMA for ETH on 15-minute timeframe
-let (fast_ema, missing1, total1) = supra_oracle_ti::compute_ema(
-    3,         // pair_id (ETH)
-    9,         // period
-    900_000,   // candle_duration (15 min)
-    1000       // 10% tolerance
-);
-
-let (slow_ema, missing2, total2) = supra_oracle_ti::compute_ema(
-    3,         // pair_id (ETH)
-    50,        // period
-    900_000,   // candle_duration (15 min)
-    1000       // 10% tolerance
-);
-
-// Check for golden cross (fast EMA crosses above slow EMA)
-if (option::is_some(&fast_ema) && option::is_some(&slow_ema)) {
-    let fast = option::extract(&mut fast_ema);
-    let slow = option::extract(&mut slow_ema);
-    
-    if (fast > slow) {
-        // Bullish signal
-    }
-}
-```
-
-### Relative Strength Index (RSI)
-
-```move
-#[view]
-public fun compute_rsi(
-    pair_id: u32,                                  // Unique identifier of the trading pair
-    period: u64,                                   // RSI lookback period [7, 14, 21]
-    candle_duration: u64,                          // Duration in milliseconds
-    missing_candles_tolerance_percentage: u64      // Max missing candles (two-decimal fixed-point)
-): (Option<u128>, Option<u64>)
-```
-
-**Returns**: A tuple with:
-
-* `Option<u128>`: RSI value (scaled, 0-100 range), or `none` if unavailable
-* `Option<u64>`: Number of missing candles inside the RSI window
-
-**Requirements**:
-
-* At least `period + 1` candles must exist
-* Missing-candle percentage must be within tolerance
-* Necessary historical RSI state must exist
-
-**Example**:
-
-```move
-// Get 14-period RSI for SUPRA on 4-hour timeframe
-let (rsi, missing) = supra_oracle_ti::compute_rsi(
-    2,            // pair_id (SUPRA)
-    14,           // period
-    14_400_000,   // candle_duration (4 hours)
-    500           // 5% tolerance
-);
-
-if (option::is_some(&rsi)) {
-    let rsi_value = option::extract(&mut rsi);
-    
-    if (rsi_value < 30) {
-        // Oversold condition
-    } else if (rsi_value > 70) {
-        // Overbought condition
-    }
-}
-```
+* [Simple Moving Average(SMA) ](../indicators-list/relative-strength-index-rsi.md)
+* [Exponential Moving Average(EMA)](../indicators-list/exponential-moving-average-ema.md)
+* [Relative Strength Index(RSI)](../indicators-list/relative-strength-index-rsi.md)
 
 ***
 
 ### Asset Pair IDs
 
-Map asset names to pair IDs in your contract:
+Map asset names to Supra oracle pair IDs in your contract:
 
 | Price Pair  | Pair ID |
 | ----------- | ------- |
@@ -258,7 +127,7 @@ Map asset names to pair IDs in your contract:
 
 ### Candle Durations
 
-Use these values for `candle_duration` parameter (in milliseconds):<br>
+Use these values for `candle_duration` parameter (in milliseconds):
 
 | Timeframe | Duration ( in milliseconds) |
 | --------- | --------------------------- |
@@ -267,8 +136,6 @@ Use these values for `candle_duration` parameter (in milliseconds):<br>
 | 1 hour    | 3\_600\_000                 |
 | 4 hours   | 14\_400\_000                |
 | 1 day     | 86\_400\_000                |
-
-
 
 ### Missing Candles Tolerance
 

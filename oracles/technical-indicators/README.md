@@ -20,10 +20,12 @@ Bringing technical indicators on-chain unlocks entirely new possibilities for de
 
 **Phase 1 Coverage:**
 
-* **Assets**: BTC, SUPRA, ETH, SOL, BNB
+* **Assets**: BTC\_USDT, SUPRA\_USDT , ETH\_USDT, SOL\_USDT, BNB\_USDT
 * **Indicators**: SMA, EMA, RSI
-* **Timeframes**: 5 minutes, 15 minutes, 1 hour, 4 hours, 1 day
-* **Configurable Periods**: Users can configure indicators for different periods (e.g., 9, 20, 50, 200) based on available timeframe data
+* **Timeframes**: 5m, 15m, 1h, 4h, 1d
+* **Supported Periods**:
+  * SMA/EMA: 9, 20, 50, 200
+  * RSI: 7, 14, 21
 
 **Data Source**: All calculations use the closing price of each timeframe. The closing price is determined as the last verified price available before the period closes, sourced directly from Supra's DORA oracle feeds.<br>
 

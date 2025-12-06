@@ -143,3 +143,48 @@ Wilder's smoothing provides several advantages:
 * **Mean Reversion**: Useful for identifying extreme conditions
 * **Divergence**: Can signal trend reversals when RSI direction differs from price direction
 * **Smoothed Values**: Less reactive to noise, more reliable signals
+
+### Reading Relative Strength Index (RSI) on Supra L1
+
+```move
+#[view]
+public fun compute_rsi(
+    pair_id: u32,                                  // Unique identifier of the trading pair
+    period: u64,                                   // RSI lookback period [7, 14, 21]
+    candle_duration: u64,                          // Duration in milliseconds
+    missing_candles_tolerance_percentage: u64      // Max missing candles (two-decimal fixed-point)
+): (Option<u128>, Option<u64>)
+```
+
+**Returns**: A tuple with:
+
+* `Option<u128>`: RSI value (scaled, 0-100 range), or `none` if unavailable
+* `Option<u64>`: Number of missing candles inside the RSI window
+
+**Requirements**:
+
+* At least `period + 1` candles must exist
+* Missing-candle percentage must be within tolerance
+* Necessary historical RSI state must exist
+
+**Example**:
+
+```move
+// Get 14-period RSI for SUPRA on 4-hour timeframe
+let (rsi, missing) = supra_oracle_ti::compute_rsi(
+    2,            // pair_id (SUPRA)
+    14,           // period
+    14_400_000,   // candle_duration (4 hours)
+    500           // 5% tolerance
+);
+
+if (option::is_some(&rsi)) {
+    let rsi_value = option::extract(&mut rsi);
+    
+    if (rsi_value < 30) {
+        // Oversold condition
+    } else if (rsi_value > 70) {
+        // Overbought condition
+    }
+}
+```

@@ -41,4 +41,44 @@ SMA₅ = (22 + 21 + 23 + 24 + 26) / 5 = 116 / 5 = 23.2
 
 * **Lag**: SMA reacts slowly to sudden price changes because it averages all periods equally
 * **Smoothness**: Provides clean trend lines with minimal noise
-* **Minimum Data**: Requires n periods of data before calculation is possible
+* **Minimum Data**: Requires n periods of data before calculation is possible<br>
+
+### Reading Simple Moving Average (SMA) on Supra L1
+
+```move
+#[view]
+public fun compute_sma(
+    pair_id: u32,                                  // Unique identifier of the trading pair
+    period: u64,                                   // Number of candles to average [9, 20, 50, 200]
+    candle_duration: u64,                          // Duration in milliseconds
+    missing_candles_tolerance_percentage: u64      // Max missing candles (two-decimal fixed-point)
+): Option<u128>
+```
+
+**Returns**:
+
+* `some(sma)` if the indicator can be computed (scaled by DECIMAL\_BUFFER)
+* `none` if insufficient history, invalid period, or tolerance exceeded
+
+**Parameters**:
+
+* `missing_candles_tolerance_percentage`: Expressed with two-decimal precision (e.g., 5000 = 50.00%, 1000 = 10.00%)
+
+**Example**:
+
+```move
+use supra_oracle::supra_oracle_ti;
+use std::option;
+
+// Get 20-period SMA for BTC on 1-hour timeframe with 10% tolerance
+let sma = supra_oracle_ti::compute_sma(
+    1,            // pair_id (BTC)
+    20,           // period
+    3_600_000,    // candle_duration (1 hour)
+    1000          // 10.00% missing candles tolerance
+);
+
+if (option::is_some(&sma)) {
+    let sma_value = option::extract(&mut sma);
+    // Use sma_value in your logic
+```
