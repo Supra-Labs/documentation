@@ -1,6 +1,14 @@
 # Table of contents
 
 * [Overview](README.md)
+  * [Learn More SupraEVM](overview/learn-more-supraevm.md)
+* [Network Information](network-information.md)
+* [Build on SupraEVM](build-on-supraevm/README.md)
+  * [Hardhat](build-on-supraevm/hardhat/README.md)
+    * [Prerequisites](build-on-supraevm/hardhat/prerequisites.md)
+    * [Start Building](build-on-supraevm/hardhat/start-building.md)
+  * [Foundry](build-on-supraevm/foundry.md)
+  * [Remix IDE](build-on-supraevm/remix-ide.md)
 * [Getting Started](getting-started/README.md)
   * [Remix IDE](getting-started/remix-ide/README.md)
     * [Fund Your Wallet](getting-started/remix-ide/fund-your-wallet.md)
@@ -17,6 +25,5 @@
     * [Write Smart Contract](getting-started/foundry/write-smart-contract.md)
     * [Deploying Smart Contract](getting-started/foundry/deploying-smart-contract.md)
   * [Your First Solidity Contract](getting-started/your-first-move-contract.md)
-* [Network Information](network-information.md)
 * [SupraEVM Beta](supraevm-beta.md)
 * [SupraEVM Beta Bounty](supraevm-beta-bounty.md)
