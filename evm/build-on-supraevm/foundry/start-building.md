@@ -23,7 +23,7 @@ For the latest RPC URL, please refer to the [Supra Network Information](../../ne
 
 ```
 [profile.supra]
-rpc_url = "<SUPRAEVM_RPC_URL"
+rpc_url = "<SUPRAEVM_RPC_URL>"
 private_key = "0xYourPrivateKey"
 ```
 
