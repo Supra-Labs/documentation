@@ -32,7 +32,7 @@ Click **Add** to save the network.
 
 Visit the MultiVM RPC endpoint:
 
-> &#x20;[https://rpc-multivm.supra.com/](https://rpc-multivm.supra.com/)
+> &#x20;[https://rpc-multivm.supra.com/docs/#/operations/json\_rpc\_handler](https://rpc-multivm.supra.com/docs/#/operations/json_rpc_handler)
 
 Scroll to **Faucet > EVM Faucet Endpoint**\
 Copy the GET request:
