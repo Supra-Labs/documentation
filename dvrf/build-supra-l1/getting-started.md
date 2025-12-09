@@ -2,16 +2,9 @@
 
 Before diving into the technical details, let's understand how dVRF works and how to subscribe to consume random numbers.
 
-{% hint style="info" %}
-VRF 3.0 and UI based subscription manager still not live on SUPRA L1 or SUPRA EVM.\
-\
-If you re building on SUPRA please refer to section "BUILD on SUPRA L1 with dVRF" for developer documentation.&#x20;
-{% endhint %}
-
 ### Subscription Model
 
-Think of it like a prepaid phone plan, but for random numbers. You deposit funds upfront, and Supra uses them to pay gas fees for your VRF callbacks.\
-
+Think of it like a prepaid phone plan, but for random numbers. You deposit funds upfront, and Supra uses them to pay gas fees for your VRF callbacks.<br>
 
 * **Predictable costs**: Set gas limits upfront, no surprises
 * **Simplified contracts**: Your VRF consumer contracts don't need to handle payments
@@ -36,4 +29,4 @@ Understanding the complete dVRF process flow will help you integrate more effect
 
 
 
-\
+<br>
