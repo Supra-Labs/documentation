@@ -7,7 +7,7 @@ description: 'Before starting, make sure you have:'
 * [**Node.js**](https://nodejs.org/en/download)
 * [**Hardhat** ](https://hardhat.org/)**installed globally**
 * **A** [**StarKey Wallet**](https://starkey.app/) with a private key for signing transactions
-* **Your** [**SupraEVM RPC URL**](../../network-information.md) from the Network Information page\\
+* **Your** [**SupraEVM RPC URL**](../../network-information.md) from the Network Information page
 
 ```
 npm install -g hardhat
