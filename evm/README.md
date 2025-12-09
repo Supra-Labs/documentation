@@ -10,6 +10,3 @@ Supra’s MultiVM architecture currently supports or plans to support:
 * **EVM:** For Solidity smart contracts from the Ethereum ecosystem
 * **SolanaVM (SVM):** Coming soon, for smart contracts written in Rust (used by Solana)
 
-***
-
-<table data-card-size="large" data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td></td><td>Learn More SupraEVM <mark style="color:red;"><strong>→</strong></mark></td><td></td><td><a href="overview/learn-more-supraevm.md">learn-more-supraevm.md</a></td></tr></tbody></table>
