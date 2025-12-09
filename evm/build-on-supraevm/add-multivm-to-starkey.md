@@ -22,7 +22,7 @@ Use the Supra MultiVM Testnet settings:
 
 * **Network Name:** Supra MultiVM Testnet
 * **Network Type:** Ethereum
-* **RPC URL:** _Use the URL from the Network Information page_
+* **RPC URL:** _Use the URL from the_ [_Network Information_](../network-information.md) _page_
 * **Symbol:** SupEVM
 * **Chain ID:** _(will auto-fill)_
 
