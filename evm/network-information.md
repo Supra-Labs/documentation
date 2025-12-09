@@ -26,5 +26,3 @@ Use this when calling the RPC directly or building custom tooling for Supra.
 `https://rpc-multivm.supra.com/rpc/v1/eth/wallet_integration`\
 Use this when working with Foundry, Hardhat, or 3rd-party wallets.\
 This endpoint ignores block-height tags and always returns the latest block state, so no extra configuration is required.
-
-<table data-view="cards"><thead><tr><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>Build on SupraEVM</strong></td><td><a href="build-on-supraevm/">build-on-supraevm</a></td></tr></tbody></table>
