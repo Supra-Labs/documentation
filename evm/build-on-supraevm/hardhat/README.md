@@ -18,5 +18,5 @@ This guide will show you how to:
 
 Whether you're experimenting, testing DAO mechanics, or building production-ready applications, Hardhat provides a fast and flexible workflow for building on SupraEVM.
 
-<table data-view="cards"><thead><tr><th></th><th></th></tr></thead><tbody><tr><td><strong>Prerequisites</strong></td><td>Everything you need installed before building on SupraEVM with Hardhat.</td></tr><tr><td><strong>Start Building</strong></td><td>Start your Hardhat project and connect it to SupraEVM.</td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th></th><th></th></tr></thead><tbody><tr><td><mark style="color:red;"><strong>Prerequisites</strong></mark></td><td>Everything you need installed before building on SupraEVM with Hardhat.</td></tr><tr><td><mark style="color:red;"><strong>Start Building</strong></mark></td><td>Start your Hardhat project and connect it to SupraEVM.</td></tr></tbody></table>
 

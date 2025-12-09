@@ -6,7 +6,7 @@ description: >-
 
 # Start Building
 
-### Step 1: Open Remix IDE
+### <mark style="color:red;">Step 1: Open Remix IDE</mark>
 
 1. Visit [**https://remix.ethereum.org**](https://remix.ethereum.org)
 2. On the left sidebar, click **Deploy & Run Transactions**
@@ -16,7 +16,7 @@ description: >-
 
 A confirmation modal will appear in StarKey Wallet.
 
-### Step 2: Create a New Solidity File
+### <mark style="color:red;">Step 2: Create a New Solidity File</mark>
 
 1. Click the **File Explorer** icon
 2. Click **New File**
@@ -53,7 +53,7 @@ contract SimpleSupraStorage {
 
 Perfect for learning SupraEVM deployment flow.
 
-### Step 3: Compile the Contract
+### <mark style="color:red;">Step 3: Compile the Contract</mark>
 
 1. Click the **Solidity Compiler** tab
 2. Choose compiler version: **0.8.x**
@@ -61,7 +61,7 @@ Perfect for learning SupraEVM deployment flow.
 
 A green checkmark means success.
 
-### Step 4: Deploy to SupraEVM MultiVM
+### <mark style="color:red;">Step 4: Deploy to SupraEVM MultiVM</mark>
 
 1. Open **Deploy & Run Transactions**
 2. Under **Environment**, choose:
@@ -78,7 +78,7 @@ A green checkmark means success.
 
 Your contract is now deployed on SupraEVM.
 
-### Step 6: Verify Transactions on the Explorer
+### <mark style="color:red;">Step 6: Verify Transactions on the Explorer</mark>
 
 Every action (deploy, set, get) is recorded on Supra’s MultiVM Explorer.
 

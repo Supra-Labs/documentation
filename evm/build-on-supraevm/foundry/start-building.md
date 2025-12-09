@@ -4,7 +4,7 @@ description: Initialize a new Foundry project and prepare it for deployment on S
 
 # Start Building
 
-### Step 1: Initialize Your Project
+### <mark style="color:red;">Step 1: Initialize Your Project</mark>
 
 Create and enter a new Foundry project directory:
 
@@ -13,7 +13,7 @@ forge init foundry-project
 cd foundry-project
 ```
 
-### Step 2: Configure `foundry.toml`
+### <mark style="color:red;">Step 2: Configure</mark> <mark style="color:red;"></mark><mark style="color:red;">`foundry.toml`</mark>
 
 Add a SupraEVM profile to configure your RPC, chain ID, and private key:
 
@@ -29,7 +29,7 @@ private_key = "0xYourPrivateKey"
 
 This allows Foundry to deploy and broadcast transactions to SupraEVM.
 
-### Step 3: Create a Smart Contract
+### <mark style="color:red;">Step 3: Create a Smart Contract</mark>
 
 Inside `src/`, create **SimpleStorage.sol**:
 
@@ -50,7 +50,7 @@ contract SimpleStorage {
 }
 ```
 
-### Step 4: Create a Deployment Script
+### <mark style="color:red;">Step 4: Create a Deployment Script</mark>
 
 In `script/DeploySimpleStorage.sol`:
 
@@ -71,13 +71,13 @@ contract DeploySimpleStorage is Script {
 }
 ```
 
-### Step 5: Compile Your Contract
+### <mark style="color:red;">Step 5: Compile Your Contract</mark>
 
 ```
 forge build
 ```
 
-### Step 6: Deploy to SupraEVM
+### <mark style="color:red;">Step 6: Deploy to SupraEVM</mark>
 
 Use `forge create` to deploy the contract:
 
@@ -90,7 +90,7 @@ forge create src/SimpleStorage.sol:SimpleStorage \
 
 This broadcasts the deployment transaction to SupraEVM.
 
-### Step 7: Interact Using `cast send`
+### <mark style="color:red;">Step 7: Interact Using</mark> <mark style="color:red;"></mark><mark style="color:red;">`cast send`</mark>
 
 Call functions on your deployed contract:
 
@@ -102,7 +102,7 @@ cast send <ContractAddress> "set(uint256)" 42 \
   --private-key 0xYourPrivateKey
 ```
 
-### Step 8: Read the Contract State with `cast call`
+### <mark style="color:red;">Step 8: Read the Contract State with</mark> <mark style="color:red;"></mark><mark style="color:red;">`cast call`</mark>
 
 This is a gas-free read:
 

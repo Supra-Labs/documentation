@@ -4,7 +4,7 @@ description: Initialize a new Hardhat project and prepare it for deployment on S
 
 # Start Building
 
-### Step 1: Initialize Your Project
+### <mark style="color:red;">Step 1: Initialize Your Project</mark>
 
 Set up your folder, initialize Hardhat, and prepare your config file.
 
@@ -16,7 +16,7 @@ npx hardhat init
 
 Choose the **empty `hardhat.config.js` template** and install any required node modules.
 
-### Step 2: Configure Hardhat for SupraEVM
+### <mark style="color:red;">Step 2: Configure Hardhat for SupraEVM</mark>
 
 Update your `hardhat.config.js` file with the SupraEVM network:
 
@@ -36,7 +36,7 @@ module.exports = {
 };
 ```
 
-### Step 3: Create Your DAO Contract
+### <mark style="color:red;">Step 3: Create Your DAO Contract</mark>
 
 Inside a new `contracts/` directory, create your Solidity file (e.g., `CrossChainDAO.sol`):
 
@@ -102,7 +102,7 @@ contract CrossChainDAO {
 }
 ```
 
-### Step 4: Compile Your Contract
+### <mark style="color:red;">Step 4: Compile Your Contract</mark>
 
 Make sure the Solidity code builds successfully.
 
@@ -130,7 +130,7 @@ main().catch((error) => {
 });
 ```
 
-### Step 6: Deploy to SupraEVM
+### <mark style="color:red;">Step 6: Deploy to SupraEVM</mark>
 
 Run your deploy script on the SupraEVM network.
 
@@ -138,7 +138,7 @@ Run your deploy script on the SupraEVM network.
 npx hardhat run scripts/deploy.js --network supra
 ```
 
-### Step 7: Create Interaction Script
+### <mark style="color:red;">Step 7: Create Interaction Script</mark>
 
 Add a menu-based script that interacts with your deployed DAO.
 
@@ -217,7 +217,7 @@ main().catch((error) => {
 });
 ```
 
-### Step 8: Run the Interaction Script
+### <mark style="color:red;">Step 8: Run the Interaction Script</mark>
 
 Run your interaction script:
 

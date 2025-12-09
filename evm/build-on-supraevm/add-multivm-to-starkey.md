@@ -7,16 +7,16 @@ description: >-
 
 # Add MultiVM to StarKey
 
-### Step 1: Open StarKey Wallet
+### <mark style="color:red;">Step 1: Open StarKey Wallet</mark>
 
 Make sure the [StarKey Wallet](https://starkey.app/) extension/app is installed and unlocked.
 
-### Step 2: Navigate to Networks
+### <mark style="color:red;">Step 2: Navigate to Networks</mark>
 
 Click the **All Networks** at the top of the wallet.\
 Select **Add Network** (the **+** icon).
 
-### Step 3: Enter the Network Details
+### <mark style="color:red;">Step 3: Enter the Network Details</mark>
 
 Use the Supra MultiVM Testnet settings:
 
@@ -28,7 +28,7 @@ Use the Supra MultiVM Testnet settings:
 
 Click **Add** to save the network.
 
-### Step 4: Fund Your Wallet
+### <mark style="color:red;">Step 4: Fund Your Wallet</mark>
 
 Visit the MultiVM RPC endpoint:
 

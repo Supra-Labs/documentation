@@ -18,4 +18,4 @@ This guide will show you how to:
 
 Whether you're experimenting with simple storage contracts or validating complex dApp logic, Remix provides a simple and beginner-friendly workflow for building on SupraEVM.
 
-<table data-view="cards"><thead><tr><th></th><th></th></tr></thead><tbody><tr><td><strong>Start Building</strong></td><td>Start your Remix project and connect it to SupraEVM.</td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th></th><th></th></tr></thead><tbody><tr><td><mark style="color:red;"><strong>Start Building</strong></mark></td><td>Start your Remix project and connect it to SupraEVM.</td></tr></tbody></table>
