@@ -3,6 +3,7 @@
 * [Welcome to Early Access](README.md)
 * [Network Information](network-information.md)
 * [Build on SupraEVM](build-on-supraevm/README.md)
+  * [Add MultiVM to StarKey](build-on-supraevm/add-multivm-to-starkey.md)
   * [Hardhat](build-on-supraevm/hardhat/README.md)
     * [Prerequisites](build-on-supraevm/hardhat/prerequisites.md)
     * [Start Building](build-on-supraevm/hardhat/start-building.md)
