@@ -12,4 +12,4 @@ Supra’s MultiVM architecture currently supports or plans to support:
 
 ***
 
-<table data-card-size="large" data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td></td><td><mark style="color:red;"><strong>Getting Started →</strong></mark></td><td></td><td><a href="getting-started/">getting-started</a></td></tr></tbody></table>
+<table data-card-size="large" data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td></td><td>Learn More SupraEVM <mark style="color:red;"><strong>→</strong></mark></td><td></td><td><a href="overview/learn-more-supraevm.md">learn-more-supraevm.md</a></td></tr></tbody></table>
