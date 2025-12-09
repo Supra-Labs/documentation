@@ -5,6 +5,8 @@ hidden: true
 
 # Network Information
 
+***
+
 <table data-full-width="false"><thead><tr><th></th><th></th></tr></thead><tbody><tr><td><strong>Network Name</strong></td><td><strong>SupraEVM MultiVM Testnet</strong></td></tr><tr><td><strong>RPC URL Endpoints</strong></td><td><strong>learn more below</strong></td></tr><tr><td>*<strong>Direct RPC Endpoint</strong></td><td><a href="https://rpc-multivm.supra.com/rpc/v1/eth"><code>https://rpc-multivm.supra.com/rpc/v1/eth</code></a></td></tr><tr><td>*<strong>Wallet &#x26; Tooling Integration Endpoint</strong></td><td><a href="https://rpc-multivm.supra.com/rpc/v1/eth/wallet_integration"><code>https://rpc-multivm.supra.com/rpc/v1/eth/wallet_integration</code></a></td></tr></tbody></table>
 
 ***
