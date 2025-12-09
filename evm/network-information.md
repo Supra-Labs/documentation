@@ -7,6 +7,8 @@ hidden: true
 
 <table data-full-width="true"><thead><tr><th></th><th></th></tr></thead><tbody><tr><td><strong>Network Name</strong></td><td><strong>SupraEVM MultiVM Testnet</strong></td></tr><tr><td><strong>RPC URL Endpoints</strong></td><td><strong>learn more below</strong></td></tr><tr><td>*<strong>Direct RPC Endpoint</strong></td><td><a href="https://rpc-multivm.supra.com/rpc/v1/eth"><code>https://rpc-multivm.supra.com/rpc/v1/eth</code></a></td></tr><tr><td>*<strong>Wallet &#x26; Tooling Integration Endpoint</strong></td><td><a href="https://rpc-multivm.supra.com/rpc/v1/eth/wallet_integration"><code>https://rpc-multivm.supra.com/rpc/v1/eth/wallet_integration</code></a></td></tr></tbody></table>
 
+***
+
 ## <mark style="color:red;">Notes for Third-Party Tooling</mark>&#x20;
 
 Supra’s EVM chain uses Moonshot consensus, which finalizes blocks in **sub-second time**.\
@@ -24,3 +26,5 @@ Use this when calling the RPC directly or building custom tooling for Supra.
 `https://rpc-multivm.supra.com/rpc/v1/eth/wallet_integration`\
 Use this when working with Foundry, Hardhat, or 3rd-party wallets.\
 This endpoint ignores block-height tags and always returns the latest block state, so no extra configuration is required.
+
+<table data-view="cards"><thead><tr><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>Build on SupraEVM</strong></td><td><a href="build-on-supraevm/">build-on-supraevm</a></td></tr></tbody></table>
