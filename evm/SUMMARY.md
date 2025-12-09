@@ -1,7 +1,6 @@
 # Table of contents
 
-* [Overview](README.md)
-  * [Learn More SupraEVM](overview/learn-more-supraevm.md)
+* [Welcome to Early Access](README.md)
 * [Network Information](network-information.md)
 * [Build on SupraEVM](build-on-supraevm/README.md)
   * [Hardhat](build-on-supraevm/hardhat/README.md)
@@ -17,6 +16,8 @@
   * [Move](supraevm-resources/move.md)
   * [Solidity Resources](supraevm-resources/solidity-resources.md)
   * [EVM/MoveVM Cheatsheet](supraevm-resources/evm-movevm-cheatsheet.md)
+* [Overview](<README (1).md>)
+  * [Learn More SupraEVM](overview/learn-more-supraevm.md)
 * [Getting Started](getting-started/README.md)
   * [Remix IDE](getting-started/remix-ide/README.md)
     * [Fund Your Wallet](getting-started/remix-ide/fund-your-wallet.md)

@@ -5,16 +5,7 @@ hidden: true
 
 # Network Information
 
-{% hint style="info" %}
-**MultiVM Testnet for SupraEVM Coming soon! (Early access for Devs via Discord)**
-{% endhint %}
-
-|                                       |                                                                                                                              |
-| ------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| Network Name                          | **SupraEVM MultiVM Testnet**                                                                                                 |
-| RPC URL Endpoints                     | learn more below                                                                                                             |
-| Direct RPC Endpoint                   | [`https://rpc-multivm.supra.com/rpc/v1/eth`](https://rpc-multivm.supra.com/rpc/v1/eth)                                       |
-| Wallet & Tooling Integration Endpoint | [`https://rpc-multivm.supra.com/rpc/v1/eth/wallet_integration`](https://rpc-multivm.supra.com/rpc/v1/eth/wallet_integration) |
+<table data-full-width="true"><thead><tr><th></th><th></th></tr></thead><tbody><tr><td><strong>Network Name</strong></td><td><strong>SupraEVM MultiVM Testnet</strong></td></tr><tr><td><strong>RPC URL Endpoints</strong></td><td><strong>learn more below</strong></td></tr><tr><td><strong>Direct RPC Endpoint</strong></td><td><a href="https://rpc-multivm.supra.com/rpc/v1/eth"><code>https://rpc-multivm.supra.com/rpc/v1/eth</code></a></td></tr><tr><td><strong>Wallet &#x26; Tooling Integration Endpoint</strong></td><td><a href="https://rpc-multivm.supra.com/rpc/v1/eth/wallet_integration"><code>https://rpc-multivm.supra.com/rpc/v1/eth/wallet_integration</code></a></td></tr></tbody></table>
 
 ## Notes for Third-Party Tooling&#x20;
 
