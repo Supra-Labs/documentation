@@ -6,7 +6,7 @@ description: >-
 
 # EVM/MoveVM Cheatsheet
 
-### High-Level Overview <a href="#high-level-overview" id="high-level-overview"></a>
+### <mark style="color:red;">High-Level Overview</mark> <a href="#high-level-overview" id="high-level-overview"></a>
 
 | Feature           | Ethereum                                 | Supra Move                                            |
 | ----------------- | ---------------------------------------- | ----------------------------------------------------- |
@@ -21,7 +21,7 @@ description: >-
 | Type Safety       | Contract types provide basic type safety | Module structs and generics offer robust type safety  |
 | Unique Features   | Wide ecosystem, EVM compatibility        | Native VRF, Automation, Oracle price feeds            |
 
-### Comparing Token Standards <a href="#comparing-token-standards" id="comparing-token-standards"></a>
+### <mark style="color:red;">Comparing Token Standards</mark> <a href="#comparing-token-standards" id="comparing-token-standards"></a>
 
 | Aspect             | Ethereum/Solidity                                          | Supra Move                                                        |
 | ------------------ | ---------------------------------------------------------- | ----------------------------------------------------------------- |
@@ -31,7 +31,7 @@ description: >-
 | Transfer Mechanism | Tokens can be transferred without receiver’s permission    | Tokens require receiver’s explicit consent for transfer           |
 | Safety             | Depends on implementation quality                          | Resources cannot be arbitrarily created, ensuring token integrity |
 
-### Comparing EVM and Move VM <a href="#comparing-evm-and-move-vm" id="comparing-evm-and-move-vm"></a>
+### <mark style="color:red;">Comparing EVM and Move VM</mark> <a href="#comparing-evm-and-move-vm" id="comparing-evm-and-move-vm"></a>
 
 | Aspect                      | EVM (Ethereum Virtual Machine)                   | Move VM (Supra Move Virtual Machine)                           |
 | --------------------------- | ------------------------------------------------ | -------------------------------------------------------------- |
@@ -44,7 +44,7 @@ description: >-
 | Transaction Safety          | Uses nonces for transaction ordering             | Uses sequence numbers for transaction ordering                 |
 | Object Accessibility        | Objects bound to smart contract scope            | Guaranteed global accessibility of objects                     |
 
-### Module Structure & Initialization <a href="#module-structure--initialization" id="module-structure--initialization"></a>
+### <mark style="color:red;">Module Structure & Initialization</mark> <a href="#module-structure--initialization" id="module-structure--initialization"></a>
 
 #### Ethereum (Solidity) <a href="#ethereum-solidity" id="ethereum-solidity"></a>
 
@@ -72,7 +72,7 @@ module my_address::my_contract {    use supra_framework::signer;    use supra_fr
 * **Supra Move:** Resources are stored under user accounts, not contract addresses
 * **Ethereum**: State stored in contract storage slots
 
-### Functions <a href="#functions" id="functions"></a>
+### <mark style="color:red;">Functions</mark> <a href="#functions" id="functions"></a>
 
 #### Ethereum (Solidity) <a href="#ethereum-solidity-1" id="ethereum-solidity-1"></a>
 
@@ -104,7 +104,7 @@ module my_address::functions {    use supra_framework::signer;
 * **Supra Move**: acquires keyword, declares which resources the function accesses
 * **Ethereum**: Automatic state access without declaration
 
-### Basic Types <a href="#basic-types" id="basic-types"></a>
+### <mark style="color:red;">Basic Types</mark> <a href="#basic-types" id="basic-types"></a>
 
 #### Ethereum (Solidity) <a href="#ethereum-solidity-2" id="ethereum-solidity-2"></a>
 
@@ -132,7 +132,7 @@ module my_address::basic_types {    use std::string::{Self, String};    use std:
     // Struct    struct User has store, drop {        name: String,        age: u64,    }}
 ```
 
-### Structs and Resources <a href="#structs-and-resources" id="structs-and-resources"></a>
+### <mark style="color:red;">Structs and Resources</mark> <a href="#structs-and-resources" id="structs-and-resources"></a>
 
 #### Ethereum (Solidity) <a href="#ethereum-solidity-3" id="ethereum-solidity-3"></a>
 
@@ -163,7 +163,7 @@ module my_address::token {    use supra_framework::signer;    use aptos_std::tab
 * **Supra Move**: Resources ensure linear type safety
 * **Ethereum**: No built-in protection against double-spending
 
-### Events <a href="#events" id="events"></a>
+### <mark style="color:red;">Events</mark> <a href="#events" id="events"></a>
 
 #### Ethereum (Solidity) <a href="#ethereum-solidity-4" id="ethereum-solidity-4"></a>
 
@@ -194,7 +194,7 @@ module my_address::events {    use supra_framework::event;    use supra_framewor
 * **Supra Move**: No indexed parameters concept
 * **Ethereum**: Supports indexed parameters for filtering
 
-### Storage & State Management <a href="#storage--state-management" id="storage--state-management"></a>
+### <mark style="color:red;">Storage & State Management</mark> <a href="#storage--state-management" id="storage--state-management"></a>
 
 #### Ethereum (Solidity) <a href="#ethereum-solidity-5" id="ethereum-solidity-5"></a>
 
@@ -221,7 +221,7 @@ module my_address::storage {    use supra_framework::signer;    use aptos_std::t
 * Supra Move: Must explicitly declare resource access with `acquires`
 * Ethereum: Automatic state access
 
-### Testing <a href="#testing" id="testing"></a>
+### <mark style="color:red;">Testing</mark> <a href="#testing" id="testing"></a>
 
 #### Ethereum (Solidity with Hardhat) <a href="#ethereum-solidity-with-hardhat" id="ethereum-solidity-with-hardhat"></a>
 
@@ -240,7 +240,7 @@ describe("Token", function () {    it("Should transfer tokens correctly", async 
         assert!(token::get_balance(addr, @0x456) == 100, 1);    }}
 ```
 
-### Deployment <a href="#deployment" id="deployment"></a>
+### <mark style="color:red;">Deployment</mark> <a href="#deployment" id="deployment"></a>
 
 #### Ethereum <a href="#ethereum" id="ethereum"></a>
 
@@ -254,7 +254,7 @@ describe("Token", function () {    it("Should transfer tokens correctly", async 
 # Compile and publish modulesupra move tool publish \  --package-dir /path/to/project \  --rpc-url https://rpc-testnet.supra.com
 ```
 
-### Account Structure & Transaction Model <a href="#account-structure--transaction-model" id="account-structure--transaction-model"></a>
+### <mark style="color:red;">Account Structure & Transaction Model</mark> <a href="#account-structure--transaction-model" id="account-structure--transaction-model"></a>
 
 #### Ethereum Account Model <a href="#ethereum-account-model" id="ethereum-account-model"></a>
 
@@ -272,7 +272,7 @@ module my_address::example {    use supra_framework::coin;    use supra_framewor
     // Each account can hold resources directly    public entry fun transfer(from: &signer, to: address, amount: u64) {        coin::transfer<SupraCoin>(from, to, amount);    }}
 ```
 
-### Recap <a href="#recap" id="recap"></a>
+### <mark style="color:red;">Recap</mark> <a href="#recap" id="recap"></a>
 
 | **Feature**         | **Ethereum/Solidity**          | **Supra Move**                     |
 | ------------------- | ------------------------------ | ---------------------------------- |
