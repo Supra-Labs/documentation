@@ -1,0 +1,16 @@
+---
+description: >-
+  Your complete hub for learning Solidity, Move, and building smart contracts on
+  SupraEVM.
+hidden: true
+---
+
+# SupraEVM Resources
+
+#### **Your complete hub for learning Solidity, Move, and building smart contracts on SupraEVM.**
+
+SupraEVM Resources brings together everything developers need to start building on the EVM side of Supra’s multi-VM network. Whether you're learning Solidity, exploring Move, comparing both languages, or browsing tools and frameworks, this section gives you clear explanations, examples, and hands-on resources to accelerate your development workflow.
+
+From introductory guides to in-depth documentation, this is your starting point for mastering smart contract development on SupraEVM.
+
+<table data-view="cards"><thead><tr><th></th><th></th></tr></thead><tbody><tr><td><strong>Solidity</strong></td><td>Learn how Solidity works and start building smart contracts for the EVM.</td></tr><tr><td><strong>Move</strong></td><td>Discover how Move powers secure, resource-oriented smart contracts on the Supra L1.</td></tr><tr><td><strong>Solidity Resources</strong></td><td>Explore frameworks, tutorials, tools, and advanced guides for professional Solidity development.</td></tr><tr><td><strong>EVM / MoveVM Cheatsheet</strong></td><td>Compare Solidity and Move side-by-side and understand how both VMs differ under the hood.</td></tr></tbody></table>

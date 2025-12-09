@@ -11,8 +11,6 @@ description: Benefits of Supra MultiVM
 * **Unified infrastructure:** Access the same high-performance Layer 1, Oracle feeds, and automation regardless of which VM you choose
 * **Cross-VM interactions:** Smart contracts on different VMs can call each other and share state through Supra’s unified architecture
 
-The MultiVM approach means:
-
 ### Developer Experience <a href="#developer-experience" id="developer-experience"></a>
 
 Supra includes verifiable randomness at the protocol level to provide transparent, tamper-resistant randomness for validator selection and randomized ordering of transaction execution, helping to mitigate vulnerabilities related to Maximum Extractable Value (MEV) extraction.
