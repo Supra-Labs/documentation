@@ -4,7 +4,7 @@ description: Initialize a new Hardhat project and prepare it for deployment on S
 
 # Start Building
 
-### Step 1: Create Your Hardhat Project
+### Step 1: Initialize Your Project
 
 Set up your folder, initialize Hardhat, and prepare your config file.
 
