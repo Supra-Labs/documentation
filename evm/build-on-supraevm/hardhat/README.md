@@ -20,5 +20,5 @@ Whether you're experimenting, testing DAO mechanics, or building production-read
 
 ***
 
-<table data-view="cards"><thead><tr><th></th><th></th></tr></thead><tbody><tr><td><mark style="color:red;"><strong>Prerequisites</strong></mark></td><td>Everything you need installed before building on SupraEVM with Hardhat.</td></tr><tr><td><mark style="color:red;"><strong>Start Building</strong></mark></td><td>Start your Hardhat project and connect it to SupraEVM.</td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th></th><th></th></tr></thead><tbody><tr><td><mark style="color:red;"><strong>Prerequisites</strong></mark></td><td>Everything you need installed before building on SupraEVM with Hardhat.   ></td></tr><tr><td><mark style="color:red;"><strong>Start Building</strong></mark></td><td>Start your Hardhat project and connect it to SupraEVM.                             ></td></tr></tbody></table>
 
