@@ -3,6 +3,20 @@ description: >-
   Connect your StarKey Wallet to the Supra MultiVM Testnet by adding the custom
   network details and funding your account using the built-in faucet. This setup
   ensures your wallet is ready to deploy and
+layout:
+  width: default
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
 ---
 
 # Add MultiVM to StarKey

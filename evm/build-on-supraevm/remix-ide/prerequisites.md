@@ -19,7 +19,7 @@ layout:
 # Prerequisites
 
 * **A** [**StarKey Wallet**](https://starkey.app/) is installed
-* A wallet account with testnet funds
+* A wallet account with [testnet funds](../add-multivm-to-starkey.md)
 * [**Supra MultiVM RPC**](../../network-information.md) is already selected inside StarKey Wallet
 
 {% hint style="info" %}
