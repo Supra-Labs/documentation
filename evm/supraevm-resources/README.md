@@ -2,7 +2,6 @@
 description: >-
   Your complete hub for learning Solidity, Move, and building smart contracts on
   SupraEVM.
-hidden: true
 ---
 
 # SupraEVM Resources

@@ -1,6 +1,5 @@
 ---
 description: Relative network, faucet, and API details.
-hidden: true
 layout:
   width: default
   title:
