@@ -4,6 +4,8 @@ description: Initialize a new Hardhat project and prepare it for deployment on S
 
 # Start Building
 
+***
+
 {% stepper %}
 {% step %}
 ### <mark style="color:red;">Step 1: Initialize Your Project</mark>
