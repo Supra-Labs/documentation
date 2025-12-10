@@ -20,4 +20,4 @@ Whether you're experimenting with simple storage contracts or validating complex
 
 ***
 
-<table data-view="cards"><thead><tr><th></th><th></th></tr></thead><tbody><tr><td><mark style="color:red;"><strong>Prerequisites</strong></mark></td><td>Everything you need to start  using Remix IDE</td></tr><tr><td><mark style="color:red;"><strong>Start Building</strong></mark></td><td>Start your Remix project and connect it to SupraEVM.</td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><mark style="color:red;"><strong>Prerequisites</strong></mark></td><td>Everything you need to start  using Remix IDE                    <strong>></strong></td><td><a href="prerequisites.md">prerequisites.md</a></td></tr><tr><td><mark style="color:red;"><strong>Start Building</strong></mark></td><td>Start your Remix project and connect it to SupraEVM.                             <strong>></strong></td><td></td></tr></tbody></table>
