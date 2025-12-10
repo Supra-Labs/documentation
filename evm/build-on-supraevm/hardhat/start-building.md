@@ -4,6 +4,8 @@ description: Initialize a new Hardhat project and prepare it for deployment on S
 
 # Start Building
 
+{% stepper %}
+{% step %}
 ### <mark style="color:red;">Step 1: Initialize Your Project</mark>
 
 Set up your folder, initialize Hardhat, and prepare your config file.
@@ -15,7 +17,9 @@ npx hardhat init
 ```
 
 Choose the **empty `hardhat.config.js` template** and install any required node modules.
+{% endstep %}
 
+{% step %}
 ### <mark style="color:red;">Step 2: Configure Hardhat for SupraEVM</mark>
 
 Update your `hardhat.config.js` file with the SupraEVM network:
@@ -35,7 +39,9 @@ module.exports = {
     }
 };
 ```
+{% endstep %}
 
+{% step %}
 ### <mark style="color:red;">Step 3: Create Your DAO Contract</mark>
 
 Inside a new `contracts/` directory, create your Solidity file (e.g., `CrossChainDAO.sol`):
@@ -101,7 +107,9 @@ contract CrossChainDAO {
     }
 }
 ```
+{% endstep %}
 
+{% step %}
 ### <mark style="color:red;">Step 4: Compile Your Contract</mark>
 
 Make sure the Solidity code builds successfully.
@@ -109,8 +117,10 @@ Make sure the Solidity code builds successfully.
 ```
 npx hardhat compile
 ```
+{% endstep %}
 
-### Step 5: Create a Deployment Script
+{% step %}
+### <mark style="color:red;">Step 5: Create a Deployment Script</mark>
 
 Add a `scripts/deploy.js` file to deploy your DAO contract to SupraEVM.
 
@@ -129,7 +139,9 @@ main().catch((error) => {
     process.exitCode = 1;
 });
 ```
+{% endstep %}
 
+{% step %}
 ### <mark style="color:red;">Step 6: Deploy to SupraEVM</mark>
 
 Run your deploy script on the SupraEVM network.
@@ -137,7 +149,9 @@ Run your deploy script on the SupraEVM network.
 ```
 npx hardhat run scripts/deploy.js --network supra
 ```
+{% endstep %}
 
+{% step %}
 ### <mark style="color:red;">Step 7: Create Interaction Script</mark>
 
 Add a menu-based script that interacts with your deployed DAO.
@@ -216,7 +230,9 @@ main().catch((error) => {
     process.exitCode = 1;
 });
 ```
+{% endstep %}
 
+{% step %}
 ### <mark style="color:red;">Step 8: Run the Interaction Script</mark>
 
 Run your interaction script:
@@ -224,4 +240,5 @@ Run your interaction script:
 ```
 npx hardhat run scripts/interact.js --network supra
 ```
-
+{% endstep %}
+{% endstepper %}
