@@ -1,6 +1,20 @@
 ---
 description: Relative network, faucet, and API details.
 hidden: true
+layout:
+  width: default
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
 ---
 
 # Network Information

@@ -1,5 +1,19 @@
 ---
 description: 'Before starting, make sure you have:'
+layout:
+  width: default
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
 ---
 
 # Prerequisites
@@ -13,3 +27,4 @@ Request the testnet fund [here](https://rpc-multivm.supra.com/docs/#/operations/
 {% endhint %}
 
 These tools allow Remix to connect to the SupraEVM network and sign transactions using StarKey Wallet.
+
