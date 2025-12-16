@@ -20,7 +20,7 @@ Supra’s MultiVM architecture currently supports or plans to support:
 * **SolanaVM (SVM):** Coming soon, for smart contracts written in Rust (used by Solana)
 
 {% hint style="info" %}
-For the latest RPC URL, please refer to the [Supra Network Information](../network-information.md) page.
+For the latest RPC URL, please refer to the [Supra Network Information](../overview/network-information.md) page.
 {% endhint %}
 
 ***
