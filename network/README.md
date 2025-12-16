@@ -1,17 +1,3 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # Overview
 
 Supra is more than just a Layer 1 — it’s a full-stack, high-performance blockchain ecosystem purpose-built to power the next generation of decentralized applications. Whether you're building DeFi, GameFi, AI/ML protocols, or cross-chain solutions, Supra gives you the tools you need to go further, faster.
@@ -35,7 +21,7 @@ Supra’s native oracle network brings unmatched speed and precision to on-chain
 * **Data Feeds** – Pull and push-based price feeds with fast refresh rates and multi-source aggregation.
 * **dVRF (Distributed Verifiable Random Function)** – A next-gen dVRF system that delivers secure, provably fair randomness optimized for performance-critical applications like gaming, NFTs, lotteries, and more.
 
-<table data-card-size="large" data-view="cards"><thead><tr><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><mark style="color:red;"><strong>Explore Data Feeds →</strong></mark></td><td><a href="https://app.gitbook.com/s/pGVprscCeQzW0QYcaJS9/data-feeds">Data Feeds</a></td></tr><tr><td><mark style="color:red;"><strong>Explore dVRF (Randomness) →</strong></mark></td><td><a href="https://app.gitbook.com/s/pGVprscCeQzW0QYcaJS9/dvrf">Decentralized VRF (dVRF)</a></td></tr></tbody></table>
+<table data-card-size="large" data-view="cards"><thead><tr><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><mark style="color:red;"><strong>Explore Data Feeds →</strong></mark></td><td><a href="https://app.gitbook.com/s/pGVprscCeQzW0QYcaJS9/data-feeds">Data Feeds</a></td></tr><tr><td><mark style="color:red;"><strong>Explore dVRF (Randomness) →</strong></mark></td><td><a href="/broken/spaces/pGVprscCeQzW0QYcaJS9/pages/KNqM62uwVlFaX1V3L0r1">Broken link</a></td></tr></tbody></table>
 
 ***
 

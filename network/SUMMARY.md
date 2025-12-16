@@ -2,6 +2,7 @@
 
 * [Overview](README.md)
 * [Network Information](network-information.md)
+* [Useful Links](useful-links.md)
 * [Moonshot Consensus Algorithm](moonshot.md)
 
 ## MoveVM <a href="#move" id="move"></a>
