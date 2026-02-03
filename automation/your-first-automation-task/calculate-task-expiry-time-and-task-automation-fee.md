@@ -120,7 +120,7 @@ If your task’s max gas is 100:
 
 #### Output:
 
-`{"result":["720000000"]}`&#x20;
+<mark style="color:green;">`{"result":["720000000"]}`</mark>&#x20;
 
 Your fee cap is 720,000,000 quants - (7.2 supra per epoch)
 
@@ -128,13 +128,13 @@ Your fee cap is 720,000,000 quants - (7.2 supra per epoch)
 
 If your task’s max gas is 50,000:
 
-```
+```powershell
 "arguments": ["50000"]
 ```
 
 #### Output:
 
-`{"result":["393872320800"]}`&#x20;
+<mark style="color:green;">`{"result":["393872320800"]}`</mark>&#x20;
 
 Your fee cap is 393,872,320,800 quant - (393.87 supra per epoch)
 
