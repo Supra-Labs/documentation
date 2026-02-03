@@ -91,29 +91,56 @@ task-expiry-time-secs = 1748027985 + 7200 + 300 = 1748035485
 
 ## How to Estimate the --task-automation-fee-cap
 
-Use this endpoint to estimate the automation execution fee:
+**Input your max gas:** The input argument should be the maximum gas you expect your task to use. Let’s represent this as **\<max-gas>**.
 
-```powershell
-curl --request POST \
-  --url https://rpc-testnet.supra.com/rpc/v2/view \
+<pre class="language-powershell"><code class="lang-powershell"><strong>curl --request POST \
+</strong>  --url https://rpc-testnet.supra.com/rpc/v2/view \
   --header 'Accept: application/json' \
   --header 'Content-Type: application/json' \
   --data '{
   "function": "0x1::automation_registry::estimate_automation_fee",
   "type_arguments": [],
-  "arguments": ["50000"]
+  "arguments": ["&#x3C;max-gas>"]
 }'
-```
+</code></pre>
 
-### Example:
+{% hint style="info" %}
+This represents the expected **--task-automation-fee-cap** based on the currently registered task.&#x20;
+
+You may set a slightly higher automation fee cap to allow for buffering.
+{% endhint %}
+
+### Example calculation:
+
+If your task’s max gas is 100:
 
 ```powershell
-{"result":["1440000000"]}
+"arguments": ["100"]
 ```
 
-#### This means:
+#### Output:
 
-`--task-automation-fee-cap 1440000000`
+`{"result":["720000000"]}`&#x20;
+
+Your fee cap is 720,000,000 quants - (7.2 supra per epoch)
+
+### Example calculation:
+
+If your task’s max gas is 50,000:
+
+```
+"arguments": ["50000"]
+```
+
+#### Output:
+
+`{"result":["393872320800"]}`&#x20;
+
+Your fee cap is 393,872,320,800 quant - (393.87 supra per epoch)
+
+{% hint style="info" %}
+The value you input (max gas) should reflect how much gas you expect your task to use. It’s not fixed; adjust as needed based on your task complexity.
+{% endhint %}
 
 ### Parameter Guide
 
