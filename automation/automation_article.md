@@ -78,6 +78,9 @@ public entry fun change_state(user:&signer, exec_counter: u64, task_id: u64) acq
 
     let automation_state = borrow_global_mut<AutomationState>(signer::address_of(user));
     automation_state.execution_counter = exec_counter;
+
+    // Ensures that the provided `task_id` corresponds to an active task registered by the caller.
+    assert!(automation_registry::has_sender_active_task_with_id(user_addr, task_id), ETASK_INACTIVE_OR_UNAUTHORIZED);
     automation_state.task_id = option::some(task_id);
 } 
 
@@ -88,6 +91,8 @@ public entry fun init_state(user:&signer, exec_counter: u64) {
 ```
 
 You do not know the `task_id` before registration. So it can be kept as `Option` and populated later via sending a regular transaction. Other part of the state can also be changed via a regular transaction.
+
+Always validate `task_id` ownership before storing it in global state. Failing to do so may allow unauthorized task binding or inconsistent automation behavior.
 
 In fact, by doing `init_state` via a regular transaction, before registering your automation would greatly help is reducing `max-gas` parameter that you supply at the time of registration. Why?  Because, the automation registry reserves the gas for your task in the block space, therefore, the _automation fee_ is in proportion to the `max-gas`. By doing operations which creates new storage in a regular transaction, `max-gas` requirement can be greatly reduced for automaiton tasks.
 
