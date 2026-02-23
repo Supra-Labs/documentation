@@ -10,9 +10,9 @@ So what are the limitations of this approach?
 
 With Supra Native automation you can bid good-bye to these limitations. The action happens as soon as the condition becomes _true_ and, it executes with the same authority as the submitter.
 
-You might ask that Supra Automation does not seem to have `if-this-than-that` structure. Well, yes and no. From the infrastructure side, once your task becomes active, validator nodes execute the submitted task at the end of every block. Howeve, one can write the smart contract in a manner so that you achieve `if-this-than-that` effect.
+You might ask that Supra Automation does not seem to have `if-this-then-that` structure. Well, yes and no. From the infrastructure side, once your task becomes active, validator nodes execute the submitted task at the end of every block. Howeve, one can write the smart contract in a manner so that you achieve `if-this-then-that` effect.
 
-``` rust
+```move
 public entry fun my_automation_task(user: &signer) {
     if (check_condition_of_interest()) {
         perform_action_of_interest();
@@ -29,27 +29,23 @@ Why did we design it in this fashion? Well, so that if a user wants to perform s
 
 This can also be achieved via smart contract programming.
 
-```rust 
-
-
+```move 
 struct AutomationState {
-    last_checked : u64;
-    check_interval: u64;
+    last_checked: u64,
+    check_interval: u64,
 }
 
 public entry fun my_automation_task(user: &signer) acquires AutomationState {
     let automation_state = borrow_global<AutomationState>(signer::address_of(user));
-    if(timestamp::now_seconds() - automation_state.lc < automation_state.check_interval ) {
-        return;
-    }
+    if (timestamp::now_seconds() - automation_state.last_checked < automation_state.check_interval) { 
+        return
+    };
 
-    //Now check the condition of interest
-    if(check_condition_of_interest()) {
+    // Now check the condition of interest
+    if (check_condition_of_interest()) {
         perform_action_of_interest();
-    }
+    };
 }
-
-
 ```
 
 
@@ -57,45 +53,38 @@ public entry fun my_automation_task(user: &signer) acquires AutomationState {
 
 Again, this can also be achieved via clever programming.
 
-```rust
-
+```move
 struct AutomationState{
-    execution_counter: u64;
-    task_id : Option<u64>;
+    execution_counter: u64,
+    task_id: Option<u64>,
 }
-
 
 public entry fun my_automation_task(user:&signer) acquires AutomationState {
 
+    let automation_state = borrow_global_mut<AutomationState>(signer::address_of(user));
+    if(automation_state.execution_counter == 0) { return };
+    // OR you can just stop the task
+    if (option::is_some(automation_state.task_id)) {
+        0x1::automation_registry::stop_tasks(user,vector[task_id]);
+    };
 
-let automation_state = borrow_global_mut<AutomationState>(signer::address_of(user));
-if(automation_state.execution_counter==0) { return;
-// OR you can just stop the task
-if (option::is_some(automation_state.task_id)) {
-0x1::automation_registry::stop_tasks(user,vector[task_id]);
+    if(check_condition_of_interest()) {
+        perform_action_of_interest();
+        automation_state.execution_counter = automation_state.execution_counter - 1;    
+    };
 }
-}
-
-if(check_condition_of_interest()) {
-    perform_action_of_interest();
-    automation_state.execution_counter = automaiton_state.execution_counter - 1;    
-}
-}
-
 
 public entry fun change_state(user:&signer, exec_counter: u64, task_id: u64) acquires AutomationState {
 
-    let automation_state = borrow_global_mut<AutomaionState>(signer::address_of(user));
+    let automation_state = borrow_global_mut<AutomationState>(signer::address_of(user));
     automation_state.execution_counter = exec_counter;
     automation_state.task_id = option::some(task_id);
 } 
 
 public entry fun init_state(user:&signer, exec_counter: u64) {
 
-    move_to(user,AutomationState {execution_counter: exec_counter, task_id : option::none()})
-
+    move_to(user, AutomationState { execution_counter: exec_counter, task_id: option::none()})
 }
-
 ```
 
 You do not know the `task_id` before registration. So it can be kept as `Option` and populated later via sending a regular transaction. Other part of the state can also be changed via a regular transaction.
@@ -107,8 +96,7 @@ In fact, by doing `init_state` via a regular transaction, before registering you
 
 Well, good news is that your automation task has two ways in which it receives inputs. One is via parameters and other is via global storage. So the behaviour can be dynamically be changed by changing the global state. For example,
 
-```rust
-
+```move
 struct AutomationState {
     state : u64;
 }
@@ -127,7 +115,7 @@ public entry fun my_automation_task(user: &signer) {
 
 public entry fun change_state(user: &signer, in_state: u64) {
 
-    let automation_state = borrow_global_mut<AutomationState>(signer:;address_of(user));
+    let automation_state = borrow_global_mut<AutomationState>(signer::address_of(user));
     automation_state.state = in_state;
 }
 
