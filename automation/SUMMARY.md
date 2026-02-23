@@ -4,6 +4,7 @@
 * [Getting Started](getting-started.md)
 * [API Reference](api-reference.md)
 * [Smart Contract Integration](smart-contract-integration.md)
+* [Automation Dev Guide](automation_article.md)
 * [Your First Automation Task](your-first-automation-task/README.md)
   * [Prerequisites & Epoch Timing](your-first-automation-task/prerequisites-and-epoch-timing.md)
   * [Create the Move Smart Contract](your-first-automation-task/create-the-move-smart-contract.md)
