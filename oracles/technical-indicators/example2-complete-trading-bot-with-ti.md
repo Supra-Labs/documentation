@@ -1,6 +1,6 @@
-# Example 2:  Complete Trading Bot
+# Example2:  Complete Trading Bot with TI
 
-This is a smaple trading bot made with technical indicators
+This is a sample trading bot made with technical indicators
 
 ```move
 module my_address::trading_bot {
