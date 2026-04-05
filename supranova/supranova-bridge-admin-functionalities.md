@@ -17,9 +17,9 @@ Administrative actions are executed via on-chain transactions, leveraging MultiS
 
 #### 1. Supra Foundation MultiSig Admin on Ethereum
 
-**Composition:** A 16-member committee comprising core members of the Supra Ecosystem.
+**Composition:** A 15-member committee comprising core members of the Supra Ecosystem.
 
-**Threshold:** 9 out of 16 signatures are required to execute any admin function.
+**Threshold:** 9 out of 15 signatures are required to execute any admin function.
 
 **Administrative Capabilities:**
 
@@ -37,9 +37,9 @@ Administrative actions are executed via on-chain transactions, leveraging MultiS
 
 #### 2. Operating MultiSig Admin on Ethereum
 
-**Composition:** A 6-member committee consisting of core cross-chain team members from Supra.
+**Composition:** A 5-member committee consisting of core cross-chain team members from Supra.
 
-**Threshold:** 4 out of 6 signatures required to execute any admin function.
+**Threshold:** 3 out of 5 signatures required to execute any admin function.
 
 **Administrative Capabilities:**
 
@@ -78,7 +78,7 @@ Administrative actions are executed via on-chain transactions, leveraging MultiS
 
 #### **Security and Best Practices:**
 
-* **Threshold Design:** MultiSig thresholds (e.g., 9/16, 4/6) balance accessibility with security, requiring supermajority consensus.
+* **Threshold Design:** MultiSig thresholds (e.g., 9/16, 3/5) balance accessibility with security, requiring supermajority consensus.
 * **Audit and Monitoring:** All admin transactions are publicly verifiable on-chain.
 * **Recovery Mechanisms:** Delegation functions allow for key rotations or recoveries without halting operations.
 * **Temporary Features:** Emergency withdrawal is audited for removal upon reverse bridge deployment, estimated in Q4 2025. In short, SupraNova begins to be run by more decentralized operators, towards full L1 security.
